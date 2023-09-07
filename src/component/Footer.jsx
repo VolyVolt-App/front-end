@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, Typography } from '@mui/material'
+import { Box, Button, Grid, InputAdornment, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -36,6 +36,20 @@ export const Footer = () => {
             background: 'linear-gradient(180deg, #082D0E 37.50%, #1B470C 100%)',
             width: '100%'
         }}>
+            
+        <Grid container display={'flex'} justifyContent={'center'}>
+            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3}>
+                <Stack direction={'row'} alignItems={'center'} justifyContent={'center'} spacing={2}>
+                    <Typography color={'white'}>S’abonner aux Newsletters</Typography>
+                    <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white'}}
+                        InputProps={{
+                            endAdornment: <InputAdornment position='end'>
+                                <Button variant='contained' sx={{backgroundColor: '#FFBE18'}} >S'abonner</Button>
+                                </InputAdornment>
+                        }}/>
+                </Stack>
+            </Grid>
+        </Grid>
         <Grid container display={'flex'} justifyContent={'space-between'}>
             <Grid item xs={12} sm={4} >
                 <Box sx={{ display: "flex",justifyContent: 'center' , p:2  }}>

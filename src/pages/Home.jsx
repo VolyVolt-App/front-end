@@ -4,23 +4,25 @@ import '../styles/accordion.css'
 
 
 import bannerImage from '../asset/image/banner-image.png'
-import img1 from '../asset/icon/image 29.png'
-import img2 from '../asset/icon/image 30.png'
-import img3 from '../asset/icon/image 31.png'
-import img4 from '../asset/icon/image 32.png'
-import videoImg from '../asset/image/kaboompics_green-garden-plants-2687 1.png'
+import { ReactComponent as ValuePropositionOne } from '../asset/icon/val1.svg'
+import { ReactComponent as ValuePropositionTwo } from '../asset/icon/icons-commitment 1.svg'
+import { ReactComponent as ValuePropositionThree } from '../asset/icon/icons-clee 1.svg'
+import { ReactComponent as ValuePropositionFour } from '../asset/icon/icons-eco 1.svg'
+
+
+import videoImg from '../asset/image/video.png'
 import article1 from '../asset/image/image 19.png'
 import article2 from '../asset/image/image 20.png'
 import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.png'
-import { ReactComponent as OddTwo } from '../asset/image/odd2.svg'
+//import { ReactComponent as OddTwo } from '../asset/image/odd2.svg'
 import { ReactComponent as OddSeven } from '../asset/image/odd7_adobe_express.svg'
 import { ReactComponent as OddNine } from '../asset/image/odd09_adobe_express.svg'
 import { ReactComponent as OddTen } from '../asset/image/odd10_adobe_express.svg'
 import { ReactComponent as OddEleven } from '../asset/image/odd11.svg'
 import { ReactComponent as OddThirteen } from '../asset/image/odd13_adobe_express.svg'
+import { ReactComponent as OddSeventeen } from '../asset/image/odd17.svg'
 
 import { Articles } from '../component/Home/Articles'
-import { Cibles } from '../component/Home/Cibles'
 
 
 
@@ -28,15 +30,15 @@ import { Cibles } from '../component/Home/Cibles'
 export const Home = () => {
   //for odd
 
-  const refOddTwo = useRef(null)
+  const refOddSeventeen = useRef(null)
   const refOddSeven = useRef(null)
   const refOddNine = useRef(null)
   const refOddTen = useRef(null)
   const refOddEleven = useRef(null)
   const refOddThirteen = useRef(null)
 
-  const handleCollapseOddTwo = () => {
-    refOddTwo.current.style.maxWidth=refOddTwo.current.scrollWidth+'px'
+  const handleCollapseOddSeventeen = () => {
+    refOddSeventeen.current.style.maxWidth=refOddSeventeen.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
@@ -47,7 +49,7 @@ export const Home = () => {
 
   const handleCollapseOddSeven = () => {
     refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
-    refOddTwo.current.style.maxWidth= null
+    refOddSeventeen.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
     refOddEleven.current.style.maxWidth= null
@@ -56,7 +58,7 @@ export const Home = () => {
   const handleCollapseOddNine = () => {
     refOddNine.current.style.maxWidth=refOddNine.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
-    refOddTwo.current.style.maxWidth= null
+    refOddSeventeen.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
     refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
@@ -65,7 +67,7 @@ export const Home = () => {
     refOddTen.current.style.maxWidth=refOddTen.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
-    refOddTwo.current.style.maxWidth= null
+    refOddSeventeen.current.style.maxWidth= null
     refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
@@ -74,7 +76,7 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddTwo.current.style.maxWidth= null
+    refOddSeventeen.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
   const handleCollapseOddThirteen = () => {
@@ -83,49 +85,59 @@ export const Home = () => {
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
     refOddEleven.current.style.maxWidth= null
-    refOddTwo.current.style.maxWidth= null
+    refOddSeventeen.current.style.maxWidth= null
   }
 
   useEffect(()=>{
-    refOddTwo.current.style.maxWidth=refOddTwo.current.scrollWidth+'px'
+    refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
   },[])
 
   return (
   <>
-    <Grid container justifyContent={'center'}  p={2} pt={9}
+    
+    <Grid container px={14} pt={9} sx={{
+        backgroundColor: '#082D0E'
+      }} >
+
+      <Typography align='center' variant='h5' sx={{
+        color: '#96CC1E',
+        //fontSize: 22,
+        fontWeight: 'bold',
+        //fontFamily: 'Assistant',
+      }}>
+        Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
+      </Typography>
+
+    </Grid>
+
+    <Grid container pt={3} justifyContent={'center'}  
       sx={{
         backgroundColor: '#082D0E'
       }}>
-      <Grid item xs={12} md={6}>
-        <Typography 
-          sx={{
-            color: 'green'
-          }}>
-          ENERGIE VERTE ET AGRICULTURE DURABLE
-        </Typography>
-        <Typography variant='h4' mt={1} color={'white'}>
-          Imaginer un avenir ou vous pouvez produire votre propre énergie verte directement à partir de vos culture.
+      <Grid item xs={12} md={5}>
+        <Typography variant='h6' mt={3} color={'white'}>
+        Imaginez un avenir où votre engagement a le pouvoir de faire briller un foyer et d’inspirer des sourires au sein des communautés rurales. 
         </Typography>
         <Typography sx={{color: '#bbb'}}>
-          Construisons un futur ou l'agriculture et l'énergie s'unissent pour créer une véritable dynamique positive, pour les familles rurales et pour notre planete.
+        Collaborer avec VolyVolt, c'est bien plus que cultiver de l'énergie durable, c'est semer la transformation,  récolter la gratitude de ceux que vous aidez. 
         </Typography>
 
         <Box mt={2}>
-          <Button variant='contained' size='small' sx={{ color: '#fff'}} >Nos produits</Button> 
+          <Button variant='contained' size='small' sx={{ color: '#fff'}} >NOTRE SOLUTION</Button> 
           <Button variant='outlined' size='small'
             sx={{
               marginLeft: 2
             }}>
-              Nos solution
+              COLLABORER AVEC NOUS
           </Button>
         </Box>
       </Grid> {/* end grid */}
       
-      <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'} mt={2}>
+      <Grid item xs={12} md={5} display={'flex'} pl={3} >
       <Box
          component={'img'}
          sx={{
-          width: 300,
+          width: 450,
          // maxHeight: { xs: 50, md: 60},
          // maxWidth: {xs: 50, md: 60 }
          }}
@@ -138,7 +150,7 @@ export const Home = () => {
     <Typography variant='h5' align='center' p={2} sx={{
       backgroundColor: '#082D0E',
       color: '#ffbe18'
-    }}>"Du champs à  votre prise: L'Energie Verte, cultivée par vous et pour vous"</Typography>
+    }}>“Illuminer les cœurs, semer le changement et éclairer les foyers”</Typography>
 {/* end voloan */}
 {/* faharoa */}
     <Grid container
@@ -150,7 +162,7 @@ export const Home = () => {
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <Box
+        {/*<Box
          component={'img'}
          sx={{
           height: 60,
@@ -160,9 +172,10 @@ export const Home = () => {
          }}
          alt="rdf"
          src= {img1}
-        />
+        />*/}
+        <ValuePropositionOne width={70} height={70}/>
         <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Premiere solution a double tranchant agriculture et energie
+          Accès à l’énergie verte  à partir des cultures locales
         </Typography>
       </Grid> {/* end grid item*/}
 
@@ -171,7 +184,7 @@ export const Home = () => {
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <Box
+        {/*<Box
          component={'img'}
          sx={{
           height: 60,
@@ -181,10 +194,11 @@ export const Home = () => {
          }}
          alt="rdf"
          src= {img2}
-        />
+        />*/}
+        <ValuePropositionTwo width={70} height={70}/>
         
         <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Premiere solution a double tranchant agriculture et energie
+          Renforcement de la Responsabilité Sociale des ONGs et des fondations
         </Typography>
       </Grid> {/* end grid item*/}
       
@@ -192,20 +206,10 @@ export const Home = () => {
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <Box
-         component={'img'}
-         sx={{
-          height: 60,
-          width: 60,
-          maxHeight: { xs: 50, md: 60},
-          maxWidth: {xs: 50, md: 60 }
-         }}
-         alt="rdf"
-         src= {img3}
-        />
+        <ValuePropositionThree width={70} height={70}/>
 
         <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Premiere solution a double tranchant agriculture et energie
+        Une solution clé en main pour l'électrification rurale
         </Typography>
       </Grid> {/* end grid item*/}
 
@@ -214,19 +218,9 @@ export const Home = () => {
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <Box
-         component={'img'}
-         sx={{
-          height: 60,
-          width: 60,
-          maxHeight: { xs: 50, md: 60},
-          maxWidth: {xs: 50, md: 60 }
-         }}
-         alt="rdf"
-         src= {img4}
-        />
+        <ValuePropositionFour width={70} height={70} />
         <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Premiere solution a double tranchant agriculture et energie
+        Une éléctrification à moindre coûts  au sein des foyers ruraux
         </Typography>
       </Grid> {/* end grid item*/}
 
@@ -234,44 +228,87 @@ export const Home = () => {
     
 {/* end faharoa */}
 
+{/* mission */}
+    <Grid container px={6} py={3}>
+      <Grid item xs={10} sm={10} md={10} >
+        <Typography variant='h5' sx={{
+          color: '#638715',
+          textDecoration: 'underline',
+          fontWeight: 'bold'
+        }}>MISSION DE VOLYVOLT</Typography>
+
+        <Typography py={2} sx={{fontSize: 20}}>
+        Résoudre le problème d'électrification rurale à Madagascar en permettant aux ménages d'accéder à une solution énergétique verte, durable et à coût abordable 
+        </Typography>
+
+        <Typography py={2}>
+        Seulement 10,9 % de la population rurale a accès à l'électricité, tandis que ce chiffre atteint 72,6 % en zone urbaine. Cette disparité crée des obstacles au développement socio-économique des communautés rurales, car elles luttent pour éclairer leurs maisons, alimenter leurs appareils électroniques et utiliser des équipements nécessitant de l'énergie.
+        </Typography>
+        <Typography>
+        Face à ce défi, VolyVolt propose de fournir des services  clé en main d'électrification aux des ONG et des fondations  au niveau des localités où ils souhaitent apporter leur contribution. 
+        La particularité de notre solution réside dans l'utilisation de la technologie des piles microbiennes. Grâce à des bactéries situées au niveau des racines des plantes, nous générons de l'électricité de manière propre et durable, offrant ainsi une source d'énergie verte à ces communautés. 
+        </Typography>
+      </Grid>
+      <Grid item xs={2} sm={2} md={2} backgroundColor={'main'}>
+        
+      </Grid>
+
+    </Grid>
+{/* end mission */}
+
+{/* cibles*/}
+    {/* video */}
+    <Grid container px={6} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
+            <Grid item xs={12} sm={12} md={6}>
+              <Box
+                component={'img'}
+                sx={{
+                
+                  width: '100%',
+                }}
+                alt="rdf"
+                src= {videoImg}
+              />
+            </Grid>
+            <Grid item xs={12} sm={12} md={6} >
+              <Box margin={'0px auto'} width={'80%'}>
+              <Typography variant='h6' align='center' pb={3}
+                sx={{
+                  color: '#8BBC1F',
+                  fontWeight: 'bold',
+                  textDecoration: 'underline'
+                }}>À QUI S’ADRESSE LA SOLUTION VOLYVOLT?
+              </Typography>
+              <Typography color={'white'}>Notre solution d'électrification rurale est spécialement conçue pour : </Typography>
+              <ul>
+                <li><Typography color={'white'}>les ONG </Typography></li>
+                <li><Typography color={'white'}>les fondations engagées  </Typography></li>
+              </ul>
+              <Typography color={'white'}>               
+                 La solution VolyVolt s’adresse aux acteurs du secteur philanthropique et du développement durable qui cherchent à avoir un impact positif en fournissant de l'énergie propre aux populations rurales.
+              </Typography>
+              </Box>
+            </Grid>
+            
+
+          </Grid>
+    {/* end video */}
+
+{/* end cible*/}
 
 {/* ODD */}
-    <Grid container sx={{backgroundColor: '#4C3012'}} py={2} justifyContent={'center'}>
-      <Typography variant='h6' align='center' pb={3}
+    <Grid container sx={{backgroundColor: '#082D0E'}} py={2} >
+      <Typography variant='h6'  pb={3} px={6}
           sx={{
-            color: '#FFC000',
-            fontWeight: 'bold'
+            color: '#8BBC1F',
+            fontWeight: 'bold',
+            textDecoration: 'underline'
           }}>
             Comment participons-nous à l’atteinte des ODD?
         </Typography>
       <Grid item xs={12} md={12} lg={12}>
         <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} >
-            <Box 
-              sx={{
-                width: {xs:120, sm: 150, md:150},
-                marginLeft: 1,
-                cursor: 'pointer',
-                '&:hover':{
-                  border: '2px solid transparent',
-                }
-              }}>
-              <OddTwo width={'100%'} onClick={handleCollapseOddTwo}/>
-            </Box>{/* end odd two */}
-
-            <Box ref={refOddTwo}className='panel-horizontal' >{/* start tobecollapse */}
-              <Box p={{sm:1,md:2}} sx={{
-                backgroundColor: '#D3A029',
-                marginBottom: {xs:1, sm: 1},
-                height: {xs:120,sm:150,md:150},
-                width: {xs:350,sm:400, md: 490}
-              }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
-              </Box>
-            </Box>{/* tobecollapse */}
+            
 
             <Box 
               sx={{
@@ -407,6 +444,33 @@ export const Home = () => {
  
               </Box>
             </Box>{/* tobecollapse */}
+
+            <Box 
+              sx={{
+                width: {xs:120, sm: 150, md:150},
+                marginLeft: 1,
+                cursor: 'pointer',
+                '&:hover':{
+                  border: '2px solid transparent',
+                }
+              }}>
+              <OddSeventeen width={'100%'} onClick={handleCollapseOddSeventeen}/>
+            </Box>{/* end odd two */}
+
+            <Box ref={refOddSeventeen}className='panel-horizontal' >{/* start tobecollapse */}
+              <Box p={{sm:1,md:2}} sx={{
+                backgroundColor: '#19486A',
+                marginBottom: {xs:1, sm: 1},
+                height: {xs:120,sm:150,md:150},
+                width: {xs:350,sm:400, md: 490}
+              }}>
+              <Typography align='center' color={'white'}
+              sx={{
+                fontSize: {xs:13, sm: 14.5, lg:15}
+              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+ 
+              </Box>
+            </Box>{/* tobecollapse */}
         </Box>
       </Grid>
       
@@ -414,54 +478,9 @@ export const Home = () => {
 {/* end ODD */}
 
 
-{/* cibles*/}
-    <Box 
-      sx={{
-        backgroundColor:'#082D0Ebb',
-        p: 6
-      }}>
-      <Typography variant='h6' align='center' pb={3}
-        sx={{
-          color: '#FFC000',
-          fontWeight: 'bold'
-        }}>
-          POUR QUI EST VOLYVOLT?
-      </Typography>
-      <Grid container justifyContent={'center'} spacing={2}>
-        <Grid item xs={12} md={4}>
-            <Cibles heading={'MÉNAGES RURAUX'} text={"VolyVolt est spécialement conçu pour répondre aux besoins énergétiques des ménages résident dans des zones rurales. Notre solution offre une alternative fiable et abordable aux bougies, lampes pétroles, permettant aux familles rurales de profiter d'une source d'énergie autonome et durable."}/>
-        </Grid>
-        <Grid item xs={12} md={4}>
-            <Cibles heading={'MÉNAGES RURAUX'} text={"VolyVolt est spécialement conçu pour répondre aux besoins énergétiques des ménages résident dans des zones rurales. Notre solution offre une alternative fiable et abordable aux bougies, lampes pétroles, permettant aux familles rurales de profiter d'une source d'énergie autonome et durable."}/>
-        </Grid>
-        <Grid item xs={12} md={4}>
-            <Cibles heading={'MÉNAGES RURAUX'} text={"VolyVolt est spécialement conçu pour répondre aux besoins énergétiques des ménages résident dans des zones rurales. Notre solution offre une alternative fiable et abordable aux bougies, lampes pétroles, permettant aux familles rurales de profiter d'une source d'énergie autonome et durable."}/>
-        </Grid>
-        {/*<Grid item>
-            <Cibles heading={''} text={""}/>
-        </Grid> */}
 
-      </Grid>
-    </Box>
-{/* end cible*/}
 
-{/* video */}
-      <Grid container>
-        <Grid item>
-          <Box
-            component={'img'}
-            sx={{
-            
-              width: '100%',
-            }}
-            alt="rdf"
-            src= {videoImg}
-          />
-        </Grid>
-        
 
-      </Grid>
-{/* end video */}
 
 {/* impact */}
     <Grid container sx={{backgroundColor:'#FFC000'}} p={6}>
@@ -500,13 +519,13 @@ export const Home = () => {
          sx={{
           fontWeight: 'bold'
          }}>
-          +30%
+          45
          </Typography>
          <Typography variant='h6' align='center'
          sx={{
           fontWeight: 'bold'
          }}>
-         Hausse de productivité 
+         Partenaires de projets  
          </Typography>
       </Grid>{/* end item */}
 

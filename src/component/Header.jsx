@@ -29,7 +29,7 @@ const pages = [
       link: ''
     },
     {
-      text:"NOS PRODUITS",
+      text:"NOTRE SOLUTION",
       link: 'products'
     },
     {

@@ -1,5 +1,5 @@
 import { Grid, Box, Typography, Button, Divider, Stack, Chip } from '@mui/material'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../styles/accordion.css'
 
 
@@ -23,13 +23,27 @@ import { ReactComponent as OddThirteen } from '../asset/image/odd13_adobe_expres
 import { ReactComponent as OddSeventeen } from '../asset/image/odd17.svg'
 
 import { Articles } from '../component/Home/Articles'
-import zIndex from '@mui/material/styles/zIndex'
+import { Mission } from '../component/Home/mission/Mission'
+import { Histoire } from '../component/Home/mission/Histoire'
+
+import { Valeurs } from '../component/Home/mission/Valeurs'
 
 
 
 
 export const Home = () => {
+  //mission
+  const [mission, setMission] = useState('mission')
+
+ // const refMission = useRef
+
+
+  /*const handleMission = (mission) => {
+    setMission(mission)
+  }*/
+
   //for odd
+
 
   const refOddSeventeen = useRef(null)
   const refOddSeven = useRef(null)
@@ -240,38 +254,118 @@ export const Home = () => {
 {/* end faharoa */}
 
 {/* mission */}
-    <Grid container pl={{xs:2, md:6}} pr={{xs:2, md:0}} py={3} justifyContent={'space-between'}>
+    <Grid container pl={{xs:2, md:6}} pr={{xs:2, md:0}} py={3} justifyContent={'space-between'}
+      sx={{
+        '& .hoverbuttonnn': {
+          backgroundColor: '#8BBC1F'
+        },
+        '& .missionTextActive': {
+          fontWeight: 'bold',
+          fontSize: 16,
+          fontStyle: 'Assistant'
+        }
+      }}>
       {/* nav on small */}
-      <Grid item xs={12} sm={12} display={{xs:'block',md:'none'}} >
+      <Grid item xs={12} sm={12} display={{xs:'block',md:'none'}}
+      sx={{
+        '& .missionTextActive': {
+          fontWeight: 'bold',
+          fontSize: 16,
+          fontStyle: 'Assistant',
+          right: '20%',
+        },
+        '& .missionButtonActive': {
+          backgroundColor: '#8BBC1F'
+        }
+      }} >
         <Box display={'flex'} mb={3} mt={6}>
-          <Box width={'33.333%'} position={'relative'}>     
+
+          <Box width={'33.333%'} position={'relative'} onClick={()=>setMission('mission')}
+          sx={{
+            '&:hover':{
+              cursor: 'pointer',
+              '& .hoverbutton': {
+                backgroundColor: '#8BBC1F'
+            },
+            '& .hovertext': {
+                fontWeight: 'bold',
+                fontSize: 16,
+                fontStyle: 'Assistant',
+                right: '20%',
+              }
+              }
+          }}>     
             <Divider variant='fullwidth'>
-              <Typography sx={{
+              <Typography
+              className={ mission === 'mission' ? 'hovertext missionTextActive': 'hovertext'}
+              sx={{
                 position: 'absolute',
                 top: -25,
-                right: '20%',
+                right: '28%',
+                fontSize: 13
               }}>Notre Mission</Typography>
-              <Chip sx={{width:26, height:26 }}/>
+              <Chip 
+              className={ mission === 'mission' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+              sx={{width:26, height:26 }}/>
             </Divider>
           </Box>
-          <Box width={'33.333%'} position={'relative'}>     
+          <Box width={'33.333%'} position={'relative'} onClick={()=>setMission('histoire')}
+          sx={{
+            '&:hover':{
+              cursor: 'pointer',
+              '& .hoverbutton': {
+                backgroundColor: '#8BBC1F'
+            },
+            '& .hovertext': {
+                fontWeight: 'bold',
+                fontSize: 16,
+                fontStyle: 'Assistant',
+                right: '20%',
+              }
+              }
+          }}>     
             <Divider variant='fullwidth'>
-              <Typography sx={{
+              <Typography
+              className={ mission === 'histoire' ? 'hovertext missionTextActive': 'hovertext'}
+              sx={{
                 position: 'absolute',
                 top: -25,
-                right: '20%',
-              }}>Notre Mission</Typography>
-              <Chip sx={{width:26, height:26 }}/>
+                right: '28%',
+                fontSize: 13
+              }}>Notre Histoire</Typography>
+              <Chip 
+              className={ mission === 'histoire' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+              sx={{width:26, height:26 }}/>
             </Divider>
           </Box>
-          <Box width={'33.333%'} position={'relative'}>     
+
+          <Box width={'33.333%'} position={'relative'} onClick={()=>setMission('valeurs')}
+          sx={{
+            '&:hover':{
+              cursor: 'pointer',
+              '& .hoverbutton': {
+                backgroundColor: '#8BBC1F'
+            },
+            '& .hovertext': {
+                fontWeight: 'bold',
+                fontSize: 16,
+                fontStyle: 'Assistant',
+                right: '20%',
+              }
+              }
+          }}>     
             <Divider variant='fullwidth'>
-              <Typography sx={{
+              <Typography
+              className={ mission === 'valeurs' ? 'hovertext missionTextActive': 'hovertext'}
+              sx={{
                 position: 'absolute',
                 top: -25,
-                right: '20%',
-              }}>Notre Mission</Typography>
-              <Chip sx={{width:26, height:26 }}/>
+                right: '28%',
+                fontSize: 13
+              }}>Nos Valeurs</Typography>
+              <Chip 
+              className={ mission === 'valeurs' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+              sx={{width:26, height:26 }}/>
             </Divider>
           </Box>
         </Box>
@@ -279,56 +373,144 @@ export const Home = () => {
       </Grid>
       {/* end nav on small */}
       <Grid item xs={12} sm={12} md={10} >
-        <Typography variant='h5' 
-        sx={{
-          color: '#638715',
-          fontWeight: 'bold',
-          width:'fit-content'
-        }}>MISSION DE VOLYVOLT
+
+        {/* mission */}
+        {mission === 'mission' && <Mission/>}
+        {mission === 'histoire' && <Histoire/>}
+        {mission === 'valeurs' && <Valeurs/>}
         
-        <Divider variant="fullwidth" sx={{ borderBottomWidth: 2, mt:1 }} />
-        </Typography>
+        
 
-        <Typography py={2} sx={{fontSize: 20}}>
-        Résoudre le problème d'électrification rurale à Madagascar en permettant aux ménages d'accéder à une solution énergétique verte, durable et à coût abordable 
-        </Typography>
 
-        <Typography py={2}>
-        Seulement 10,9 % de la population rurale a accès à l'électricité, tandis que ce chiffre atteint 72,6 % en zone urbaine. Cette disparité crée des obstacles au développement socio-économique des communautés rurales, car elles luttent pour éclairer leurs maisons, alimenter leurs appareils électroniques et utiliser des équipements nécessitant de l'énergie.
-        </Typography>
-        <Typography>
-        Face à ce défi, VolyVolt propose de fournir des services  clé en main d'électrification aux des ONG et des fondations  au niveau des localités où ils souhaitent apporter leur contribution. 
-        La particularité de notre solution réside dans l'utilisation de la technologie des piles microbiennes. Grâce à des bactéries situées au niveau des racines des plantes, nous générons de l'électricité de manière propre et durable, offrant ainsi une source d'énergie verte à ces communautés. 
-        </Typography>
       </Grid>
-      <Grid item xs={2} sm={2} md={1} display={{xs:'none',md:'block'}}>
+      <Grid item xs={2} sm={2} md={1} display={{xs:'none',md:'block'}}
+        sx={{
+          '& .missionTextActive': {
+            fontWeight: 'bold',
+            fontSize: 16,
+            fontStyle: 'Assistant'
+          },
+          '& .missionButtonActive': {
+            backgroundColor: '#8BBC1F'
+          }
+        }}>
           <Box display={'flex'} flexDirection={'column'} alignItems={'stretch'} height={'100%'}>
             <Box height={'33.333%'} >
               <Divider orientation='vertical' variant='fullwidth'  sx={{
               }}>
-                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
-                  <Typography sx={{position: 'absolute', right:'80%'}}>Notre Mission</Typography>
-                  <Chip sx={{width:26, height:26 }}/>
+                <Stack direction='row' justifyContent='center' onClick={()=>setMission('mission')}
+                  sx={{
+                    position:'relative',
+                    '&:hover':{
+                      cursor: 'pointer',
+                      '& .hoverbutton': {
+                        backgroundColor: '#8BBC1F'
+                      },
+                      '& .hovertext': {
+                        fontWeight: 'bold',
+                        fontSize: 16,
+                        fontStyle: 'Assistant'
+                      }
+                    }
+                    
+                  }}>
+                  <Typography className={ mission === 'mission' ? 'hovertext missionTextActive': 'hovertext'} 
+                    sx={{
+                      position: 'absolute', 
+                      right:'80%',
+                      fontSize: 13
+                      }}>
+                      Notre Mission
+                  </Typography>
+                  
+                  <Chip className={ mission === 'mission' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                    sx={{
+                      width:26, 
+                      height:26,
+                      
+                    }}
+                    />
+                  
                 </Stack>
               </Divider>
             </Box>
             <Box height={'33.333%'} >
               <Divider orientation='vertical' variant='fullwidth'  sx={{
               }}>
-                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
-                  <Typography sx={{position: 'absolute', right:'80%'}}>Notre Histoire</Typography>
-                  <Chip sx={{width:26, height:26 }}/>
-                </Stack>
-              </Divider>
+              <Stack direction='row' justifyContent='center' onClick={()=>setMission('histoire')}
+                sx={{
+                  position:'relative',
+                  '&:hover':{
+                    cursor: 'pointer',
+                    '& .hoverbutton': {
+                      backgroundColor: '#8BBC1F'
+                    },
+                    '& .hovertext': {
+                      fontWeight: 'bold',
+                      fontSize: 16,
+                      fontStyle: 'Assistant'
+                    }
+                  }
+                  
+                }}>
+                <Typography className={ mission === 'histoire' ? 'hovertext missionTextActive': 'hovertext'} 
+                  sx={{
+                    position: 'absolute', 
+                    right:'80%',
+                    fontSize: 13
+                    }}>
+                    Notre Histoire
+                </Typography>
+                
+                <Chip className={ mission === 'histoire' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{
+                    width:26, 
+                    height:26,
+                    
+                  }}
+                  />
+                
+              </Stack>
+            </Divider>
             </Box>
             <Box height={'33.333%'} >
               <Divider orientation='vertical' variant='fullwidth'  sx={{
               }}>
-                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
-                  <Typography sx={{position: 'absolute', right:'80%'}}>Nos valeurs</Typography>
-                  <Chip sx={{width:26, height:26 }}/>
-                </Stack>
-              </Divider>
+              <Stack direction='row' justifyContent='center' onClick={()=>setMission('valeurs')}
+                sx={{
+                  position:'relative',
+                  '&:hover':{
+                    cursor: 'pointer',
+                    '& .hoverbutton': {
+                      backgroundColor: '#8BBC1F'
+                    },
+                    '& .hovertext': {
+                      fontWeight: 'bold',
+                      fontSize: 16,
+                      fontStyle: 'Assistant'
+                    }
+                  }
+                  
+                }}>
+                <Typography className={ mission === 'valeurs' ? 'hovertext missionTextActive': 'hovertext'} 
+                  sx={{
+                    position: 'absolute', 
+                    right:'80%',
+                    fontSize: 13
+                    }}>
+                    Nos Valeurs
+                </Typography>
+                
+                <Chip className={ mission === 'valeurs' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{
+                    width:26, 
+                    height:26,
+                    
+                  }}
+                  />
+                
+              </Stack>
+            </Divider>
             </Box>
           </Box>
           {/* 

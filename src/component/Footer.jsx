@@ -16,7 +16,7 @@ const pages = [
       link: ''
     },
     {
-      text:"Nos Produit",
+      text:"Notre solution",
       link: 'products'
     },
     {
@@ -38,7 +38,7 @@ export const Footer = () => {
         }}>
             
         <Grid container display={'flex'} justifyContent={'center'}>
-            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3}>
+            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3} marginX={{xs:1,md:0}}>
                 <Stack direction={'row'} alignItems={'center'} justifyContent={'center'} spacing={2}>
                     <Typography color={'white'}>S’abonner aux Newsletters</Typography>
                     <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white'}}

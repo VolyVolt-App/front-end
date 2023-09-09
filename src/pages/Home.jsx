@@ -95,15 +95,15 @@ export const Home = () => {
   return (
   <>
     
-    <Grid container px={14} pt={9} sx={{
+    <Grid container px={{xs:2,md:14}} pt={9} sx={{
         backgroundColor: '#082D0E'
       }} >
 
       <Typography align='center' variant='h5' sx={{
         color: '#96CC1E',
-        //fontSize: 22,
+        fontSize: {xs:18,md:23},
         fontWeight: 'bold',
-        //fontFamily: 'Assistant',
+        fontFamily: 'Assistant',
       }}>
         Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
       </Typography>
@@ -114,15 +114,18 @@ export const Home = () => {
       sx={{
         backgroundColor: '#082D0E'
       }}>
-      <Grid item xs={12} md={5}>
-        <Typography variant='h6' mt={3} color={'white'}>
+      <Grid item xs={12} md={5} px={1}>
+        <Typography variant='h6' mt={3} color={'white'}
+        sx={{
+        fontFamily: 'Assistant',
+        }}>
         Imaginez un avenir où votre engagement a le pouvoir de faire briller un foyer et d’inspirer des sourires au sein des communautés rurales. 
         </Typography>
         <Typography sx={{color: '#bbb'}}>
         Collaborer avec VolyVolt, c'est bien plus que cultiver de l'énergie durable, c'est semer la transformation,  récolter la gratitude de ceux que vous aidez. 
         </Typography>
 
-        <Box mt={2}>
+        <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}}>
           <Button variant='contained' size='small' sx={{ color: '#fff'}} >NOTRE SOLUTION</Button> 
           <Button variant='outlined' size='small'
             sx={{
@@ -137,7 +140,9 @@ export const Home = () => {
       <Box
          component={'img'}
          sx={{
-          width: 450,
+          width: {md:450, xs:'95%'},
+          mt:{xs:3,md:0},
+          
          // maxHeight: { xs: 50, md: 60},
          // maxWidth: {xs: 50, md: 60 }
          }}
@@ -147,10 +152,15 @@ export const Home = () => {
       </Grid> {/* end grid */}
 
     </Grid> {/*end container */}
+
     <Typography variant='h5' align='center' p={2} sx={{
       backgroundColor: '#082D0E',
-      color: '#ffbe18'
-    }}>“Illuminer les cœurs, semer le changement et éclairer les foyers”</Typography>
+      fontFamily: 'Assistant',
+      color: '#ffbe18',
+      pb:3,
+      pt:3
+    }}>“Illuminer les cœurs, semer le changement et éclairer les foyers”
+    </Typography>
 {/* end voloan */}
 {/* faharoa */}
     <Grid container
@@ -229,11 +239,10 @@ export const Home = () => {
 {/* end faharoa */}
 
 {/* mission */}
-    <Grid container px={6} py={3}>
+    <Grid container px={{xs:2, md:6}} py={3}>
       <Grid item xs={10} sm={10} md={10} >
         <Typography variant='h5' sx={{
           color: '#638715',
-          textDecoration: 'underline',
           fontWeight: 'bold'
         }}>MISSION DE VOLYVOLT</Typography>
 
@@ -258,7 +267,7 @@ export const Home = () => {
 
 {/* cibles*/}
     {/* video */}
-    <Grid container px={6} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
+    <Grid container px={{xs:1,md:6}} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
             <Grid item xs={12} sm={12} md={6}>
               <Box
                 component={'img'}
@@ -271,12 +280,11 @@ export const Home = () => {
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6} >
-              <Box margin={'0px auto'} width={'80%'}>
-              <Typography variant='h6' align='center' pb={3}
+              <Box margin={'0px auto'} width={{xs:'100%',md:'80%'}}>
+              <Typography variant='h6' align='center' pb={3} pt={{xs:3,md:0}}
                 sx={{
                   color: '#8BBC1F',
                   fontWeight: 'bold',
-                  textDecoration: 'underline'
                 }}>À QUI S’ADRESSE LA SOLUTION VOLYVOLT?
               </Typography>
               <Typography color={'white'}>Notre solution d'électrification rurale est spécialement conçue pour : </Typography>
@@ -298,11 +306,10 @@ export const Home = () => {
 
 {/* ODD */}
     <Grid container sx={{backgroundColor: '#082D0E'}} py={2} >
-      <Typography variant='h6'  pb={3} px={6}
+      <Typography variant='h6'  pb={3} px={{xs:1,md:6}}
           sx={{
             color: '#8BBC1F',
             fontWeight: 'bold',
-            textDecoration: 'underline'
           }}>
             Comment participons-nous à l’atteinte des ODD?
         </Typography>
@@ -483,17 +490,18 @@ export const Home = () => {
 
 
 {/* impact */}
-    <Grid container sx={{backgroundColor:'#FFC000'}} p={6}>
+    <Grid container sx={{backgroundColor:'#FFC000'}} p={{xs:2,md:6}}>
       <Grid item xs={6} md={3}>
          <Typography variant='h2' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontSize: {xs:30,md:59}
          }}>
           +45
          </Typography>
          <Typography variant='h6' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
          }}>
          Communes touchées
          </Typography>
@@ -502,13 +510,14 @@ export const Home = () => {
       <Grid item xs={6} md={3}>
          <Typography variant='h2' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontSize: {xs:30,md:59}
          }}>
           +200
          </Typography>
          <Typography variant='h6' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
          }}>
          Foyers  éclairés
          </Typography>
@@ -517,28 +526,30 @@ export const Home = () => {
       <Grid item xs={6} md={3}>
          <Typography variant='h2' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontSize: {xs:30,md:59}
          }}>
           45
          </Typography>
          <Typography variant='h6' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
          }}>
          Partenaires de projets  
          </Typography>
       </Grid>{/* end item */}
 
-      <Grid item xs={6} md={3}>
+      <Grid item xs={6} md={3} >
          <Typography variant='h2' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          fontSize: {xs:30,md:59}
          }}>
           +90
          </Typography>
          <Typography variant='h6' align='center'
          sx={{
-          fontWeight: 'bold'
+          fontWeight: 'bold',
          }}>
          Emplois créés
          </Typography>
@@ -548,8 +559,8 @@ export const Home = () => {
 {/* end impact */}
 
 {/* article */}
-    <Box backgroundColor={'#CACEB1'} p={4}> 
-      <Typography variant='h5' align='center'
+    <Box backgroundColor={'#CACEB1'} p={{xs:0,md:4}} > 
+      <Typography variant='h5' align='center' pt={{xs:4,md:0}}
         sx={{
           color: '#6D3F0D',
         }}>

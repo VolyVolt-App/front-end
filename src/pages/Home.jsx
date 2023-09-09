@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Button } from '@mui/material'
+import { Grid, Box, Typography, Button, Divider, Stack, Chip } from '@mui/material'
 import React, { useEffect, useRef } from 'react'
 import '../styles/accordion.css'
 
@@ -23,6 +23,7 @@ import { ReactComponent as OddThirteen } from '../asset/image/odd13_adobe_expres
 import { ReactComponent as OddSeventeen } from '../asset/image/odd17.svg'
 
 import { Articles } from '../component/Home/Articles'
+import zIndex from '@mui/material/styles/zIndex'
 
 
 
@@ -239,12 +240,54 @@ export const Home = () => {
 {/* end faharoa */}
 
 {/* mission */}
-    <Grid container px={{xs:2, md:6}} py={3}>
-      <Grid item xs={10} sm={10} md={10} >
-        <Typography variant='h5' sx={{
+    <Grid container pl={{xs:2, md:6}} pr={{xs:2, md:0}} py={3} justifyContent={'space-between'}>
+      {/* nav on small */}
+      <Grid item xs={12} sm={12} display={{xs:'block',md:'none'}} >
+        <Box display={'flex'} mb={3} mt={6}>
+          <Box width={'33.333%'} position={'relative'}>     
+            <Divider variant='fullwidth'>
+              <Typography sx={{
+                position: 'absolute',
+                top: -25,
+                right: '20%',
+              }}>Notre Mission</Typography>
+              <Chip sx={{width:26, height:26 }}/>
+            </Divider>
+          </Box>
+          <Box width={'33.333%'} position={'relative'}>     
+            <Divider variant='fullwidth'>
+              <Typography sx={{
+                position: 'absolute',
+                top: -25,
+                right: '20%',
+              }}>Notre Mission</Typography>
+              <Chip sx={{width:26, height:26 }}/>
+            </Divider>
+          </Box>
+          <Box width={'33.333%'} position={'relative'}>     
+            <Divider variant='fullwidth'>
+              <Typography sx={{
+                position: 'absolute',
+                top: -25,
+                right: '20%',
+              }}>Notre Mission</Typography>
+              <Chip sx={{width:26, height:26 }}/>
+            </Divider>
+          </Box>
+        </Box>
+        
+      </Grid>
+      {/* end nav on small */}
+      <Grid item xs={12} sm={12} md={10} >
+        <Typography variant='h5' 
+        sx={{
           color: '#638715',
-          fontWeight: 'bold'
-        }}>MISSION DE VOLYVOLT</Typography>
+          fontWeight: 'bold',
+          width:'fit-content'
+        }}>MISSION DE VOLYVOLT
+        
+        <Divider variant="fullwidth" sx={{ borderBottomWidth: 2, mt:1 }} />
+        </Typography>
 
         <Typography py={2} sx={{fontSize: 20}}>
         Résoudre le problème d'électrification rurale à Madagascar en permettant aux ménages d'accéder à une solution énergétique verte, durable et à coût abordable 
@@ -258,7 +301,49 @@ export const Home = () => {
         La particularité de notre solution réside dans l'utilisation de la technologie des piles microbiennes. Grâce à des bactéries situées au niveau des racines des plantes, nous générons de l'électricité de manière propre et durable, offrant ainsi une source d'énergie verte à ces communautés. 
         </Typography>
       </Grid>
-      <Grid item xs={2} sm={2} md={2} backgroundColor={'main'}>
+      <Grid item xs={2} sm={2} md={1} display={{xs:'none',md:'block'}}>
+          <Box display={'flex'} flexDirection={'column'} alignItems={'stretch'} height={'100%'}>
+            <Box height={'33.333%'} >
+              <Divider orientation='vertical' variant='fullwidth'  sx={{
+              }}>
+                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
+                  <Typography sx={{position: 'absolute', right:'80%'}}>Notre Mission</Typography>
+                  <Chip sx={{width:26, height:26 }}/>
+                </Stack>
+              </Divider>
+            </Box>
+            <Box height={'33.333%'} >
+              <Divider orientation='vertical' variant='fullwidth'  sx={{
+              }}>
+                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
+                  <Typography sx={{position: 'absolute', right:'80%'}}>Notre Histoire</Typography>
+                  <Chip sx={{width:26, height:26 }}/>
+                </Stack>
+              </Divider>
+            </Box>
+            <Box height={'33.333%'} >
+              <Divider orientation='vertical' variant='fullwidth'  sx={{
+              }}>
+                <Stack direction='row' justifyContent='center' sx={{position:'relative'}}>
+                  <Typography sx={{position: 'absolute', right:'80%'}}>Nos valeurs</Typography>
+                  <Chip sx={{width:26, height:26 }}/>
+                </Stack>
+              </Divider>
+            </Box>
+          </Box>
+          {/* 
+          <Divider orientation='vertical' variant='fullwidth'  sx={{
+            }}>
+              <Stack direction='row' justifyContent='center' sx={{ marginRight:5}} spacing={1}>
+                <Typography>feno</Typography>
+                <Chip sx={{width:26, height:26}}/>
+              </Stack>
+          </Divider>
+        
+          */}
+        
+        
+    
         
       </Grid>
 
@@ -306,13 +391,15 @@ export const Home = () => {
 
 {/* ODD */}
     <Grid container sx={{backgroundColor: '#082D0E'}} py={2} >
-      <Typography variant='h6'  pb={3} px={{xs:1,md:6}}
+      <Typography variant='h6'  pb={3} px={{xs:1,md:6}} 
           sx={{
             color: '#8BBC1F',
             fontWeight: 'bold',
           }}>
             Comment participons-nous à l’atteinte des ODD?
+            <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
         </Typography>
+        
       <Grid item xs={12} md={12} lg={12}>
         <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} >
             

@@ -17,9 +17,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger'
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
 
 
-import logo from '../asset/image/volivolt-logo-alt-white 2.png'
-import { useTheme } from '@mui/material'
-import { GifBox } from '@mui/icons-material'
 
 //import {ReactComponent as LogoMiniXs} from '../image/logo-mini-xs.svg'
 
@@ -70,17 +67,13 @@ const pages = [
 
 export const Header = (props) => {
 
-  const theme = useTheme()
 
     const [anchorElNav, setAnchorElNav] = useState(null)
-  const [anchorElUser, setAnchorElUser] = useState(null)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
   }
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget)
-  }
+
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)

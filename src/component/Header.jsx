@@ -3,18 +3,19 @@ import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
 import IconButton from "@mui/material/IconButton"
-import Typography from "@mui/material/Typography"
-import Menu from "@mui/material/Menu"
+
 import MenuIcon from "@mui/icons-material/Menu"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
-import MenuItem from "@mui/material/MenuItem"
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
+
+import ClearIcon from '@mui/icons-material/Clear';
 
 import PropTypes from 'prop-types'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
+import { Drawer, List, ListItem, ListItemText } from '@mui/material'
 
 
 
@@ -69,16 +70,18 @@ export const Header = (props) => {
 
 
     const [anchorElNav, setAnchorElNav] = useState(null)
+    const [collapse, setCollapse] = useState(false)
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
+    setCollapse(true)
   }
 
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
   }
-
  
   return (
     
@@ -110,7 +113,7 @@ export const Header = (props) => {
               <MenuIcon />
             </IconButton>
             {/* nav ref @small */}
-            <Menu
+           {/*  <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -133,7 +136,40 @@ export const Header = (props) => {
                   <Typography textAlign="center">{page.text}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+              </Menu>*/}
+               <Drawer
+                      open={collapse}
+                      onClose={()=>setCollapse(false)}
+                      PaperProps={{
+                          elevation: 8,
+                          sx: {
+                              mt: 6,
+                              ml:4,
+                              width: 200,
+                              height: 'fit-content',
+                              color: "#fff",
+                              backgroundColor: "#8BBC1F",
+                              fontFamily: 'Astro'
+                          }
+                      }}
+                  >
+                  <Box position={'relative'}>
+                    <Box sx={{ position: 'absolute',width: 'fit-content', right: 2, top: 2, zIndex: 4}}>
+                    <IconButton onClick={()=>setCollapse(false)}>
+                        <ClearIcon/>
+                      </IconButton>
+                    </Box>
+                    <List>
+                      {pages.map((page, index) => (
+                        <ListItem button key={page.text}>
+                          <Link to={`/${page.link}`} style={{fontFamily:'Astro',textDecoration: 'none', color: 'white'}}>
+                            <ListItemText primary={page.text} onClick={()=>setCollapse(false)}/>
+                          </Link>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                </Drawer>
             
           </Box>
           <Box sx={{

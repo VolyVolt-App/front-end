@@ -1,8 +1,9 @@
-import { Box, Divider, Grid, Stack, Typography } from '@mui/material'
+import { Box, Divider, Grid, Typography } from '@mui/material'
 import React from 'react'
 
 
 import bannerImage from '../asset/image/Group 104.png'
+import bannerVideo from '../asset/image/Group 103.png'
 
 export const Solution = () => {
   return (
@@ -45,19 +46,38 @@ export const Solution = () => {
             <Typography variant='h6' sx={{color: '#08280D', fontSize:15}}>
                 ENERGIE À PARTIR DES CULTURES
             </Typography>
-            <Typography variant='h6' color={'white'}>
+            <Typography variant='h6' color={'white'} mb={3}>
             Techniquement, comment ça fonctionne ..?
             </Typography>
 
             
-            
-            <Typography color={'white'} mt={3}>
-            <Divider orientation='vertical' variant='fullwidth'  />
-            Le fonctionnement de VolyVolt est basé sur une technologie appelée "pile microbienne". Ces piles utilisent des micro-organismes, tels que des bactéries, pour produire de l'électricité. Les bactéries présentes dans les racines des plantes consomment des matières organiques et libèrent des électrons lors de leur dégradation. Ces électrons sont ensuite capturés par un circuit électrique, générant ainsi de l'électricité pour alimenter les équipements tels que les lampes, les chargeurs de téléphone et les radios.
-            </Typography>
+            <Grid container>
+              <Grid item xs={0.1} md={0.1}>
+                <Divider orientation="vertical"  sx={{ borderLeftWidth: 5,borderRightWidth: 0, borderColor: '#A8E71C' }} />
+              </Grid>
+              <Grid item xs={11.9} md={11.9}>    
+                <Typography color={'white'} px={1} >
+                Le fonctionnement de VolyVolt est basé sur une technologie appelée "pile microbienne". Ces piles utilisent des micro-organismes, tels que des bactéries, pour produire de l'électricité. Les bactéries présentes dans les racines des plantes consomment des matières organiques et libèrent des électrons lors de leur dégradation. Ces électrons sont ensuite capturés par un circuit électrique, générant ainsi de l'électricité pour alimenter les équipements tels que les lampes, les chargeurs de téléphone et les radios.
+                </Typography>
+              </Grid>
+            </Grid>{/*end mini container */}
             
         </Grid>
-      </Grid>
+        <Grid item xs={12} md={4} >
+            <Box
+                component={'img'}
+                sx={{
+                    width: {md:'100%',lg:'80%', xs:'95%'},
+                    mt: 'auto',
+                    
+                    // maxHeight: { xs: 50, md: 60},
+                    // maxWidth: {xs: 50, md: 60 }
+                }}
+                alt="rdf"
+                src= {bannerVideo}
+            />
+        </Grid>
+      </Grid>{/*end container */}
     </>
   )
 }

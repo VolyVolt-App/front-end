@@ -8,6 +8,13 @@ import bannerVideo from '../asset/image/Group 103.png'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Analyse } from '../component/solution/Analyse';
 
+import { ReactComponent as IconContact } from '../asset/icon/icons-contact.svg'
+import { ReactComponent as IconConvention } from '../asset/icon/icons-convention.svg'
+import { ReactComponent as IconDevis } from '../asset/icon/icons-devis.svg'
+import { ReactComponent as IconEvaluation } from '../asset/icon/icons-evaluation.svg'
+import { ReactComponent as IconAnalyse } from '../asset/icon/icons-analyse.svg'
+import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oeuvre.svg'
+
 export const Solution = () => {
  /* const AccordionSummary = ({
     root: {
@@ -42,7 +49,7 @@ export const Solution = () => {
         </Grid>
         <Grid item xs={12} md={6} px={2}>
             <Typography variant='h6' sx={{color: '#8BBC1F', fontSize:15}}>
-            L'ENERGIE VERTE AU COEUR DE VOS ACTIONS
+            L'ÉNERGIE VERTE AU COEUR DE VOS ACTIONS
             </Typography>
             <Typography variant='h6' color={'white'} fontWeight={'bold'} my={2}>
             Embarquez aujourd'hui dans le courant de l'énergie verte et osez faire la différence au cœur des communautés rurales.
@@ -59,7 +66,7 @@ export const Solution = () => {
       }}>
         <Grid item xs={12} md={8} >
             <Typography variant='h6' sx={{color: '#08280D', fontSize:15}}>
-                ENERGIE À PARTIR DES CULTURES
+            ÉNERGIE À PARTIR DES CULTURES
             </Typography>
             <Typography variant='h6' color={'white'} mb={3}>
             Techniquement, comment ça fonctionne ..?
@@ -78,7 +85,7 @@ export const Solution = () => {
             </Grid>{/*end mini container */}
             
         </Grid>
-        <Grid item xs={12} md={4} >
+        <Grid item xs={12} md={4} pt={{xs:3, md:0}} >
             <Box
                 component={'img'}
                 sx={{
@@ -114,7 +121,7 @@ export const Solution = () => {
         <Divider variant="middle" sx={{ borderBottomWidth: 2, bgcolor: '#638715', mt:3, width:'60%', m: '0px auto' }} />
 
         <Typography variant='h6' sx={{color: '#08280D', fontSize:18, mt:3}}>
-        DE VOS BESOINS A UNE ELECTRIFICATION RURALE REUSSIE
+        DE VOS BESOINS A UNE ÉLECTRIFICATION RURALE REUSSIE
         </Typography>
         <Typography variant='h5'  mb={3} sx={{color: '#638715'}}>
             Processus de collaboration et de personnalisation chez VolyVolt
@@ -123,7 +130,118 @@ export const Solution = () => {
         <Typography >
         Chez VolyVolt, nous comprenons que chaque projet est unique et nécessite une approche personnalisée pour assurer un impact positif durable. Notre processus est conçu pour vous fournir des solutions sur mesure qui sont alignées sur vos objectifs et répondent aux besoins spécifiques des communautés que vous servez.
         </Typography>
+
+        
       </Box>
+      <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} py={3}>
+
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              p:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>1.PRISE DE CONTACT</Typography>
+              <IconContact width={100} height={100}/>
+          </Box>
+
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              py:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>2.ANALYSE ET CONSULTATION</Typography>
+              <IconAnalyse width={150} height={150}/>
+          </Box>
+
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              py:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>3.DEVIS PERSONNALISÉ</Typography>
+              <IconDevis width={150} height={150}/>
+          </Box>
+            
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              py:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>4.VALIDATION  & ACCORDS</Typography>
+              <IconConvention width={150} height={150}/>
+          </Box>
+
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              py:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>5.MISE EN OEUVRE</Typography>
+              <IconMiseOeuvre width={150} height={150}/>
+          </Box>
+          <Box 
+            sx={{
+              width: 220,
+              height: 180,
+              bgcolor: '#638715',
+              borderTopLeftRadius: 20,
+              borderBottomRightRadius: 20,
+              py:3,
+              m:1,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}>
+              <Typography align='center' color={'white'}>5.ÉVALUATION </Typography>
+              <IconEvaluation width={150} height={150}/>
+          </Box>
+        </Box>
       {/* END OFFRE */}
 
       {/* FOIRE AUX QUESTION */}
@@ -134,8 +252,8 @@ export const Solution = () => {
         </Typography>
       </Grid>
       <Grid container display={'flex'} justifyContent={'center'} pb={3}>
-        <Grid item xs={12} md={8}>
-          <Accordion>
+        <Grid item xs={12} md={8} sx={{ mx:{xs:1, md:0}}}>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -156,7 +274,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -177,7 +295,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -198,7 +316,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -219,7 +337,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -240,7 +358,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -261,7 +379,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -282,7 +400,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -294,16 +412,16 @@ export const Solution = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails
-            sx={{
-              bgcolor: '#E4EFC38A'
-            }}>
+              sx={{
+                bgcolor: '#E4EFC38A'
+              }}>
               <Typography>
               Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
               </Typography>
             </AccordionDetails>
           </Accordion>
 
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"
@@ -324,7 +442,7 @@ export const Solution = () => {
             </AccordionDetails>
           </Accordion>
           
-          <Accordion>
+          <Accordion sx={{my:1}}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
               aria-controls="panel1a-content"

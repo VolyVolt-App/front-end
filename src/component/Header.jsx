@@ -149,7 +149,8 @@ export const Header = (props) => {
                               height: 'fit-content',
                               color: "#fff",
                               backgroundColor: "#8BBC1F",
-                              fontFamily: 'Astro'
+                              fontFamily: 'Astro',
+                              borderRadius: 2,
                           }
                       }}
                   >

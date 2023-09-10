@@ -78,21 +78,21 @@ export const Footer = () => {
         
         <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
         <Grid container display={'flex'} justifyContent={'space-between'} p={1}>
-            <Grid item xs={12} sm={3} >
+            <Grid item xs={12} sm={3} my={1}>
                 <Typography color={'white'} align='center'
                 sx={{
                     fontSize: '12px'
                 }}>
-                    &copy;2023 Tous droit reserves
+                    &copy;2023 Tous droit réservés
                 </Typography>
             </Grid>{/*end grid item*/}
 
-            <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'}>
+            <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'} my={1}>
                 <Logo width={80}
                 />
             </Grid>{/*end grid item*/}
 
-            <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'}>
+            <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'} my={2}>
                 <Typography color={'white'} 
                     sx={{
                     fontSize: '12px'}}>

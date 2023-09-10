@@ -179,7 +179,7 @@ export const Home = () => {
 {/* faharoa */}
     <Grid container
       sx={{
-        backgroundColor: '#8BBC1F',
+        backgroundColor: '#638715',
       }}>
 
       <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}

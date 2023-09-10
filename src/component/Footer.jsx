@@ -1,4 +1,4 @@
-import { Box, Button, Grid, InputAdornment, Stack, TextField, Typography } from '@mui/material'
+import { Box, Button, Divider, Grid, InputAdornment, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ const pages = [
     },
     {
       text:"Notre solution",
-      link: 'products'
+      link: 'solution'
     },
     {
       text:"Espace Client",
@@ -76,6 +76,7 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
         </Grid>{/*end grid container*/}
         
+        <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
         <Grid container display={'flex'} justifyContent={'space-between'} p={1}>
             <Grid item xs={12} sm={3} >
                 <Typography color={'white'} align='center'

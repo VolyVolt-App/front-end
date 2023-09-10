@@ -27,7 +27,7 @@ const pages = [
     },
     {
       text:"NOTRE SOLUTION",
-      link: 'products'
+      link: 'solution'
     },
     {
       text:"ESPACE CLIENT",
@@ -158,7 +158,7 @@ export const Header = (props) => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-               <Link to={`/${page.link}`} style={{textDecoration: 'none', color: 'white'}}>{page.text}</Link> 
+               <Link to={`/${page.link}`} style={{fontFamily:'Astro',textDecoration: 'none', color: 'white'}}>{page.text}</Link> 
               </Button>
             ))}
           </Box>

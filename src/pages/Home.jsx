@@ -118,7 +118,6 @@ export const Home = () => {
         color: '#96CC1E',
         fontSize: {xs:18,md:23},
         fontWeight: 'bold',
-        fontFamily: 'Assistant',
       }}>
         Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
       </Typography>
@@ -272,7 +271,7 @@ export const Home = () => {
           fontWeight: 'bold',
           fontSize: 16,
           fontStyle: 'Assistant',
-          right: '20%',
+          right: {xs:'10%',sm:'20%'},
         },
         '& .missionButtonActive': {
           backgroundColor: '#8BBC1F'
@@ -291,7 +290,7 @@ export const Home = () => {
                 fontWeight: 'bold',
                 fontSize: 16,
                 fontStyle: 'Assistant',
-                right: '20%',
+                right: {xs:'18%',sm:'20%'},
               }
               }
           }}>     
@@ -301,7 +300,7 @@ export const Home = () => {
               sx={{
                 position: 'absolute',
                 top: -25,
-                right: '28%',
+                right: {xs:'20%',sm:'28%'},
                 fontSize: 13
               }}>Notre Mission</Typography>
               <Chip 
@@ -320,7 +319,7 @@ export const Home = () => {
                 fontWeight: 'bold',
                 fontSize: 16,
                 fontStyle: 'Assistant',
-                right: '20%',
+                right: {xs:'18%',sm:'20%'},
               }
               }
           }}>     
@@ -330,7 +329,7 @@ export const Home = () => {
               sx={{
                 position: 'absolute',
                 top: -25,
-                right: '28%',
+                right: {xs:'20%',sm:'28%'},
                 fontSize: 13
               }}>Notre Histoire</Typography>
               <Chip 
@@ -350,7 +349,7 @@ export const Home = () => {
                 fontWeight: 'bold',
                 fontSize: 16,
                 fontStyle: 'Assistant',
-                right: '20%',
+                right: {xs:'18%',sm:'20%'},
               }
               }
           }}>     
@@ -360,7 +359,7 @@ export const Home = () => {
               sx={{
                 position: 'absolute',
                 top: -25,
-                right: '28%',
+                right: {xs:'25%',sm:'28%'},
                 fontSize: 13
               }}>Nos Valeurs</Typography>
               <Chip 
@@ -553,6 +552,8 @@ export const Home = () => {
                   color: '#8BBC1F',
                   fontWeight: 'bold',
                 }}>À QUI S’ADRESSE LA SOLUTION VOLYVOLT?
+                
+                <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
               </Typography>
               <Typography color={'white'}>Notre solution d'électrification rurale est spécialement conçue pour : </Typography>
               <ul>

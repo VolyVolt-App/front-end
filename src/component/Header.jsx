@@ -31,7 +31,7 @@ const pages = [
       link: 'solution'
     },
     {
-      text:"ESPACE CLIENT",
+      text:"IMPACTS SOCIAUX",
       link: 'client'
     },
     {

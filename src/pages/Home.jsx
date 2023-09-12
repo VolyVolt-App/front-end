@@ -125,7 +125,8 @@ export const Home = () => {
     
     <Grid container px={{xs:2,md:14}} pt={9} sx={{
         backgroundColor: '#082D0E'
-      }} >
+        
+      }}>
 
       <Typography component={motion.h5} align='center' variant='h5' sx={{
         color: '#96CC1E',
@@ -171,7 +172,7 @@ export const Home = () => {
       <Box
          component={motion.img}
          sx={{
-          width: {md:450, xs:'95%'},
+          width: {md:450, xs:'100%'},
           mt:{xs:3,md:0},
           
          // maxHeight: { xs: 50, md: 60},

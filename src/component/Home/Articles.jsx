@@ -10,14 +10,14 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
         <Box
          component={'img'}
          sx={{
-            width:{xs: '100%'}
+            width:{xs: '100%'},
          }}
          alt="rdf"
          src= {articleImage}
         />
 
-        <Typography sx={{py:1}}>{subheading}</Typography>
-        <Typography variant='h5' 
+        <Typography sx={{py:1}} color={'white'}>{subheading}</Typography>
+        <Typography variant='h5'  color={'white'}
         sx={{
             fontWeight: 'bold'
         }}
@@ -26,8 +26,8 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
         </Typography>
         <Stack direction={'row'} spacing={1}>
             <Box display={'flex'} alignItems={'center'}>
-                <CalendarTodayIcon sx={{fontSize: 15}}/>
-                <Typography 
+                <CalendarTodayIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
+                <Typography  color={'white'}
                     sx={{
                         fontSize: 10,
                         marginLeft:'2px'
@@ -36,11 +36,12 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
                 </Typography>
             </Box>
             <Box display={'flex'} alignItems={'center'} >
-                <ChatBubbleOutlineIcon sx={{fontSize: 15}}/>
+                <ChatBubbleOutlineIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
                 <Typography
                     sx={{
                         fontSize: 10,
-                        marginLeft: '2px'
+                        marginLeft: '2px',
+                        color: 'white'
                     }}> 
                         
                         {nombre} commentaires
@@ -50,7 +51,8 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
         <Typography 
             sx={{
                 paddingTop: 2,
-                paddingBottom: 1
+                paddingBottom: 1,
+                color: 'white'
             }}>
                 {text}
         </Typography>

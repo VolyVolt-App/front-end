@@ -1,5 +1,5 @@
-import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography } from '@mui/material'
-import React from 'react'
+import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography, Chip } from '@mui/material'
+import React, { useState } from 'react'
 
 
 import bannerImage from '../asset/image/Group 104.png'
@@ -14,20 +14,13 @@ import { ReactComponent as IconDevis } from '../asset/icon/icons-devis.svg'
 import { ReactComponent as IconEvaluation } from '../asset/icon/icons-evaluation.svg'
 import { ReactComponent as IconAnalyse } from '../asset/icon/icons-analyse.svg'
 import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oeuvre.svg'
+import { Processus } from '../component/solution/Processus';
 
 export const Solution = () => {
- /* const AccordionSummary = ({
-    root: {
-      flexDirection: "column"
-    },
-    content: {
-      marginBottom: 0
-    },
-    expandIcon: {
-      marginRight: 0,
-      paddingTop: 0
-    }
-  })(MuiAccordionSummary);*/
+
+  //mission
+  const [solution, setSolution] = useState('analyse')
+
   return (
     <>
     <Grid container px={{xs:2,md:14}} pt={9} pb={3} sx={{
@@ -117,6 +110,235 @@ export const Solution = () => {
 
         </Typography>
 
+        {/* action */}
+        <Grid container px={1}>
+          <Grid item xs={12} sm={6} md={4}
+            sx={{
+              '& .missionTextActive': {
+                fontWeight: 'bold',
+                fontStyle: 'Assistant',
+              },
+              '& .missionButtonActive': {
+                backgroundColor: '#8BBC1F'
+              }
+            }} >
+            <Box display={'flex'} mb={6} mt={3}>
+
+              <Box width={'50%'} position={'relative'} onClick={()=>setSolution('analyse')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                  }
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'analyse' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'19%',sm:'21%'},
+                    fontSize: 13
+                  }}>Analyse et consultation</Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>1</Typography>
+                  <Chip 
+                  className={ solution === 'analyse' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+              
+              <Box width={'50%'} position={'relative'} onClick={()=>setSolution('installation')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                  }
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'installation' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'13%',sm:'21%'},
+                    fontSize: 13
+                  }}>Installation des Générateurs</Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>2</Typography>
+                  <Chip 
+                  className={ solution === 'installation' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+              
+            </Box>
+            
+          </Grid>
+          
+          <Grid item xs={12} sm={6} md={4}
+            sx={{
+              '& .missionTextActive': {
+                fontWeight: 'bold',
+                fontStyle: 'Assistant',
+              },
+              '& .missionButtonActive': {
+                backgroundColor: '#8BBC1F'
+              }
+            }} >
+            <Box display={'flex'} mb={6} mt={3}>
+
+            <Box width={'50%'} position={'relative'} onClick={()=>setSolution('distribution')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                  }
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'distribution' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'5%',sm:'10%'},
+                    fontSize: 13
+                  }}>Distribution des dispositifs de stcokage</Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>3</Typography>
+                  <Chip 
+                  className={ solution === 'distribution' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+              
+            <Box width={'50%'} position={'relative'} onClick={()=>setSolution('kiosque')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                  }
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'kiosque' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'5%',sm:'5%'},
+                    fontSize: 13
+                  }}>Création de kiosques de Distribution</Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>4</Typography>
+                  <Chip 
+                  className={ solution === 'kiosque' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+            
+            </Box>
+            </Grid>
+
+          <Grid item xs={12} sm={6} md={4}
+            sx={{
+              '& .missionTextActive': {
+                fontWeight: 'bold',
+                fontStyle: 'Assistant',
+              },
+              '& .missionButtonActive': {
+                backgroundColor: '#8BBC1F'
+              }
+            }} >
+            <Box display={'flex'} mb={6} mt={3}>
+
+              
+              <Box width={'50%'} position={'relative'} onClick={()=>setSolution('maintenance')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                }
+                    
+                
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'maintenance' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'20%',sm:'21%'},
+                    fontSize: 13
+                  }}>Maintenance et Entretien</Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>5</Typography>
+                  <Chip 
+                  className={ solution === 'maintenance' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+              
+              <Box width={'50%'} position={'relative'} onClick={()=>setSolution('suivi')}
+              sx={{
+                '&:hover':{
+                  cursor: 'pointer',
+                  '& .hoverbutton': {
+                    backgroundColor: '#8BBC1F'
+                },
+                '& .hovertext': {
+                    fontWeight: 'bold',
+                    fontStyle: 'Assistant',
+                  }
+                  }
+              }}>     
+                <Divider variant='fullwidth'>
+                  <Typography
+                  className={ solution === 'suivi' ? 'hovertext missionTextActive': 'hovertext'}
+                  sx={{
+                    position: 'absolute',
+                    top: 25,
+                    right: {xs:'27%',sm:'26%'},
+                    fontSize: 13
+                  }}>Suivi et rapportage </Typography>
+                  <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>6</Typography>
+                  <Chip 
+                  className={ solution === 'suivi' ? 'hoverbutton missionButtonActive': 'hoverbutton'}
+                  sx={{width:26, height:26 }}/>
+                </Divider>
+              </Box>
+              
+            </Box>
+            
+          </Grid>
+
+
+        </Grid>
+        
         <Analyse />
         <Divider variant="middle" sx={{ borderBottomWidth: 2, bgcolor: '#638715', mt:3, width:'60%', m: '0px auto' }} />
 
@@ -133,115 +355,44 @@ export const Solution = () => {
 
         
       </Box>
+
+      {/* processus */}
       <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} py={3}>
 
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              p:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>1.PRISE DE CONTACT</Typography>
-              <IconContact width={100} height={100}/>
-          </Box>
+         <Processus 
+          title={'1.PRISE DE CONTACT'} 
+          image={<IconContact width={100} height={100}/>}
+          text={"Lorsque vous envisagez de travailler avec VolyVolt, la première étape consiste à nous contacter. Vous nous faites part de vos besoins initiaux, notamment le nombre de ménages bénéficiaires, la localité et sa distance de localisation, la durée du contrat souhaitée, le nombre de kiosques de distribution souhaités, ainsi que toute limite budgétaire applicable."}
+          />
+         <Processus 
+          title={'2.ANALYSE ET CONSULTATION'} 
+          image={<IconAnalyse width={150} height={150}/>}
+          text={"Après avoir reçu vos informations initiales, nous entamons une phase d'analyse et de consultation approfondies. Nous envoyons nos spécialistes sur le terrain pour comprendre de manière concrète les particularités de la région. Cette étape vise à analyser les ressources disponibles et à identifier les meilleures approches."}
+          />
+         <Processus 
+          title={'3.DEVIS PERSONNALISÉ'} 
+          image={<IconDevis width={150} height={150}/>}
+          text={"Sur la base des informations collectées lors de l'étape précédente, nous élaborons un devis personnalisé. Ce devis détaille les coûts estimés, la planification du projet et toutes les spécifications techniques pertinentes. Il reflète précisément votre projet sur mesure."}
+          />
+         <Processus 
+          title={'4.VALIDATION  & ACCORDS'} 
+          image={<IconConvention width={150} height={150}/>}
+          text={"Une fois le devis présenté, nous apportons les ajustements nécessaires. Une fois que vous êtes satisfait du devis, nous procédons à la validation et à la formalisation de l'accord. Cela implique la finalisation du contrat, la signature des accords et la définition claire des responsabilités et des attentes de chaque partie."}
+          />
+         <Processus 
+          title={'5.MISE EN OEUVRE'} 
+          image={<IconMiseOeuvre width={150} height={150}/>}
+          text={"Avec l'accord en place, nous procédons à la mise en œuvre concrète du projet. Cela comprend l'installation des générateurs d'énergie locale, la distribution des dispositifs de stockage, la création des points de distribution d'énergie et toutes les activités nécessaires pour rendre le projet opérationnel."}
+          />
+         <Processus 
+          title={'6.ÉVALUATION'} 
+          image={<IconEvaluation width={150} height={150}/>}
+          text={"Après la mise en œuvre, notre collaboration se poursuit par le biais d'un suivi et évaluation. Nous surveillons les données de consommation et apportons des améliorations au besoin. Cette étape garantit que le projet évolue de manière optimale pour répondre aux besoins des ménages bénéficiaires."}
+          />
+      
+      </Box>
+      {/*end  processus */}
 
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              py:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>2.ANALYSE ET CONSULTATION</Typography>
-              <IconAnalyse width={150} height={150}/>
-          </Box>
-
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              py:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>3.DEVIS PERSONNALISÉ</Typography>
-              <IconDevis width={150} height={150}/>
-          </Box>
-            
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              py:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>4.VALIDATION  & ACCORDS</Typography>
-              <IconConvention width={150} height={150}/>
-          </Box>
-
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              py:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>5.MISE EN OEUVRE</Typography>
-              <IconMiseOeuvre width={150} height={150}/>
-          </Box>
-          <Box 
-            sx={{
-              width: 220,
-              height: 180,
-              bgcolor: '#638715',
-              borderTopLeftRadius: 20,
-              borderBottomRightRadius: 20,
-              py:3,
-              m:1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <Typography align='center' color={'white'}>5.ÉVALUATION </Typography>
-              <IconEvaluation width={150} height={150}/>
-          </Box>
-        </Box>
       {/* END OFFRE */}
 
       {/* FOIRE AUX QUESTION */}

@@ -2,6 +2,7 @@ import { Grid, Box, Typography, Button, Divider, Stack, Chip } from '@mui/materi
 import React, { useEffect, useRef, useState } from 'react'
 import '../styles/accordion.css'
 
+import { motion } from 'framer-motion'
 
 import bannerImage from '../asset/image/banner-image.png'
 import { ReactComponent as ValuePropositionOne } from '../asset/icon/val1.svg'
@@ -107,6 +108,18 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
   },[])
 
+  const titleVariants = {
+    initial: {
+      opacity: 0
+    },
+    visibility: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      }
+    }
+  }
+
   return (
   <>
     
@@ -114,11 +127,15 @@ export const Home = () => {
         backgroundColor: '#082D0E'
       }} >
 
-      <Typography align='center' variant='h5' sx={{
+      <Typography component={motion.h5} align='center' variant='h5' sx={{
         color: '#96CC1E',
         fontSize: {xs:18,md:23},
         fontWeight: 'bold',
-      }}>
+      }}
+        variants={titleVariants}
+        initial="initial"
+        animate="visibility"
+      >
         Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
       </Typography>
 
@@ -152,7 +169,7 @@ export const Home = () => {
       
       <Grid item xs={12} md={5} display={'flex'} pl={3} >
       <Box
-         component={'img'}
+         component={motion.img}
          sx={{
           width: {md:450, xs:'95%'},
           mt:{xs:3,md:0},
@@ -829,14 +846,16 @@ export const Home = () => {
 {/* end impact */}
 
 {/* article */}
-    <Box backgroundColor={'#CACEB1'} p={{xs:0,md:4}} > 
-      <Typography variant='h5' align='center' pt={{xs:4,md:0}}
+    <Box backgroundColor={'#2F2121'} p={{xs:0,md:4}} > 
+      <Typography variant='h5' px={2} pt={{xs:4,md:0}}
         sx={{
-          color: '#6D3F0D',
+          color: '#8BBC1F',
+          width: 'fit-content'
         }}>
           NOS ARTICLES
+          <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
       </Typography>
-      <Typography align='center'>
+      <Typography color={'white'} px={2} pt={1}>
       Restez informés sur nos actualités, et retrouvez nos sélections d’articles les plus récents
       </Typography>
       <Grid container>

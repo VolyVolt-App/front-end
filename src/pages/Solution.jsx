@@ -15,11 +15,13 @@ import { ReactComponent as IconEvaluation } from '../asset/icon/icons-evaluation
 import { ReactComponent as IconAnalyse } from '../asset/icon/icons-analyse.svg'
 import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oeuvre.svg'
 import { Processus } from '../component/solution/Processus';
+import { AvantageClient } from '../component/solution/AvantageClient';
 
 export const Solution = () => {
 
   //mission
   const [solution, setSolution] = useState('analyse')
+  const [isProcessusHover,setProcessusHover]= useState('')
 
   return (
     <>
@@ -360,31 +362,43 @@ export const Solution = () => {
       <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} py={3}>
 
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'1.PRISE DE CONTACT'} 
           image={<IconContact width={100} height={100}/>}
           text={"Lorsque vous envisagez de travailler avec VolyVolt, la première étape consiste à nous contacter. Vous nous faites part de vos besoins initiaux, notamment le nombre de ménages bénéficiaires, la localité et sa distance de localisation, la durée du contrat souhaitée, le nombre de kiosques de distribution souhaités, ainsi que toute limite budgétaire applicable."}
           />
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'2.ANALYSE ET CONSULTATION'} 
           image={<IconAnalyse width={150} height={150}/>}
           text={"Après avoir reçu vos informations initiales, nous entamons une phase d'analyse et de consultation approfondies. Nous envoyons nos spécialistes sur le terrain pour comprendre de manière concrète les particularités de la région. Cette étape vise à analyser les ressources disponibles et à identifier les meilleures approches."}
           />
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'3.DEVIS PERSONNALISÉ'} 
           image={<IconDevis width={150} height={150}/>}
           text={"Sur la base des informations collectées lors de l'étape précédente, nous élaborons un devis personnalisé. Ce devis détaille les coûts estimés, la planification du projet et toutes les spécifications techniques pertinentes. Il reflète précisément votre projet sur mesure."}
           />
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'4.VALIDATION  & ACCORDS'} 
           image={<IconConvention width={150} height={150}/>}
           text={"Une fois le devis présenté, nous apportons les ajustements nécessaires. Une fois que vous êtes satisfait du devis, nous procédons à la validation et à la formalisation de l'accord. Cela implique la finalisation du contrat, la signature des accords et la définition claire des responsabilités et des attentes de chaque partie."}
           />
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'5.MISE EN OEUVRE'} 
           image={<IconMiseOeuvre width={150} height={150}/>}
           text={"Avec l'accord en place, nous procédons à la mise en œuvre concrète du projet. Cela comprend l'installation des générateurs d'énergie locale, la distribution des dispositifs de stockage, la création des points de distribution d'énergie et toutes les activités nécessaires pour rendre le projet opérationnel."}
           />
          <Processus 
+          isProcessusHover={isProcessusHover}
+          setProcessusHover={setProcessusHover}
           title={'6.ÉVALUATION'} 
           image={<IconEvaluation width={150} height={150}/>}
           text={"Après la mise en œuvre, notre collaboration se poursuit par le biais d'un suivi et évaluation. Nous surveillons les données de consommation et apportons des améliorations au besoin. Cette étape garantit que le projet évolue de manière optimale pour répondre aux besoins des ménages bénéficiaires."}
@@ -394,6 +408,15 @@ export const Solution = () => {
       {/*end  processus */}
 
       {/* END OFFRE */}
+
+      {/* Avantage client */}
+      <Grid container>
+        <Grid item>
+            <AvantageClient/>
+        </Grid>
+
+      </Grid>
+      {/* END Avantage client */}
 
       {/* FOIRE AUX QUESTION */}
       <Grid >

@@ -1,18 +1,18 @@
 import { Box, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Processus = ({title, image, text}) => {
-    const [isHover,setHover]= useState(false)
+export const Processus = ({title, image, text,isProcessusHover,setProcessusHover}) => {
+    
    
   return (
     <Box
             component={'div'}
-            onMouseOver={()=>setHover(true)}
-            onMouseLeave={()=>setHover(false)}
+            onMouseOver={()=>setProcessusHover(title)}
+            onMouseLeave={()=>setProcessusHover('')}
             sx={{
               width: {xs:'95%',sm:320},
               height: 280,
-              bgcolor: isHover ? '#082D0E' :'#638715',
+              bgcolor: isProcessusHover === title ? '#082D0E' :'#638715',
               borderTopLeftRadius: 20,
               borderBottomRightRadius: 20,
               boxShadow:'2px 6px 8px 0px rgba(26, 64, 9, 0.35)',
@@ -28,7 +28,7 @@ export const Processus = ({title, image, text}) => {
                 bgcolor: '#082D0E'
               }
             }}>
-                {isHover ?
+                {isProcessusHover === title ?
                  <Typography color={'white'}>{text}</Typography>
                  : 
                     <>

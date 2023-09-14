@@ -168,7 +168,7 @@ export const Home = () => {
         </Box>
       </Grid> {/* end grid */}
       
-      <Grid item xs={12} md={5} display={'flex'} pl={3} >
+      <Grid item xs={12} md={5} display={'flex'} pl={{xs:0, md:3}} >
       <Box
          component={motion.img}
          sx={{

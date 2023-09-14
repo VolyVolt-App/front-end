@@ -6,6 +6,12 @@ import {ReactComponent as FacebookIcon} from '../asset/icon/fb.svg'
 import {ReactComponent as InstagramIcon} from '../asset/icon/instagram.svg'
 import {ReactComponent as TwitterIcon} from '../asset/icon/twitter.svg'
 import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin.svg'
+import {ReactComponent as OrangeLogo} from '../asset/icon/orange_master_logo 1.svg'
+import german from '../asset/logo/german.png'
+import africa from '../asset/logo/africa.png'
+import giz from '../asset/logo/giz.png'
+import partnerlogo from '../asset/logo/partner.png'
+
 
 
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
@@ -50,7 +56,7 @@ export const Footer = () => {
                 </Stack>
             </Grid>
         </Grid>
-        <Grid container display={'flex'} justifyContent={'space-between'}>
+        <Grid container display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
             <Grid item xs={12} sm={4} >
                 <Box sx={{ display: "flex",justifyContent: 'center' , p:2  }}>
                     {pages.map((page) => (
@@ -74,6 +80,66 @@ export const Footer = () => {
                     <LinkedinIcon/>
                 </Stack>
             </Grid>{/*end grid item*/}
+            
+
+            <Grid item xs={12} sm={4} >
+                <Stack direction={'row'} spacing={1} p={2} justifyContent={'center'}>
+                    <OrangeLogo width={{xs:'24.12%',sm:56}}/>
+                    {/*<Box
+                        component={'img'}
+                        sx={{
+                            //width: 100,
+                        //mt:{xs:3,md:0},
+                        
+                        // maxHeight: { xs: 50, md: 60},
+                        // maxWidth: {xs: 50, md: 60 }
+                        }}
+                        alt="rdf"
+                        src= {partnerlogo}
+                        />
+                    */}
+                    <Box
+                        component={'img'}
+                        sx={{
+                            width: {xs:'24.1%', sm: 99.81},
+                            height: {sm:55},
+                        //mt:{xs:3,md:0},
+                        
+                        // maxHeight: { xs: 50, md: 60},
+                        // maxWidth: {xs: 50, md: 60 }
+                        }}
+                        alt="rdf"
+                        src= {german}
+                        />
+                    <Box
+                        component={'img'}
+                        sx={{
+                            width: {xs:'32.8%',sm:136.4},
+                            height: {sm:55},
+                        //mt:{xs:3,md:0},
+                        
+                        // maxHeight: { xs: 50, md: 60},
+                        // maxWidth: {xs: 50, md: 60 }
+                        }}
+                        alt="rdf"
+                        src= {africa}
+                        />
+                        <Box
+                            component={'img'}
+                            sx={{
+                                width: {xs:'18.91%', sm:78.42},
+                                height: {sm:55},
+                            //mt:{xs:3,md:0},
+                            
+                            // maxHeight: { xs: 50, md: 60},
+                            // maxWidth: {xs: 50, md: 60 }
+                            }}
+                            alt="rdf"
+                            src= {giz}
+                            />
+                </Stack>
+            </Grid>{/*end grid item*/}
+
         </Grid>{/*end grid container*/}
         
         <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />

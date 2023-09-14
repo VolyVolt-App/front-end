@@ -68,7 +68,7 @@ function Item(props)
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            height: {xs: 250, sm: 210, md:150, lg: 120}
+            height: {xs: 270, sm: 210, md:150, lg: 120}
           }}>
             <Box sx={{alignSelf: 'flex-start'}}><GillemetStart width={20}/></Box>
             <Box>

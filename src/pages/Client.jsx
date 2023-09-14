@@ -17,6 +17,7 @@ import { Impact } from '../component/impactsociaux/Impact'
 import { ImpactTwo } from '../component/impactsociaux/ImpactTwo'
 import { Testimony } from '../component/impactsociaux/Testimony'
 
+
 //article
 import article1 from '../asset/image/image 19.png'
 import article2 from '../asset/image/image 20.png'
@@ -29,6 +30,9 @@ import articlejeune from '../asset/image/PXL_20230726_072127091 1.png'
 
 import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.png'
 
+
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import { Article } from '../component/impactsociaux/Article'
 //end article
 //import {ReactComponent as Icon} from '../asset/icon'
@@ -39,7 +43,7 @@ export const Client = () => {
   const [isArticleHover, setArticleHover] = useState('')
   return (
     <>
-    <Grid container pt={9} sx={{
+    <Grid container pt={{xs:8,ms:9}} sx={{
       backgroundColor: '#082D0E',
       position: 'relative',
     }}>
@@ -65,9 +69,12 @@ export const Client = () => {
           width: '100%',
           height: '100%',
           position: 'absolute',
-          bgcolor: 'linear-gradient(270deg, #2C2112 0.05%, rgba(44, 33, 18, 0.88) 30.87%, rgba(8, 45, 14, 0.00) 82.78%)'
+          background: {xs:'#00000088',md:'linear-gradient(270deg, #00000088 40%, #ff8e5300 100%)'},
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          //backgroundColor: 'linear-gradient(toright,blue,red)',
+         // bgcolor: 'linear-gradient(270deg, #2C2112 0.05%, rgba(44, 33, 18, 0.88) 30.87%, rgba(8, 45, 14, 0.00) 82.78%)'
         }}>
-          lk
         </Box>
 
         <Box sx={{
@@ -82,14 +89,17 @@ export const Client = () => {
           }}> 
             <Box sx={{
                 width: {xs:'100%', md: 500},
+                ml: {xs:2,md:0},
                 mr: {xs:2, md: '15%'},
                 mb:{xs:3 ,md: '15%'},
+                backgroundColor: {xs: '',md:''}
               }}>
                 <Typography variant='h6' sx={{
                   color: '#A8E71C',
                   fontWeight: 500,
                   width: 'fit-content',
-                  pb: 3
+                  pb: 3,
+                  fontSize: {xs: 15 ,sm: 22}
                 }}>VolyVolt, pas uniquement une solution ÉnErgétique <br/> Une baume  au cœur  pour les familles rurales</Typography>
               
                 <Grid container>
@@ -97,8 +107,12 @@ export const Client = () => {
                     <Divider orientation="vertical"  sx={{ borderLeftWidth: 10,borderRightWidth: 0, borderColor: '#A8E71C' }} />
                   </Grid>
                   <Grid item xs={11.8} md={11.8} pl={2}>   
-                    <Typography variant='h6' fontWeight={'bold'} color={'white'}>Bienvenue dans notre section "Impacts Sociaux"</Typography> 
-                    <Typography color={'white'} >
+                    <Typography variant='h6' fontWeight={'bold'} color={'white'} sx={{
+                      fontSize: {xs: 15 ,sm: 22}
+                    }} >Bienvenue dans notre section "Impacts Sociaux"</Typography> 
+                    <Typography color={'white'} sx={{
+                      fontSize: {xs: 14 ,sm: 16}
+                    }} >
                     Découvrez comment nous travaillons main dans la main avec les communautés rurales pour apporter la lumière, l'espoir et le changement. Ici où nous partageons les histoires et les réalisations qui témoignent de notre mission.  Explorez nos projets, nos partenariats et l'empreinte que nous laissons derrière nous.
                     </Typography>
                   </Grid>
@@ -305,7 +319,9 @@ export const Client = () => {
 
         <Button variant='outlined' sx={{
           mt: 4,
-        }}>COLLABORER AVEC NOUS</Button>
+        }}
+        startIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
+        >COLLABORER AVEC NOUS</Button>
       </Grid>
       <Grid item xs={12} md={5}>
       <Box

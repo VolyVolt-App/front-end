@@ -75,6 +75,7 @@ function Item(props)
                 <Typography align='center' color={'white'} sx={{
                     fontFamily: 'Cantarell',
                     p:1,
+                    fontSize: {xs: 14 ,sm: 16}
                     }}>
                         {props.item.text}
                 </Typography>

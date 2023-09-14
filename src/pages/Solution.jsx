@@ -146,7 +146,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'19%',sm:'21%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Analyse et consultation</Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>1</Typography>
                   <Chip 
@@ -175,7 +175,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'13%',sm:'21%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Installation des Générateurs</Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>2</Typography>
                   <Chip 
@@ -220,7 +220,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'5%',sm:'10%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Distribution des dispositifs de stcokage</Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>3</Typography>
                   <Chip 
@@ -249,7 +249,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'5%',sm:'5%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Création de kiosques de Distribution</Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>4</Typography>
                   <Chip 
@@ -296,7 +296,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'20%',sm:'21%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Maintenance et Entretien</Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>5</Typography>
                   <Chip 
@@ -325,7 +325,7 @@ export const Solution = () => {
                     position: 'absolute',
                     top: 25,
                     right: {xs:'27%',sm:'26%'},
-                    fontSize: 13
+                    fontSize: {xs:10,md:13},
                   }}>Suivi et rapportage </Typography>
                   <Typography sx={{position: 'absolute', pl:1, fontWeight:'bold'}}>6</Typography>
                   <Chip 

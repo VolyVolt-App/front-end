@@ -132,7 +132,7 @@ export const Client = () => {
 
     {/* Impact commune */}
     <Grid container >
-      <Grid item xs={12} md={6} sx={{bgcolor: '#FFC000'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+      <Grid item xs={12} md={5} sx={{bgcolor: '#FFC000'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <Stack spacing={3} alignItems={'center'}>
           <Stack display={'flex'} direction={'row'} spacing={3}>
             <Impact value='16' icon={<CommuneIcon width={50} height={50}/>} text='Communes touchées'/>
@@ -145,7 +145,7 @@ export const Client = () => {
         </Stack>
       </Grid>
 
-      <Grid item xs={12} md={6} sx={{bgcolor: '#2F2121'}} display={'flex'} alignItems={'center'} flexDirection={'column'}>
+      <Grid item xs={12} md={7} sx={{bgcolor: '#2F2121'}} display={'flex'} alignItems={'center'} flexDirection={'column'}>
         <Typography align='center' color={'white'} variant='h6' p={2} fontWeight={'bold'}>COMMUNE RURALE D’ AKADINANDRIANA</Typography>
         <Box width={'fit-content'} px={{xs:3, md:0}} pb={3}>
           <Typography color={'white'} width={'fit-content'}>Fokotany touchés par la solution : Ambohitrosy, Ambohimahatsinjo,  Andranovelona</Typography>
@@ -159,7 +159,7 @@ export const Client = () => {
         </Box>
         <Box pb={3}>
         <Button variant='outlined'
-          sx={{ color: '#FFC000'}}>NOUS REJOINDRE</Button>
+          sx={{ color: '#FFC000', borderColor:'#FFC000'}}>NOUS REJOINDRE</Button>
         </Box>
       </Grid>
     </Grid>
@@ -168,7 +168,7 @@ export const Client = () => {
     {/* testomony and impact */}
     <Grid container >
       {/* testomony */}
-      <Grid item xs={12} md={6} display={'flex'} alignItems={'center'} flexDirection={'column'}
+      <Grid item xs={12} md={7} display={'flex'} alignItems={'center'} flexDirection={'column'}
       sx={{
         bgcolor: '#2F2121',
         p: {xs:3,md:6}
@@ -178,7 +178,7 @@ export const Client = () => {
       {/* end testomony */}
 
       {/* Impact  */}
-      <Grid item xs={12} md={6} sx={{bgcolor: '#8BBC1F'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+      <Grid item xs={12} md={5} sx={{bgcolor: '#8BBC1F'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <Stack spacing={3} alignItems={'center'} justifyContent={'center'}>
           <Stack display={'flex'} direction={'row'} spacing={3}>
             <ImpactTwo value='100%' icon={<CommuneIcon width={50} height={50}/>} text='Collaborateurs satisfaits'/>
@@ -271,7 +271,8 @@ export const Client = () => {
           color: '#799C2B',
           bgcolor: 'rgba(217, 217, 217, 0.21)',
           boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
-        }}>CHARGER PLUS D’ARTICLES</Button>
+        }}
+        startIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}>CHARGER PLUS D’ARTICLES</Button>
       </Divider>
     </Box>
     
@@ -320,7 +321,6 @@ export const Client = () => {
         <Button variant='outlined' sx={{
           mt: 4,
         }}
-        startIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}
         >COLLABORER AVEC NOUS</Button>
       </Grid>
       <Grid item xs={12} md={5}>

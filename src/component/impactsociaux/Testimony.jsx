@@ -68,7 +68,7 @@ function Item(props)
         </Box>
         <Box>
               
-          <Typography color={'white'}>{props.item.text}</Typography>
+          <Typography color={'white'} fontSize= {{xs: 14 ,sm: 16}}>{props.item.text}</Typography>
           <Typography variant='h6' sx={{
               mt:3,
               fontWeight: 'bold',

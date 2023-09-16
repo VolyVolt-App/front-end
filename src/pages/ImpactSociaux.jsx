@@ -39,7 +39,7 @@ import { Article } from '../component/impactsociaux/Article'
 //import {ReactComponent as Icon} from '../asset/icon'
 
 
-export const Client = () => {
+export const ImpactSociaux = () => {
   const [isArticleHover, setArticleHover] = useState('')
   return (
     <>

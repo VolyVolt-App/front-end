@@ -3,9 +3,10 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { AppOutlet } from './pages/AppOutlet';
 import  Home  from './pages/Home';
-import { Client } from './pages/Client';
 import { Contact } from './pages/Contact';
 import { Solution } from './pages/Solution';
+import { ImpactSociaux } from './pages/ImpactSociaux';
+import { Don } from './pages/Don';
 
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path='solution' element={<Solution/>} />
         
-        <Route path='client' element={<Client/>} />
+        <Route path='impactsociaux' element={<ImpactSociaux/>} />
         
         <Route path='contact' element={<Contact/>} />
+        
+        <Route path='don' element={<Don/>} />
       </Route>
       
   {/*<Route path='' element={} /> */}

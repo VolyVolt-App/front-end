@@ -1,0 +1,23 @@
+<svg width="70" height="75" viewBox="0 0 70 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icons-phone 1" clip-path="url(#clip0_909_1231)">
+<g id="Clip path group">
+<mask id="mask0_909_1231" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="70" height="75">
+<g id="ArtboardFrame">
+<path id="Vector" d="M69.9996 0H0V74.4094H69.9996V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_909_1231)">
+<g id="Calque-1">
+<path id="Vector_2" d="M29.8704 59.6496H14.9232C12.4189 59.6496 10.3887 57.6221 10.3887 55.1214V17.791C10.3887 15.2901 12.4189 13.2627 14.9232 13.2627H36.3582" stroke="#2F2021" stroke-width="4" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path id="Vector_3" d="M43.6012 13.2627H53.0918C54.6821 13.2627 55.9714 14.55 55.9714 16.1379V56.7743C55.9714 58.3624 54.6821 59.6496 53.0918 59.6496H34.4473" stroke="#2F2021" stroke-width="4" stroke-miterlimit="10" stroke-linejoin="round"/>
+<path id="Vector_4" d="M20.5496 24.2088C21.528 21.9195 26.3621 20.597 28.1929 25.0488C29.7705 28.8849 27.438 30.9029 28.3181 34.0009C29.0156 36.4564 34.4472 42.3235 36.3581 42.1333C39.1147 41.859 46.1797 37.0373 46.95 44.3886C47.487 49.5116 35.5923 52.8458 27.6296 44.0157C21.1142 36.7903 17.7436 30.7749 20.5496 24.2088Z" stroke="#2F2021" stroke-width="4" stroke-miterlimit="10" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_909_1231">
+<rect width="70" height="74.4094" fill="white"/>
+</clipPath>
+</defs>
+</svg>

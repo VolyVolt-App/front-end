@@ -34,9 +34,12 @@ import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.pn
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { Article } from '../component/impactsociaux/Article'
+import { SliderRight } from '../component/gallery/SliderRight'
+import { SliderLeft } from '../component/gallery/SliderLeft'
 //end article
 //import {ReactComponent as Icon} from '../asset/icon'
 //import {ReactComponent as Icon} from '../asset/icon'
+
 
 
 export const ImpactSociaux = () => {
@@ -164,6 +167,15 @@ export const ImpactSociaux = () => {
       </Grid>
     </Grid>
     {/* End Impact commune */}
+
+    {/* gallery slider */}
+    <Grid container>
+      <Grid item xs={12}>
+        <SliderRight/>
+        <SliderLeft/>
+      </Grid>
+    </Grid>
+    {/* end gallery slider */}
 
     {/* testomony and impact */}
     <Grid container >

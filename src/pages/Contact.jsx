@@ -1,6 +1,9 @@
 import { Box, Grid, Divider, Typography, Stack, TextField, Button, Select, MenuItem } from '@mui/material'
 import React, {useState} from 'react'
 
+import backgroundBanner from '../asset/image/contact/equipe-commerciale-reussie-heureuse 1.png'
+import teamvolyvolt from '../asset/image/volvoltteam.png'
+import backgroundMobileBanner from '../asset/image/contact/bannermobilecontact.png'
 import { Embarque } from '../component/contact/Embarque'
 
 import {ReactComponent as ConventionIcon} from '../asset/icon/icons-convention 1.svg'
@@ -20,17 +23,80 @@ import {ReactComponent as TwitterIcon} from '../asset/icon/twitter out.svg'
 
 import { Link } from 'react-router-dom';
 import { RejoindreDialog } from '../component/contact/RejoindreDialog'
+import { SliderRight } from '../component/gallery/SliderRight'
+import { SliderLeft } from '../component/gallery/SliderLeft'
 
 export const Contact = () => {
     const [isEmbarqueHover, setEmbarqueHover] = useState('')
     const [rejoindreDialog, setRejoindreDialog] = useState(false)
   return (
    <Box sx={{bgcolor: '#F5F5F5'}}>
-   <Grid container px={{xs:2,md:14}} pt={9} sx={{
-        backgroundColor: '#082D0E'
+   <Grid container  pt={9} sx={{
+        backgroundColor: '#082D0E',}}>
+      <Grid item xs={12} sx={{
+        position:'relative',
         
       }}>
-
+        <Box sx={{
+            position: 'absolute',
+            display: {md:'none'},
+            zIndex:20,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(8, 45, 14, 0.73)',
+          }}/>
+          <Box
+              component={'img'}
+              sx={{
+                width: '100%',
+                display:{xs:'none',md:'flex'}
+                //width: '100%'
+              //width: {md:450, xs:'100%'},
+              //mt:{xs:3,md:0},
+              
+              // maxHeight: { xs: 50, md: 60},
+              // maxWidth: {xs: 50, md: 60 }
+              }}
+              alt="rdf"
+              src= {backgroundBanner}
+          />
+          <Box
+              component={'img'}
+              sx={{
+                position:'relative',
+                width: '100%',
+                display:{xs:'flex',md:'none'}
+                //width: '100%'
+              //width: {md:450, xs:'100%'},
+              //mt:{xs:3,md:0},
+              
+              // maxHeight: { xs: 50, md: 60},
+              // maxWidth: {xs: 50, md: 60 }
+              }}
+              alt="rdf"
+              src= {backgroundMobileBanner}
+            />
+          <Box
+              component={'img'}
+              sx={{
+                position:'absolute',
+                zIndex:21,
+                bottom:0,
+                pl:{xs:0,md:12},
+                width: {xs:'100%', md: '55vw'},
+                height: {md:'70vh'},
+              //width: {md:450, xs:'100%'},
+              //mt:{xs:3,md:0},
+              
+              // maxHeight: { xs: 50, md: 60},
+              // maxWidth: {xs: 50, md: 60 }
+              }}
+              alt="rdf"
+              src= {teamvolyvolt}
+          />
+          
+          
+          </Grid>
     </Grid>
     {/* section 2 */}
     <Box sx={{bgcolor: '#6E9F00'}} px={{xs:2,md:6, lg: 12}} py={3}>
@@ -116,6 +182,32 @@ export const Contact = () => {
     {/* pop up for rejoindre */}
     <RejoindreDialog rejoindreDialog={rejoindreDialog} setRejoindreDialog={setRejoindreDialog}/>
     {/* pop up for rejoindre */}
+
+    {/* sector slider */}
+    <Grid container>
+      <Grid item xs={12}>
+        <Box sx={{position:'relative', width: '100%', height:'fit-content'}}>
+
+          <Box sx={{ position:"absolute",zIndex:20,width: '100%', height:'100%',backgroundColor: 'rgba(8, 45, 14, 0.73)'}}></Box>
+          <Box sx={{position: 'absolute', zIndex:21,width: '100%', height:'100%' , display:'flex', alignItems:'center'}}>
+            <Typography variant='h5' color={'white'} 
+              sx={{ 
+                fontWeight: 600,
+                px: {xs:3,md:12},
+                fontSize: {xs:25,md:39}
+              }}>  
+              Illuminer les coeurs, <br/>
+              Semer le changement, <br/>
+              Éclairer les foyers ... <br/>
+            </Typography>
+          </Box>
+          <SliderRight/>
+          <SliderLeft/>
+        </Box>
+        
+      </Grid>
+    </Grid>
+    {/* end sector slider */}
 
     {/* section nous contacter */}
     <Grid container px={{xs:2,md:6, lg: 12}} pb={6} pt={6} sx={{

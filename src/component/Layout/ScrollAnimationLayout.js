@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { motion, useAnimation,useInView } from 'framer-motion';
 import { ScrollAnimationVariants } from '../Utils/AnimationVariants/HomeAnimationVariants';
 
@@ -16,8 +16,8 @@ const ScrollAnimationLayout = ({children}) => {
     
 
     return (
+      <Box ref={ref} component="div" style={{ position:"relative", overflow: "hidden" }} >
         <Box 
-            ref={ref} 
             component={motion.div} 
             variants={ScrollAnimationVariants} 
             initial="hidden"
@@ -25,6 +25,7 @@ const ScrollAnimationLayout = ({children}) => {
         >
             {children}
         </Box>
+      </Box>
     )
 }
 

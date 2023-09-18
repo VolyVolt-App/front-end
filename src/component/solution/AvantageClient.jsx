@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { Box, Button, Divider, IconButton, Typography } from '@mui/material'
+import { Box, Button, Divider, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material'
 
 
 import {Swiper, SwiperSlide, useSwiper} from 'swiper/react'
@@ -43,8 +43,14 @@ export const AvantageClient = () => {
       text:"En optant pour une solution d'énergie propre, les clients de VolyVolt renforcent leur engagement en faveur de la durabilité environnementale. Cela peut avoir un impact positif sur leur image et leur réputation, ce qui peut être un avantage concurrentiel.",
     },
   ] 
+
+  
+  const theme = useTheme()
+  const sm = useMediaQuery(theme.breakpoints.down('md'))
+  const md = useMediaQuery(theme.breakpoints.down('lg'))
   
   const [swiperRef, setSwiperRef] = useState(null)
+  const [indexActive, setIndexActive] = useState(0)
 
   const handleNextSlide = useCallback(() => {
     console.log(swiperRef.activeIndex)
@@ -56,13 +62,36 @@ export const AvantageClient = () => {
     console.log(swiperRef.activeIndex)
   },[swiperRef])
 
+  
+  const handleNextSlideLarge = useCallback(() => {
+    if(md){
+      if(swiperRef.activeIndex !== 3){
+        setIndexActive(indexActive+1)
+        //swiperRef.slideTo(ind)
+      }
+    }
+     if(sm){
+      console.log('sm')
+    }
+    console.log('activeIndex: ',swiperRef.activeIndex)
+    //isEnd,isBeginning previousIndex
+    //swiperRef.slideNext()
+  },[swiperRef])
+
+  const handlePrevSlideLarge = useCallback(() => {
+    swiperRef.slidePrev()
+    console.log(swiperRef.activeIndex)
+  },[swiperRef])
+
 
   return (
     <>
-    <Box display={'flex'}>
+
+    {/* xs */}
+    <Box display={{xs:'flex', sm:'none'}} >
       <Box display={'flex'} alignItems={'center'} pr={{xs:0, md:2}}>
         <IconButton onClick={handlePrevSlide}>
-          <ArrowBack width={45}/>
+          <ArrowBack width={30}/>
         </IconButton>
       </Box>
       
@@ -72,7 +101,7 @@ export const AvantageClient = () => {
       spaceBetween={50}
       initialSlide={5}
       //slidesPerView={3}
-      pagination={{clickable:true}}
+      //pagination={{clickable:true}}
       onSwiper={setSwiperRef}
       breakpoints={{
         640 : {
@@ -98,7 +127,8 @@ export const AvantageClient = () => {
           <SwiperSlide key={index}>
             {({isActive})=> (
               <SwiperLayout isActive={isActive} item={item} index={index}/>
-            )}
+              )
+            }
           </SwiperSlide>
             )
           })
@@ -106,10 +136,66 @@ export const AvantageClient = () => {
       </Swiper>
       <Box display={'flex'} alignItems={'center'} >
         <IconButton onClick={handleNextSlide}>
-          <ArrowForward width={45}/>
+          <ArrowForward width={30}/>
         </IconButton>
       </Box>
     </Box>
+
+
+    {/* large */}
+
+    <Box display={{xs:'none', sm:'flex'}} >
+      <Box display={'flex'} alignItems={'center'} pr={{xs:0, md:2}}>
+        <IconButton onClick={handlePrevSlideLarge}>
+          <ArrowBack width={30}/>
+        </IconButton>
+      </Box>
+      
+      <Swiper
+      //loop
+      modules={[Navigation, Pagination , Scrollbar, A11y]}
+      spaceBetween={50}
+      initialSlide={5}
+      //slidesPerView={3}
+      //pagination={{clickable:true}}
+      onSwiper={setSwiperRef}
+      breakpoints={{
+        600 : {
+          slidesPerView: 2
+        },
+        900 : {
+          slidesPerView: 3
+        },
+        1200 : {
+          slidesPerView: 4
+        }
+      }}
+      mousewheel={{
+        forceToAxis: true
+      }}
+      
+      onSlideChange={()=>console.log('slide change')}>
+        
+        {
+          items.map((item,index)=>{
+            return (
+
+          <SwiperSlide key={index}>
+            
+              <SwiperLayoutLarge isActive={indexActive} item={item} index={index}/>
+          
+          </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
+      <Box display={'flex'} alignItems={'center'} >
+        <IconButton onClick={handleNextSlideLarge}>
+          <ArrowForward width={30}/>
+        </IconButton>
+      </Box>
+    </Box>
+    
       
     </>
   )
@@ -122,16 +208,16 @@ const SwiperLayout = ({isActive,item, index}) => {
     {
       isActive ?
         <Box sx={{
-            p: 3,
+            p: 2,
             display: 'flex',
             flexDirection:'column',
             justifyContent:'center',
             alignItems: 'center',
             bgcolor: '#E4F0D4',
             borderRadius: 1,
-            height: 250
+            height: 230
         }}>
-          <Typography variant='h6' align='center' sx={{
+          <Typography  align='center' sx={{
             color: '#7BA71C',
             width: 'fit-content'
             }}>
@@ -139,7 +225,7 @@ const SwiperLayout = ({isActive,item, index}) => {
               <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
           </Typography>
 
-          <Typography pt={2}>
+          <Typography pt={1} fontSize={13}>
            {item.text}
           </Typography>
         </Box>
@@ -177,3 +263,72 @@ const SwiperLayout = ({isActive,item, index}) => {
     </>
   )
 }
+
+
+const SwiperLayoutLarge = ({isActive,item, index}) => {
+  const swiper = useSwiper()
+  return (
+    <>
+    {
+      isActive === index ?
+        <Box sx={{
+            p: 2,
+            display: 'flex',
+            flexDirection:'column',
+            justifyContent:'center',
+            alignItems: 'center',
+            bgcolor: '#E4F0D4',
+            borderRadius: 1,
+            height: 230
+        }}>
+          <Typography  align='center' sx={{
+            color: '#7BA71C',
+            width: 'fit-content'
+            }}>
+              {item.title}
+              <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
+          </Typography>
+
+          <Typography pt={1} fontSize={13}>
+           {item.text}
+          </Typography>
+        </Box>
+
+      :
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          height: '100%'
+        }}> 
+          <Box 
+          onClick={()=>{swiper.slideTo(index);console.log(index)}}
+          sx={{
+              py: 7,
+              px: 3,
+              display: 'flex',
+              flexDirection:'column',
+              justifyContent:'center',
+              alignItems: 'center',
+              bgcolor: '#E4F0D4',
+              mt:'auto',
+              mb:'auto',
+              borderRadius: 1
+            }}>
+              <Typography variant='h6' align='center' sx={{
+                color: '#7BA71C',
+                width: 'fit-content'
+              }}>
+                {item.title}
+              </Typography>
+            </Box>
+        </Box>
+        
+    }
+    </>
+  )
+}
+
+/*
+sm:600 md:900 lg:1200 xl:1536
+
+*/

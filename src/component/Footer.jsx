@@ -159,11 +159,13 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
 
             <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'} my={1}>
-                <Typography color={'white'} 
+                <Link to={'/confidentialite'} style={{textDecoration: 'none'}}>
+                    <Typography color={'white'} 
                     sx={{
                     fontSize: '12px'}}>
                         Politique de Confidualité
                     </Typography>
+                </Link>
                     
                 <Typography color={'white'} 
                     sx={{

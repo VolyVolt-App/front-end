@@ -9,10 +9,12 @@ import { PaypalIcon } from '../asset/dynamic/PaypalIcon'
 
 import mastercardImage from '../asset/logo/mastercard.png'
 import visaIcon from '../asset/logo/visa.png'
+import { ThxDialog } from '../component/don/ThxDialog'
 
 export const Don = () => {
   const [once,setOnce] = useState(true)
   const [isPaypal, setPaypal] = useState(false)
+  const [thxDialog, setThxDialog] = useState(false)
   return (
     <Box id='imgbg'
       sx={{
@@ -20,6 +22,7 @@ export const Don = () => {
         position: 'relative'
       }}
     >
+      <ThxDialog thxDialog={thxDialog} setThxDialog={setThxDialog}/>
       <Box
         sx={{
           //background: 'linear-gradient(270deg, #00000088 40%, #ff8e5300 100%)',
@@ -371,7 +374,7 @@ export const Don = () => {
               </>
 }
               {/* valider */}
-                <Button variant='contained' color='warning' fullWidth sx={{my:3}}>
+                <Button variant='contained' color='warning' fullWidth sx={{my:3}} onClick={()=>setThxDialog(true)}>
                 VALIDER
                 </Button>
               {/* end valider */}

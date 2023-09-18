@@ -7,6 +7,7 @@ import { Contact } from './pages/Contact';
 import { Solution } from './pages/Solution';
 import { ImpactSociaux } from './pages/ImpactSociaux';
 import { Don } from './pages/Don';
+import { Confidentialite } from './pages/Confidentialite';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path='contact' element={<Contact/>} />
         
         <Route path='don' element={<Don/>} />
+
+        <Route path='confidentialite' element={<Confidentialite/>} />
       </Route>
       
   {/*<Route path='' element={} /> */}

@@ -410,14 +410,14 @@ export const Solution = () => {
       {/* END OFFRE */}
 
       {/* Avantage client */}
-      <Grid container py={3} px={{xs:2, md: 12}} sx={{
+      <Grid container py={3}  sx={{
         background: 'linear-gradient(360deg, #2F2121 59%, #082D0E 100%)',
       }}>
         <Grid item xs={12} >
-          <Typography variant='h6' sx={{color: '#8BBC1F'}}>
+          <Typography variant='h6' sx={{color: '#8BBC1F'}} px={{xs:2, md: 12}}>
           AVANTAGES CLIENTS
           </Typography>
-          <Typography pt={1} pb={3} color={'white'}>
+          <Typography pt={1} pb={3} color={'white'} px={{xs:2, md: 12}}>
           VolyVolt offre plusieurs avantages à ses segments de clients, les ONGs et les fondations, par rapport à la concurrence :
           </Typography>
             <AvantageClient/>

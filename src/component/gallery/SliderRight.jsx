@@ -38,13 +38,16 @@ export const SliderRight = () => {
       //slidesPerView={6.85}
       breakpoints={{
         0 : {
-            slidesPerView: 1.5
+            slidesPerView: 1.2
           },
-        220:{
-            slidesPerView: 2.3
+        300:{
+            slidesPerView: 1.9
         },
         390:{
-            slidesPerView: 3
+            slidesPerView: 2
+        },
+        400 : {
+          slidesPerView: 2.4
         },
         570 : {
           slidesPerView: 3

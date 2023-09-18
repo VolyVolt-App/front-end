@@ -15,7 +15,7 @@ import PropTypes from 'prop-types'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
-import { Drawer, List, ListItem, ListItemText } from '@mui/material'
+import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material'
 
 
 
@@ -69,18 +69,18 @@ const pages = [
 export const Header = (props) => {
 
 
-    const [anchorElNav, setAnchorElNav] = useState(null)
+
     const [collapse, setCollapse] = useState(false)
+    const [navActive, setNavActive] = useState('')
 
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget)
     setCollapse(true)
   }
 
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null)
+  const handleCloseNavMenu = (active) => {
+    //setNavActive(active)
   }
  
   return (
@@ -192,10 +192,22 @@ export const Header = (props) => {
             {pages.map((page) => (
               <Button
                 key={page.text}
-                onClick={handleCloseNavMenu}
+                onClick={()=>setNavActive(page.link)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-               <Link to={`/${page.link}`} style={{fontFamily:'Astro',textDecoration: 'none', color: 'white'}}>{page.text}</Link> 
+               <Link 
+                to={`/${page.link}`} 
+                style={{
+                  fontFamily:'Astro',
+                  textDecoration: 'none', 
+                  color: navActive === page.link ? '#96CC1E' : 'white',
+                  fontWeight: navActive === page.link ? 'bold': '',
+                  }}>
+                    {page.text}
+                    { navActive === page.link &&            
+                        <Divider  sx={{ borderBottomWidth: 2, bgcolor: '#638715', mt:3, m: '0px auto' }} />
+                    }
+               </Link> 
               </Button>
             ))}
           </Box>

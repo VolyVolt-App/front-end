@@ -36,26 +36,29 @@ export const SliderLeft = () => {
       //slidesPerView={6.85}
       breakpoints={{
         0 : {
-            slidesPerView: 1.5
-          },
-        220:{
-            slidesPerView: 2.3
+          slidesPerView: 1.2
         },
-        390:{
-            slidesPerView: 3
-        },
-        570 : {
-          slidesPerView: 3
-        },
-        768 : {
-          slidesPerView: 4
-        },
-        950:{
-        slidesPerView: 5
-        },
-        1200 : {
-          slidesPerView: 6.85
-        }
+      300:{
+          slidesPerView: 1.9
+      },
+      390:{
+          slidesPerView: 2
+      },
+      400 : {
+        slidesPerView: 2.4
+      },
+      570 : {
+        slidesPerView: 3
+      },
+      768 : {
+        slidesPerView: 4
+      },
+      950:{
+      slidesPerView: 5
+      },
+      1200 : {
+        slidesPerView: 6.85
+      }
       }}
     
       onSlideChange={() => console.log('slide change')}

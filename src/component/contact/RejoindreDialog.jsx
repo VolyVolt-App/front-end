@@ -1,15 +1,25 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 
+import ClearIcon from '@mui/icons-material/Clear'
+
 export const RejoindreDialog = ({rejoindreDialog, setRejoindreDialog}) => {
+    const theme = useTheme()
+    const fullscreen = useMediaQuery(theme.breakpoints.down('md'))
   return (
     <Dialog 
     open={rejoindreDialog}
     scroll='paper'
+    fullScreen={fullscreen}
     onClose={()=>setRejoindreDialog(false)}
+
     >
-        <DialogTitle sx={{color: '#8BBC1F', bgcolor: '#082D0E'}} variant='h6'>
-        Pourquoi Rejoindre VolyVolt en Tant que Bénévole ?
+        <DialogTitle component={'div'} sx={{bgcolor: '#082D0E',display:'flex', justifyContent:'space-between'}}>
+        <Typography sx={{color: '#8BBC1F'}} variant='h6'>Pourquoi Rejoindre VolyVolt en Tant que Bénévole ?</Typography>
+        
+        <IconButton onClick={()=>setRejoindreDialog(false)} sx={{position: 'absolue', right:-10}}>
+            <ClearIcon sx={{fill: 'white'}}/>
+        </IconButton>
         </DialogTitle>
         <DialogContent
         sx={{
@@ -42,7 +52,9 @@ export const RejoindreDialog = ({rejoindreDialog, setRejoindreDialog}) => {
         <DialogActions sx={{ display: 'flex', justifyContent: 'center', bgcolor: '#082D0E'}}>
             <Button variant='contained' sx={{
                 color: 'white'
-            }}>J’EMBARQUE DANS L’AVENTURE</Button>
+            }}
+            onClick={()=>setRejoindreDialog(false)}
+            >J’EMBARQUE DANS L’AVENTURE</Button>
         </DialogActions>
 
     </Dialog>

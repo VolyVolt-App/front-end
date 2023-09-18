@@ -19,7 +19,7 @@ import {ReactComponent as MailIcon} from '../asset/icon/Vector.svg'
 import {ReactComponent as FacebookIcon} from '../asset/icon/icons-fb outline 1.svg'
 import {ReactComponent as InstagramIcon} from '../asset/icon/insta.svg'
 import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin out.svg'
-import {ReactComponent as TwitterIcon} from '../asset/icon/twitter out.svg'
+import {ReactComponent as TwitterIcon} from '../asset/icon/twitter-svgrepo-com.svg'
 
 import { Link } from 'react-router-dom';
 import { RejoindreDialog } from '../component/contact/RejoindreDialog'
@@ -44,7 +44,7 @@ export const Contact = () => {
             width: '100%',
             height: '100%',
             backgroundColor: 'rgba(8, 45, 14, 0.73)',
-          }}/>
+        }}/>
           <Box
               component={'img'}
               sx={{
@@ -75,27 +75,133 @@ export const Contact = () => {
               }}
               alt="rdf"
               src= {backgroundMobileBanner}
-            />
-          <Box
-              component={'img'}
-              sx={{
+          />
+            
+          {/* front */}
+          <Box sx={{
                 position:'absolute',
                 zIndex:21,
                 bottom:0,
-                pl:{xs:0,md:12},
-                width: {xs:'100%', md: '55vw'},
-                height: {md:'70vh'},
-              //width: {md:450, xs:'100%'},
-              //mt:{xs:3,md:0},
-              
-              // maxHeight: { xs: 50, md: 60},
-              // maxWidth: {xs: 50, md: 60 }
-              }}
-              alt="rdf"
-              src= {teamvolyvolt}
-          />
-          
-          
+                width:'100%',
+                px:{xs:0, md:6,lg:12}
+                //bgcolor: 'blue'
+          }}>
+            <Grid container >
+              {/* text on sm screen */}
+              <Grid item xs={12} sx={{
+                display: {xs:'flex', md:'none'},
+                justifyContent:'center',
+              }}>
+                  <Box sx={{
+                    display:'flex',
+                    alignItems:'baseline',
+                    
+                  }}>
+                    <Box>
+                        
+                      <Typography  sx={{
+                        color: '#96CC1E',
+                        fontWeight: 'bold',
+                      }}>
+                        TONDRO
+                      </Typography>
+                      
+                      <Typography variant='h5' sx={{
+                        color: '#96CC1E',
+                        fontWeight: 'bold',
+                      }}>
+                      
+                        TOKANA
+                      </Typography>
+                      <Box display={'flex'} alignItems={'baseline'}>
+                          
+                        <Typography variant='h6' sx={{
+                          color: '#96CC1E',
+                          fontWeight: 'bold',
+                        }}>
+                          TSY MAHAZO HAO
+                        </Typography>
+                            
+                        <Box
+                          sx={{
+                            width: 5,
+                            height: 5,
+                            bgcolor: '#96CC1E',
+                            mx:1
+                          }}
+                        />
+                      </Box>
+                    </Box>
+                  </Box>
+              </Grid>
+              {/* END text on sm screen */}
+
+              <Grid item xs={12} md={7}>
+                  
+              <Box
+                component={'img'}
+                sx={{
+                  
+               // position:'absolute',
+               // zIndex:21,
+               
+                width: {xs:'100%'},
+                //height: {md:'50vh',lg:'60vh',xl:'70vh'},
+                height: '100%'
+                //width: {md:450, xs:'100%'},
+                //mt:{xs:3,md:0},
+                
+                // maxHeight: { xs: 50, md: 60},
+                // maxWidth: {xs: 50, md: 60 }
+                }}
+                alt="rdf"
+                src= {teamvolyvolt}
+              />
+              </Grid>
+              <Grid xs={12} md={5} sx={{
+                display:'flex',
+                justifyContent:'center',
+                alignItems:'center'
+              }}>
+
+              {/* text on sm screen */}
+                
+                {/* END text on sm screen */}
+
+                {/* text on large screen */}
+                <Box sx={{
+                  display: {xs:'none',md:'block'}
+                }}>
+                  <Typography variant='h5' sx={{
+                    color: '#96CC1E',
+                    fontWeight: 'bold'
+                  }}>
+                    TONDRO  
+                  </Typography>
+                  
+                  <Typography variant='h3' sx={{
+                    color: '#96CC1E',
+                    fontWeight: 'bold',
+                    py:2,
+                  }}>
+                    TOKANA  
+                  </Typography>
+                  <Typography variant='h4' sx={{
+                    color: '#96CC1E',
+                    fontWeight: 'bold'
+                  }}>
+                    TSY MAHAZO HAO  
+                  </Typography>
+
+                </Box>
+                {/* END text on large screen */}
+              </Grid>
+            </Grid>
+
+          </Box>
+
+         
+          {/* front */}
           </Grid>
     </Grid>
     {/* section 2 */}
@@ -322,7 +428,9 @@ export const Contact = () => {
             <FacebookIcon width={35} height={35}/>
             <InstagramIcon width={35} height={35} style={{fill: '#2F2121', strokeWidth:0.3, stroke: '#2F2121'}}/>
             <TwitterIcon width={35} height={35}/>
-            <LinkedinIcon width={35} height={35} />
+            <Box>
+              <LinkedinIcon width={35} height={35}/>
+            </Box>
           </Stack>
       </Grid>
     </Grid>
@@ -331,3 +439,20 @@ export const Contact = () => {
    </Box>
   )
 }
+
+/*
+
+ <Box sx={{
+                position:'absolute',
+                zIndex:21,
+                display: {xs: 'flex', md:'none'},
+                width:'100%',
+                bgcolor: 'blue'
+          }}>
+            <Typography>TONDRO  TOKANA TSY MAHAZO HAO</Typography>
+            <Box sx={{width:20,height:20}}></Box>
+          </Box>
+
+
+
+*/

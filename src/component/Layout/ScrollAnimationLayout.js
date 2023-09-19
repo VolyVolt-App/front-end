@@ -1,12 +1,12 @@
 import { Box } from '@mui/material'
 import React, { useRef, useEffect } from 'react'
 import { motion, useAnimation,useInView } from 'framer-motion';
-import { ScrollAnimationVariants } from '../Utils/AnimationVariants/HomeAnimationVariants';
+import { ScrollAnimationVariants } from '../Utils/AnimationVariants/homeAnimationVariants';
 
 const ScrollAnimationLayout = ({children}) => {
     const ref = useRef(null);
     const scrollAnimation = useAnimation();
-    const inView = useInView(ref, { once: true });
+    const inView = useInView(ref, { once: false });
 
     useEffect(() => {
       if(inView) {

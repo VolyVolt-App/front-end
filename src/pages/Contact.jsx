@@ -1,4 +1,4 @@
-import { Box, Grid, Divider, Typography, Stack, TextField, Button, Select, MenuItem } from '@mui/material'
+import { Box, Grid, Divider, Typography, Stack, TextField, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material'
 import React, {useState} from 'react'
 
 import backgroundBanner from '../asset/image/contact/equipe-commerciale-reussie-heureuse 1.png'
@@ -25,10 +25,12 @@ import { Link } from 'react-router-dom';
 import { RejoindreDialog } from '../component/contact/RejoindreDialog'
 import { SliderRight } from '../component/gallery/SliderRight'
 import { SliderLeft } from '../component/gallery/SliderLeft'
+import { useTheme } from '@emotion/react'
 
 export const Contact = () => {
     const [isEmbarqueHover, setEmbarqueHover] = useState('')
     const [rejoindreDialog, setRejoindreDialog] = useState(false)
+    const theme = useTheme()
   return (
    <Box sx={{bgcolor: '#F5F5F5'}}>
    <Grid container  pt={9} sx={{
@@ -337,23 +339,27 @@ export const Contact = () => {
       
       <Grid item xs={12} md={6} position={'relative'}>
         <Stack px={3} py={3} mx={3} width={'100%'} color={'warning'} backgroundColor={'white'} borderRadius={2} spacing={2} position={'absolute'} display={{xs:'none',md:'flex'}}>
-          <TextField label='Nom  et Prénoms / Nom de l’organisme' color='warning' />
-          <TextField label='Adresse E-mail' color='warning' />
-          <TextField label='Numéro de téléphone' color='warning' />
-          <TextField label='Moyen de communication préféré' color='warning' />
+          <TextField label='Nom  et Prénoms / Nom de l’organisme' color={'yellowVoly'} />
+          <TextField label='Adresse E-mail' color='yellowVoly' />
+          <TextField label='Numéro de téléphone' color='yellowVoly' />
+          <TextField label='Moyen de communication préféré' color='yellowVoly' />
 
-          <Select label='Comment avez-vous connu VolyVolt?' color='warning'>
-            <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
-            <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
-            <MenuItem value={'Linkin'}>Linkin</MenuItem>
-            <MenuItem value={'Facebook'}>Facebook</MenuItem>
-            <MenuItem value={'Evenement'}>Evenement</MenuItem>
-            <MenuItem value={'Autre'}>Autre</MenuItem>
-          </Select>
+          <FormControl color='yellowVoly'>
+
+          <InputLabel id="connuvoly">Comment avez-vous connu VolyVolt?</InputLabel>
+            <Select labelId="connuvoly" label='Comment avez-vous connu VolyVolt?' color='yellowVoly'>
+              <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
+              <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
+              <MenuItem value={'Linkin'}>Linkin</MenuItem>
+              <MenuItem value={'Facebook'}>Facebook</MenuItem>
+              <MenuItem value={'Evenement'}>Evenement</MenuItem>
+              <MenuItem value={'Autre'}>Autre</MenuItem>
+            </Select>
+          </FormControl>
           
-          <TextField label='Objet' color='warning'/>
-          <TextField label='Message' color='warning' multiline rows={5}/>
-          <Button variant='contained' color='warning'>Envoyez le message</Button>
+          <TextField label='Objet' color='yellowVoly'/>
+          <TextField label='Message' color='yellowVoly' multiline rows={5}/>
+          <Button variant='contained' color='yellowVoly'>Envoyez le message</Button>
           <Typography fontSize={12}>
           En soumettant ce formulaire, vous consentez à notre politique de confidentialité et à l'utilisation de vos informations personnelles aux fins de votre demande.
           </Typography>

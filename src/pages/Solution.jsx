@@ -15,7 +15,9 @@ import { ReactComponent as IconEvaluation } from '../asset/icon/icons-evaluation
 import { ReactComponent as IconAnalyse } from '../asset/icon/icons-analyse.svg'
 import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oeuvre.svg'
 import { Processus } from '../component/solution/Processus';
-import { AvantageClient } from '../component/solution/AvantageClient';
+import { AvantageClient } from '../component/solution/AvantageClient'
+
+//https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3dV8VGIPs3KpA2PutMkTCvdoiSAqoyj47q-WxxHOqIDc_su2Qbtm6nL2Y&mid=1ztgqsEQAZ5ej0DNawjHzxl10_N5x1f8&ll=-18.95798824431245%2C47.92853244749729&z=10
 
 export const Solution = () => {
 

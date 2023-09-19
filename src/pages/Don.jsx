@@ -88,7 +88,7 @@ export const Don = () => {
 
               {/* bouton top */}
               <Box display={'flex'} justifyContent={'center'} pb={2}>
-                <Button variant={once?'contained':'outlined'} color='warning' sx={{flexGrow:1}}
+                <Button variant={once?'contained':'outlined'} color='yellowVoly' sx={{flexGrow:1}}
                 onClick={
                   ()=>{
                     setOnce(true)
@@ -96,7 +96,7 @@ export const Don = () => {
                     }}>
                 Je donne une fois
                 </Button>
-                <Button variant={!once?'contained':'outlined'} color='warning' sx={{ml:1, flexGrow:1}}
+                <Button variant={!once?'contained':'outlined'} color='yellowVoly' sx={{ml:1, flexGrow:1}}
                 onClick={()=>setOnce(false)}>
                 Je donne une fois
                 </Button>
@@ -104,7 +104,7 @@ export const Don = () => {
               {/* end bouton top */}
               <Box display={'flex'} >
               
-                  <TextField  color='warning' 
+                  <TextField  color='yellowVoly' 
                     label='Entrez le montant'
                     size='small'
                     sx={{
@@ -152,7 +152,7 @@ export const Don = () => {
             <Box p={2}>
 
               
-              <TextField label='E-mail' color='warning' size='small' fullWidth/>
+              <TextField label='E-mail' color='yellowVoly' size='small' fullWidth/>
               <FormGroup sx={{py:1}}>
                 <FormControlLabel control={<Checkbox size='small'/>} label="Je fais un don au nom d’une organisation. " />
               </FormGroup>
@@ -160,7 +160,7 @@ export const Don = () => {
               <Box display={'flex'} >
                   
                   <Box mr={1}>
-                    <FormControl size='small' color='warning'>
+                    <FormControl size='small' color='yellowVoly'>
                       
                     <InputLabel id="Civilité">Civilité</InputLabel>
                       <Select
@@ -180,24 +180,24 @@ export const Don = () => {
                       </Select>
                     </FormControl>
                   </Box>
-                  <TextField  color='warning' 
+                  <TextField  color='yellowVoly' 
                     label='Prénom'
                     size='small'
                     sx={{
                       flexGrow:1
                     }}/>
               </Box>
-              <TextField label='Nom' color='warning' size='small' fullWidth sx={{mt:2,mb:1}}/>
-              <TextField label='Adresse' color='warning' size='small' fullWidth sx={{my:1}}/>
+              <TextField label='Nom' color='yellowVoly' size='small' fullWidth sx={{mt:2,mb:1}}/>
+              <TextField label='Adresse' color='yellowVoly' size='small' fullWidth sx={{my:1}}/>
               <Box display={'flex'} my={1}>
-                <TextField  color='warning' 
+                <TextField  color='yellowVoly' 
                       label='Code Postale'
                       size='small'
                       sx={{
                         flexGrow:1,
                         mr:0.5
                 }}/>
-                <TextField  color='warning' 
+                <TextField  color='yellowVoly' 
                     label='Ville'
                     size='small'
                     sx={{
@@ -205,7 +205,7 @@ export const Don = () => {
                       ml:0.5
                 }}/>
               </Box>
-              <FormControl size='small' color='warning' fullWidth sx={{my:1}}>
+              <FormControl size='small' color='yellowVoly' fullWidth sx={{my:1}}>
                       
                       <InputLabel id="nationalite">Nationalité</InputLabel>
                         <Select
@@ -319,12 +319,12 @@ export const Don = () => {
               {/* END check box mastercard or visa*/}
 
               {/* sector final */}
-              <TextField label='Numéro de carte bancaire' color='warning' size='small' fullWidth sx={{mb:2}}/>
+              <TextField label='Numéro de carte bancaire' color='yellowVoly' size='small' fullWidth sx={{mb:2}}/>
               <Box sx={{
                 display: 'flex',
 
               }}>
-              <FormControl size='small' color='warning' sx={{width:'40%'}}>
+              <FormControl size='small' color='yellowVoly' sx={{width:'40%'}}>
                       
                       <InputLabel id="mois">Mois</InputLabel>
                         <Select
@@ -346,7 +346,7 @@ export const Don = () => {
                         </Select>
               </FormControl>
 
-              <FormControl size='small' color='warning' sx={{width:'40%', px:1}}>
+              <FormControl size='small' color='yellowVoly' sx={{width:'40%', px:1}}>
                       
                       <InputLabel id="Année">Année</InputLabel>
                         <Select
@@ -368,13 +368,13 @@ export const Don = () => {
                         </Select>
               </FormControl>
               
-              <TextField label='CVC' color='warning' size='small' sx={{width:'20%'}}/>
+              <TextField label='CVC' color='yellowVoly' size='small' sx={{width:'20%'}}/>
               </Box>
               {/* end sector final */}
               </>
 }
               {/* valider */}
-                <Button variant='contained' color='warning' fullWidth sx={{my:3}} onClick={()=>setThxDialog(true)}>
+                <Button variant='contained' color='yellowVoly' fullWidth sx={{my:3}} onClick={()=>setThxDialog(true)}>
                 VALIDER
                 </Button>
               {/* end valider */}

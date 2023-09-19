@@ -12,6 +12,12 @@ export const theme = createTheme({
     pale: {
      main: '#082D0E',
      contrastText: '#fff',
+    },
+    yellowVoly: {
+      main:'#FFC000',  
+      contrastText: '#fff',
+      //dark:'#CC9600',
+      //light:'#FFD800',
     }
   },
     typography: {

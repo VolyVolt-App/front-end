@@ -52,6 +52,9 @@ export const Home = () => {
   const refOddTen = useRef(null)
   const refOddEleven = useRef(null)
   const refOddThirteen = useRef(null)
+  
+  /* iframe */
+  const refIframe = useRef(null)
 
   const handleCollapseOddSeventeen = () => {
     refOddSeventeen.current.style.maxWidth=refOddSeventeen.current.scrollWidth+'px'
@@ -104,8 +107,13 @@ export const Home = () => {
     refOddSeventeen.current.style.maxWidth= null
   }
 
+
   useEffect(()=>{
     refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
+    console.log(refIframe)
+    refIframe.current.style.width=refIframe.current.scrollWidth
+    
+    refIframe.current.style.height=refIframe.current.scrollHeight
   },[])
 
   const titleVariants = {
@@ -552,8 +560,8 @@ export const Home = () => {
 {/* cibles*/}
     {/* video */}
     <Grid container px={{xs:1,md:6}} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
-            <Grid item xs={12} sm={12} md={6}>
-              <Box
+            <Grid item xs={12} sm={12} md={6} alignSelf={'stretch'}>
+            {/**<Box
                 component={'img'}
                 sx={{
                 
@@ -561,6 +569,14 @@ export const Home = () => {
                 }}
                 alt="rdf"
                 src= {videoImg}
+              />*/}
+              <iframe ref={refIframe} src='https://www.youtube.com/embed/P6eIQT5IQjM'
+                      frameBorder='0'
+                      allow='autoplay; encrypted-media'
+                      allowFullScreen
+                      title='video-volyvolt'
+                     // width={'100%'}
+                     // height={'100%'}
               />
             </Grid>
             <Grid item xs={12} sm={12} md={6} >

@@ -1,11 +1,9 @@
 const imageVariants = {
     hidden: {
-        scaleX: -100,
-        scaleY: -100
+        x: 50
     },
     visible: {
-        scaleX: 250,
-        scaleY: 250,
+        x: 0,
         transition: {
             ease: "easeOut",
             duration: 0.6

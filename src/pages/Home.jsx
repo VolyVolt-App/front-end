@@ -625,21 +625,20 @@ export const Home = () => {
 
 {/* ODD */}
     <Grid container sx={{backgroundColor: '#082D0E'}} py={2} >
-      <ScrollAnimationLayout>
         <Typography variant='h6'  pb={3} px={{xs:1,md:6}} 
             sx={{
               color: '#8BBC1F',
               fontWeight: 'bold',
             }}>
-              Comment participons-nous à l’atteinte des ODD?
+              <ScrollAnimationLayout>
+                Comment participons-nous à l’atteinte des ODD?
+              </ScrollAnimationLayout>
               <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
           </Typography>
-        </ScrollAnimationLayout>
         
       <Grid item xs={12} md={12} lg={12}>
         <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} >
             
-
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -649,9 +648,8 @@ export const Home = () => {
                   border: '2px solid transparent',
                 }
               }}>
-              <OddSeven width={'100%'} onClick={handleCollapseOddSeven}/>
+                <OddSeven width={'100%'} onClick={handleCollapseOddSeven}/>
             </Box>{/* end odd two */}
-
             <Box ref={refOddSeven}className='panel-horizontal' >{/* start tobecollapse */}
               <Box p={{sm:1,md:2}} sx={{
                 backgroundColor: '#FCC30B',
@@ -659,11 +657,13 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
+                <ScrollAnimationLayout>
+                  <Typography align='center' color={'white'}
+                  sx={{
+                    fontSize: {xs:13, sm: 14.5, lg:15}
+                  }}>
+                    En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+                </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -676,7 +676,9 @@ export const Home = () => {
                   border: '2px solid transparent',
                 }
               }}>
-              <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
+                <ScrollAnimationLayout>
+                  <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
+                </ScrollAnimationLayout>
             </Box>{/* end odd two */}
 
             <Box ref={refOddNine}className='panel-horizontal' >{/* start tobecollapse */}
@@ -686,11 +688,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 

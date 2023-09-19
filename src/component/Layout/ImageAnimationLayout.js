@@ -1,16 +1,16 @@
 import { Box } from '@mui/material'
 import React, { useRef, useEffect } from 'react'
 import { motion, useAnimation,useInView } from 'framer-motion';
-import { ScrollAnimationVariants } from '../Utils/AnimationVariants/homeAnimationVariants';
+import { imageVariants } from '../Utils/AnimationVariants/imageVariants';
 
-const ScrollAnimationLayout = ({children}) => {
+const ImageAnimationLayout = ({children}) => {
     const ref = useRef(null);
-    const scrollAnimation = useAnimation();
+    const imageControl = useAnimation();
     const inView = useInView(ref, { once: true });
 
     useEffect(() => {
       if(inView) {
-        scrollAnimation.start('visible');
+        imageControl.start('visible');
       }
     }, [inView])
     
@@ -19,9 +19,9 @@ const ScrollAnimationLayout = ({children}) => {
       <Box ref={ref} component="div" style={{ position:"relative", overflow: "hidden" }} >
         <Box 
             component={motion.div} 
-            variants={ScrollAnimationVariants} 
+            variants={imageVariants} 
             initial="hidden"
-            animate={scrollAnimation}
+            animate={imageControl}
         >
             {children}
         </Box>
@@ -29,4 +29,4 @@ const ScrollAnimationLayout = ({children}) => {
     )
 }
 
-export default ScrollAnimationLayout
+export default ImageAnimationLayout

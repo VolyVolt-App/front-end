@@ -30,6 +30,7 @@ import { Histoire } from '../component/Home/mission/Histoire'
 import { Valeurs } from '../component/Home/mission/Valeurs'
 
 import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
+import ImageAnimationLayout from '../component/Layout/ImageAnimationLayout'
 
 
 export const Home = () => {
@@ -172,18 +173,20 @@ export const Home = () => {
       </Grid> {/* end grid */}
       
       <Grid item xs={12} md={5} display={'flex'} pl={{xs:0, md:3}} >
-      <Box
-         component={motion.img}
-         sx={{
-          width: {md:450, xs:'100%'},
-          mt:{xs:3,md:0},
-          
-         // maxHeight: { xs: 50, md: 60},
-         // maxWidth: {xs: 50, md: 60 }
-         }}
-         alt="rdf"
-         src= {bannerImage}
-        />
+      <ImageAnimationLayout>
+        <Box
+          component={motion.img}
+          sx={{
+            width: {md:450, xs:'100%'},
+            mt:{xs:3,md:0},
+            
+          // maxHeight: { xs: 50, md: 60},
+          // maxWidth: {xs: 50, md: 60 }
+          }}
+          alt="rdf"
+          src= {bannerImage}
+          />
+        </ImageAnimationLayout>
       </Grid> {/* end grid */}
 
     </Grid> {/*end container */}

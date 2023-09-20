@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Button, Divider, Stack, Chip } from '@mui/material'
+import { Grid, Box, Typography, Button, Divider, Stack, Chip, CardMedia } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
 import '../styles/accordion.css'
 
@@ -111,9 +111,9 @@ export const Home = () => {
   useEffect(()=>{
     refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
     console.log(refIframe)
-    refIframe.current.style.width=refIframe.current.scrollWidth
+    //refIframe.current.style.width=refIframe.current.scrollWidth
     
-    refIframe.current.style.height=refIframe.current.scrollHeight
+    //refIframe.current.style.height=refIframe.current.scrollHeight
   },[])
 
   const titleVariants = {
@@ -559,8 +559,8 @@ export const Home = () => {
 
 {/* cibles*/}
     {/* video */}
-    <Grid container px={{xs:1,md:6}} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
-            <Grid item xs={12} sm={12} md={6} alignSelf={'stretch'}>
+    <Grid container  py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
+            <Grid item xs={12} sm={12} md={6}  px={{xs:0,md:6}}>
             {/**<Box
                 component={'img'}
                 sx={{
@@ -570,7 +570,9 @@ export const Home = () => {
                 alt="rdf"
                 src= {videoImg}
               />*/}
-              <iframe ref={refIframe} src='https://www.youtube.com/embed/P6eIQT5IQjM'
+             {/* 
+             
+             <iframe ref={refIframe} src='https://www.youtube.com/embed/P6eIQT5IQjM'
                       frameBorder='0'
                       allow='autoplay; encrypted-media'
                       allowFullScreen
@@ -578,8 +580,17 @@ export const Home = () => {
                      // width={'100%'}
                      // height={'100%'}
               />
+             
+             */} 
+             <CardMedia component={'iframe'}
+              src='https://www.youtube.com/embed/P6eIQT5IQjM'
+              sx={{
+                aspectRatio: '16/9',
+                border: 0
+              }}
+              />
             </Grid>
-            <Grid item xs={12} sm={12} md={6} >
+            <Grid item xs={12} sm={12} md={6} px={{xs:2,md:6}} >
               <Box margin={'0px auto'} width={{xs:'100%',md:'80%'}}>
               <Typography variant='h6' align='center' pb={3} pt={{xs:3,md:0}}
                 sx={{

@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef} from 'react'
 import { motion, useAnimation,useInView } from 'framer-motion';
 import { ScrollAnimationVariants } from '../Utils/AnimationVariants/HomeAnimationVariants';
 

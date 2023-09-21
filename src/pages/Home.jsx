@@ -50,7 +50,6 @@ export const Home = () => {
   const refOddSeven = useRef(null)
   const refOddNine = useRef(null)
   const refOddTen = useRef(null)
-  const refOddEleven = useRef(null)
   const refOddThirteen = useRef(null)
   
   /* iframe */
@@ -61,7 +60,6 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
    // refTwo.current.style.maxWidth=null
   }
@@ -71,7 +69,6 @@ export const Home = () => {
     refOddSeventeen.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
   const handleCollapseOddNine = () => {
@@ -79,7 +76,6 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
   const handleCollapseOddTen = () => {
@@ -87,23 +83,14 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
-  const handleCollapseOddEleven = () => {
-    refOddEleven.current.style.maxWidth=refOddEleven.current.scrollWidth+'px'
-    refOddSeven.current.style.maxWidth= null
-    refOddNine.current.style.maxWidth= null
-    refOddTen.current.style.maxWidth= null
-    refOddSeventeen.current.style.maxWidth= null
-    refOddThirteen.current.style.maxWidth= null
-  }
+
   const handleCollapseOddThirteen = () => {
     refOddThirteen.current.style.maxWidth=refOddThirteen.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
   }
 
@@ -654,7 +641,7 @@ export const Home = () => {
               <Typography align='center' color={'white'}
               sx={{
                 fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              }}>Énergie propre et d'un coût abordable : VolyVolt joue un rôle essentiel dans la promotion de l'accès à l'énergie propre et abordable, en particulier dans les zones rurales. En utilisant des générateurs d'énergie à partir de cultures locales, VolyVolt fournit une source d'énergie verte aux communautés qui en sont autrement privées.</Typography>
  
               </Box>
             </Box>{/* tobecollapse */}
@@ -681,7 +668,7 @@ export const Home = () => {
               <Typography align='center' color={'white'}
               sx={{
                 fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              }}>Innovation et infrastructures : VolyVolt apporte une approche innovante à l'électrification des zones rurales en utilisant des générateurs d'énergie basés sur des cultures locales. Cette technologie novatrice contribue à améliorer les infrastructures dans ces régions.</Typography>
  
               </Box>
             </Box>{/* tobecollapse */}
@@ -708,37 +695,12 @@ export const Home = () => {
               <Typography align='center' color={'white'}
               sx={{
                 fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              }}>Réduction des inégalités : En offrant des solutions énergétiques abordables , VolyVolt contribue à réduire les inégalités en matière d'accès à l'énergie. L'accès à l'électricité améliore les conditions de vie de ces communautés et réduit les disparités.</Typography>
  
               </Box>
             </Box>{/* tobecollapse */}
 
-            <Box 
-              sx={{
-                width: {xs:120, sm: 150, md:150},
-                marginLeft: 1,
-                cursor: 'pointer',
-                '&:hover':{
-                  border: '2px solid transparent',
-                }
-              }}>
-              <OddEleven width={'100%'} onClick={handleCollapseOddEleven}/>
-            </Box>{/* end odd two */}
 
-            <Box ref={refOddEleven}className='panel-horizontal' >{/* start tobecollapse */}
-              <Box p={{sm:1,md:2}} sx={{
-                backgroundColor: '#FD9D24',
-                marginBottom: {xs:1, sm: 1},
-                height: {xs:120,sm:150,md:150},
-                width: {xs:350,sm:400, md: 490}
-              }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
-              </Box>
-            </Box>{/* tobecollapse */}
 
             <Box 
               sx={{

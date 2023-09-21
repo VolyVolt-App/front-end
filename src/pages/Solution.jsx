@@ -342,8 +342,43 @@ export const Solution = () => {
 
 
         </Grid>
+
+        {/* debut miova text solution */}
+        { solution === 'analyse' && <Analyse 
+        text={"VolyVolt collabore avec vous pour analyser des projets d'électrification rurale sur mesure. VolyVolt commence par une analyse approfondie du projet d'électrification, en tenant compte des besoins spécifiques et des ressources disponibles de l'ONG ou de la fondation. Cette étape permet de définir la portée du projet et d'identifier les meilleures approches."}/>
+        }
+
+        { solution === 'installation' && <Analyse 
+        text={"VolyVolt utilise des terres locales, telles que des plantations, pour mettre en place des générateurs d'énergie. Grâce à un système d'intelligence artificielle avancé, VolyVolt détermine avec précision la surface de cultures nécessaire pour produire l'énergie requise pour répondre aux besoins des ménages, tout en assurant une marge de sécurité. Cette approche garantit une production d'énergie optimale et durable, adaptée aux spécificités de chaque localité."}/>
+        }
+
+        { solution === 'distribution' && <Analyse 
+        text={" VolyVolt assure la distribution des dispositifs de stockage d'énergie dans les localités concernées. Ces dispositifs permettent de stocker l'électricité produite, assurant ainsi l’alimentation continue au sein des foyers."}/>
+        }
+
+        { solution === 'kiosque' && <Analyse 
+        text={"Pour assurer une distribution efficace de l'électricité produite, VolyVolt installe des kiosques de distribution d'énergie stratégiquement situés dans les localités ciblées. Le nombre de ces kiosques est défini en fonction des ressources disponibles et des besoins de chaque projet."}/>
+        }
+
+        { solution === 'maintenance' && <Analyse 
+        text={"VolyVolt prend en charge la maintenance et l'entretien continus des installations pour garantir leur bon fonctionnement. Cela comprend la surveillance des équipements et les réparations nécessaires."}/>
+        }
+
+        { solution === 'suivi' && <Analyse 
+        text={" Pour optimiser l'offre d'énergie et répondre de manière précise aux besoins des ménages, VolyVolt met en place des systèmes de suivi des données de consommation. VolyVolt vous fournit également des rapports sur la consommation au niveau des communautés rurales."}/>
+        }
         
-        <Analyse />
+        {/* debut miova text solution */}
+        <Typography pt={2}>
+        Notre solution est spécifiquement conçue pour les ONG et les fondations qui partagent la vision selon laquelle : 
+        </Typography>
+      
+        <Typography fontSize={19}>
+        “ l'accès à une énergie fiable ne devrait pas être un luxe, mais un droit fondamental ”
+        </Typography>
+        <Typography pb={3}>
+        Si vous vous reconnaissez dans cette vision et que vous cherchez à avoir un impact positif, alors la solution VolyVolt est faite pour vous.
+        </Typography>
         <Divider variant="middle" sx={{ borderBottomWidth: 2, bgcolor: '#638715', mt:3, width:'60%', m: '0px auto' }} />
 
         <Typography variant='h6' sx={{color: '#08280D', fontSize:18, mt:3}}>

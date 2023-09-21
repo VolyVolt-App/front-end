@@ -210,7 +210,7 @@ export const Header = (props) => {
                </Link> 
               </Button>
             ))}
-            <Button variant='contained' color='yellowVoly' sx={{mt:1 ,mb:2, ml:{md:1,lg:6,xl:10} ,display: 'block'}}> <Link to='/don' style={{textDecoration:'none', color: 'black', fontWeight: 500, fontSize:19}}>Donate</Link></Button>
+            <Button variant='contained' color='yellowVoly' sx={{mt:1 ,mb:2, ml:{md:1,lg:6,xl:10} ,display: 'block'}}> <Link to='/don' style={{textDecoration:'none', color: 'black', fontWeight: 500, fontSize:17}}>Faire un Don</Link></Button>
           </Box>
 {/* displayed on large*/}
          

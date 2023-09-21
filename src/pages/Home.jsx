@@ -724,7 +724,7 @@ export const Home = () => {
               <Typography align='center' color={'white'}
               sx={{
                 fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              }}>VolyVolt promeut l'utilisation d'énergie propre en fournissant des générateurs d'énergie basée sur les piles microbiennes. En réduisant la dépendance aux combustibles fossiles, en les remplaçant par des alternatives vertes,VolyVolt  aide à atténuer les impacts du changement climatique et à préserver l'environnement pour les générations futures.</Typography>
  
               </Box>
             </Box>{/* tobecollapse */}
@@ -751,7 +751,7 @@ export const Home = () => {
               <Typography align='center' color={'white'}
               sx={{
                 fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              }}>VolyVolt collabore étroitement avec des ONG, des fondations et d'autres partenaires pour mettre en œuvre ses projets d'électrification rurale. Cette collaboration renforce la capacité à atteindre les objectifs liés au développement durable.</Typography>
  
               </Box>
             </Box>{/* tobecollapse */}

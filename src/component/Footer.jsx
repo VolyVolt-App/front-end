@@ -1,11 +1,11 @@
 import { Box, Button, Divider, Grid, InputAdornment, Stack, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import {ReactComponent as FacebookIcon} from '../asset/icon/fb.svg'
-import {ReactComponent as InstagramIcon} from '../asset/icon/instagram.svg'
-import {ReactComponent as TwitterIcon} from '../asset/icon/twitter.svg'
-import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin.svg'
+//import {ReactComponent as FacebookIcon} from '../asset/icon/fb.svg'
+//import {ReactComponent as InstagramIcon} from '../asset/icon/instagram.svg'
+//import {ReactComponent as TwitterIcon} from '../asset/icon/twitter.svg'
+//import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin.svg'
 import {ReactComponent as OrangeLogo} from '../asset/icon/orange_master_logo 1.svg'
 import german from '../asset/logo/german.png'
 import africa from '../asset/logo/africa.png'
@@ -15,6 +15,10 @@ import partnerlogo from '../asset/logo/partner.png'
 
 
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
+import { LinkedinIcon } from '../asset/dynamic/LinkedinIcon'
+import { TwitterIcon } from '../asset/dynamic/TwitterIcon'
+import { InstagramIcon } from '../asset/dynamic/InstagramIcon'
+import { FbIcon } from '../asset/dynamic/FbIcon'
 
 const pages = [
     {
@@ -36,6 +40,7 @@ const pages = [
      ]
 
 export const Footer = () => {
+    const [isHover, setHover] = useState('')
   return (
     <Box 
         sx={{
@@ -74,10 +79,10 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
             <Grid item xs={12} sm={4} >
                 <Stack direction={'row'} spacing={2} p={2} justifyContent={'center'}>
-                    <FacebookIcon/>
-                    <InstagramIcon/>
-                    <TwitterIcon/>
-                    <LinkedinIcon/>
+                    <FbIcon isHover={isHover} setHover={setHover}/>
+                    <InstagramIcon isHover={isHover} setHover={setHover}/>
+                    <TwitterIcon isHover={isHover} setHover={setHover}/>
+                    <LinkedinIcon isHover={isHover} setHover={setHover}/>
                 </Stack>
             </Grid>{/*end grid item*/}
             
@@ -154,8 +159,8 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
 
             <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'} my={1}>
-                <Logo width={80}
-                />
+                <Link to='/'><Logo width={80}/></Link>
+                
             </Grid>{/*end grid item*/}
 
             <Grid item xs={12} sm={3} display={'flex'} justifyContent={'center'} my={1}>
@@ -163,7 +168,7 @@ export const Footer = () => {
                     <Typography color={'white'} 
                     sx={{
                     fontSize: '12px'}}>
-                        Politique de Confidualité
+                        Politique de confidentialité
                     </Typography>
                 </Link>
                     
@@ -171,7 +176,7 @@ export const Footer = () => {
                     sx={{
                     fontSize: '12px',
                     marginLeft: 1}}>
-                        Condition d'utilisation
+                        Conditions et Termes
                     </Typography>
             </Grid>{/*end grid item*/}
         </Grid>{/*end grid container*/}

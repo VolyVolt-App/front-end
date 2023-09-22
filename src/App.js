@@ -17,7 +17,6 @@ function App() {
       <Route path={'/'} element={<AppOutlet/>}>
         <Route index element={<Home/>}/>
         <Route path='solution' element={<Solution/>} />
-        
         <Route path='impactsociaux' element={<ImpactSociaux/>} />
         
         <Route path='contact' element={<Contact/>} />

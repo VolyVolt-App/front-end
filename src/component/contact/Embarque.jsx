@@ -1,18 +1,18 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 
-export const Embarque = ({title, image, text,isEmbarqueHover,setEmbarqueHover}) => {
+export const Embarque = ({title, image, text,isHover,setHover}) => {
     
    
   return (
     <Box
             component={'div'}
-            onMouseOver={()=>setEmbarqueHover(title)}
-            onMouseLeave={()=>setEmbarqueHover('')}
+            onMouseOver={()=>setHover(title)}
+            onMouseLeave={()=>setHover('')}
             sx={{
               width: {xs:'95%'},
               height: {xs:280,sm:200},
-              bgcolor: isEmbarqueHover === title ? '#082D0E' :'#638715',
+              bgcolor: isHover === title ? '#082D0E' :'#638715',
               borderTopLeftRadius: 20,
               borderBottomRightRadius: 20,
               boxShadow:'2px 6px 8px 0px rgba(26, 64, 9, 0.35)',
@@ -28,7 +28,7 @@ export const Embarque = ({title, image, text,isEmbarqueHover,setEmbarqueHover}) 
                 bgcolor: '#082D0E'
               }
             }}>
-                {isEmbarqueHover === title ?
+                {isHover === title ?
                  <Box>{text}</Box>
                  : 
                     <Box display={'flex'} alignItems={'center'}>

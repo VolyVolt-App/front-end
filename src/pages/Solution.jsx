@@ -16,6 +16,7 @@ import { ReactComponent as IconAnalyse } from '../asset/icon/icons-analyse.svg'
 import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oeuvre.svg'
 import { Processus } from '../component/solution/Processus';
 import { AvantageClient } from '../component/solution/AvantageClient'
+import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayout';
 
 //https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3dV8VGIPs3KpA2PutMkTCvdoiSAqoyj47q-WxxHOqIDc_su2Qbtm6nL2Y&mid=1ztgqsEQAZ5ej0DNawjHzxl10_N5x1f8&ll=-18.95798824431245%2C47.92853244749729&z=10
 
@@ -57,9 +58,10 @@ export const Solution = () => {
         </Grid>
       </Grid>{/* end container */}
 
+      <BackgroundRevealLayout initial={'#082D0E'} bgColor={'#638715'}>
       <Grid container px={{xs:2,md:14}} py={3} 
       sx={{
-        backgroundColor: '#638715'
+        //backgroundColor: '#638715ff'
       }}>
         <Grid item xs={12} md={8} >
             <Typography variant='h6' sx={{color: '#08280D', fontSize:15}}>
@@ -97,8 +99,10 @@ export const Solution = () => {
             />
         </Grid>
       </Grid>{/*end container */}
+      </BackgroundRevealLayout>
 
       {/* OFFRE */}
+      <BackgroundRevealLayout initial={'#638715'} bgColor={'white'}>
       <Box sx={{ px: {xs:1, md: 12}}}>
         <Typography variant='h6' 
           sx={{
@@ -394,6 +398,8 @@ export const Solution = () => {
 
         
       </Box>
+      </BackgroundRevealLayout>
+      {/* End Offre */}
 
       {/* processus */}
       <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} py={3}>

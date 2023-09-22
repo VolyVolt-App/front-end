@@ -15,7 +15,7 @@ import {ReactComponent as LocalityIcon} from '../asset/icon/icons-locality 1.svg
 import {ReactComponent as PhoneIcon} from '../asset/icon/icons-phone 1.svg'
 import {ReactComponent as MailIcon} from '../asset/icon/Vector.svg'
 
-
+import { FbOutlinedIcon } from "../asset/dynamic/FbOutlinedIcon"
 import {ReactComponent as FacebookIcon} from '../asset/icon/icons-fb outline 1.svg'
 import {ReactComponent as InstagramIcon} from '../asset/icon/insta.svg'
 import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin out.svg'
@@ -26,9 +26,12 @@ import { RejoindreDialog } from '../component/contact/RejoindreDialog'
 import { SliderRight } from '../component/gallery/SliderRight'
 import { SliderLeft } from '../component/gallery/SliderLeft'
 import { useTheme } from '@emotion/react'
+import { InstagramOutlined } from '../asset/dynamic/InstagramOutlined'
+import { TwitterOutlined } from '../asset/dynamic/TwitterOutlined'
+import { LinkedInOutlinedIcon } from '../asset/dynamic/LinkedInOutlinedIcon'
 
 export const Contact = () => {
-    const [isEmbarqueHover, setEmbarqueHover] = useState('')
+    const [isHover, setHover] = useState('')
     const [rejoindreDialog, setRejoindreDialog] = useState(false)
     const theme = useTheme()
   return (
@@ -233,7 +236,7 @@ export const Contact = () => {
     <Grid container px={{xs:2,md:6, lg: 12}} py={3}>
       
       <Grid item xs={12} md={6}>
-          <Embarque isEmbarqueHover={isEmbarqueHover} setEmbarqueHover={setEmbarqueHover}
+          <Embarque isHover={isHover} setHover={setHover}
             title='ADOPTER LA SOLUTION'
             image={<ConventionIcon width={120} height={120}/>}
             text={
@@ -247,7 +250,7 @@ export const Contact = () => {
             />
       </Grid>
       <Grid item xs={12} md={6}>
-          <Embarque isEmbarqueHover={isEmbarqueHover} setEmbarqueHover={setEmbarqueHover}
+          <Embarque isHover={isHover} setHover={setHover}
             title='SOUTENIR FINANCIÈREMENT'
             image={<MoneyIcon width={120} height={120}/>}
             text={
@@ -260,7 +263,7 @@ export const Contact = () => {
       </Grid>
 
       <Grid item xs={12} md={6}>
-          <Embarque isEmbarqueHover={isEmbarqueHover} setEmbarqueHover={setEmbarqueHover}
+          <Embarque isHover={isHover} setHover={setHover}
             title='DEVENIR BENEVOLE'
             image={<VolunteerIcon width={120} height={120}/>}
             text={
@@ -272,7 +275,7 @@ export const Contact = () => {
             />
       </Grid>
       <Grid item xs={12} md={6}>
-          <Embarque isEmbarqueHover={isEmbarqueHover} setEmbarqueHover={setEmbarqueHover}
+          <Embarque isHover={isHover} setHover={setHover}
             title='PARTAGER NOS RÉALISATIONS'
             image={<SensibilisationIcon width={120} height={120}/>}
             text={
@@ -430,13 +433,11 @@ export const Contact = () => {
     <Grid container px={{xs:2,md:6, lg: 12}} pb={6}>
       <Grid item xs={12} md={6} display={'flex'} alignItems={'center'} flexDirection={{xs:'column', sm:'row'}}> 
           <Typography>Nous suivre sur les réseaux :</Typography>
-          <Stack direction={'row'} spacing={1} pt={{xs:1,sm:0}}>
-            <FacebookIcon width={35} height={35}/>
-            <InstagramIcon width={35} height={35} style={{fill: '#2F2121', strokeWidth:0.3, stroke: '#2F2121'}}/>
-            <TwitterIcon width={35} height={35}/>
-            <Box>
-              <LinkedinIcon width={35} height={35}/>
-            </Box>
+          <Stack direction={'row'} pl={2} spacing={1} pt={{xs:1,sm:0}}>
+            <FbOutlinedIcon isHover={isHover} setHover={setHover}/>
+            <InstagramOutlined isHover={isHover} setHover={setHover}/>
+            <TwitterOutlined isHover={isHover} setHover={setHover}/>
+            <LinkedInOutlinedIcon isHover={isHover} setHover={setHover}/>
           </Stack>
       </Grid>
     </Grid>

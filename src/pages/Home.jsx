@@ -195,7 +195,7 @@ export const Home = () => {
         backgroundColor: '#638715',
       }}>
 
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -217,7 +217,7 @@ export const Home = () => {
       </Grid> {/* end grid item*/}
 
       
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -239,7 +239,7 @@ export const Home = () => {
         </Typography>
       </Grid> {/* end grid item*/}
       
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -250,7 +250,7 @@ export const Home = () => {
         </Typography>
       </Grid> {/* end grid item*/}
 
-      
+      {/*
       <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}

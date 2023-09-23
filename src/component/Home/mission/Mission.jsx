@@ -1,18 +1,18 @@
 import { Divider, Typography } from '@mui/material'
 import React from 'react'
 import ScrollAnimationLayout from '../../Layout/ScrollAnimationLayout'
+import { ColorRevealLayout } from '../../Layout/ColorRevealLayout'
 
 export const Mission = () => {
   return (
     <>
-    <Typography variant='h5' 
-        sx={{
-          color: '#638715',
-          fontWeight: 'bold',
-          width:'fit-content'
-        }}>MISSION DE VOLYVOLT
-        
-        <Divider variant="fullwidth" sx={{ borderBottomWidth: 2, mt:1 }} />
+        <Typography variant='h5' 
+            sx={{
+              fontWeight: 'bold',
+              width:'fit-content'
+            }}>MISSION DE VOLYVOLT
+            
+            <Divider variant="fullwidth" sx={{ borderBottomWidth: 2, mt:1 }} />
         </Typography>
         <ScrollAnimationLayout>
           <Typography py={2} sx={{fontSize: 20}}>

@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Button, Divider, Stack, Chip } from '@mui/material'
+import { Grid, Box, Typography, Button, Divider, Stack, Chip, CardMedia } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
 import '../styles/accordion.css'
 
@@ -52,15 +52,16 @@ export const Home = () => {
   const refOddSeven = useRef(null)
   const refOddNine = useRef(null)
   const refOddTen = useRef(null)
-  const refOddEleven = useRef(null)
   const refOddThirteen = useRef(null)
+  
+  /* iframe */
+  const refIframe = useRef(null)
 
   const handleCollapseOddSeventeen = () => {
     refOddSeventeen.current.style.maxWidth=refOddSeventeen.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
    // refTwo.current.style.maxWidth=null
   }
@@ -70,7 +71,6 @@ export const Home = () => {
     refOddSeventeen.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
   const handleCollapseOddNine = () => {
@@ -78,7 +78,6 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
   const handleCollapseOddTen = () => {
@@ -86,28 +85,24 @@ export const Home = () => {
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddThirteen.current.style.maxWidth= null
   }
-  const handleCollapseOddEleven = () => {
-    refOddEleven.current.style.maxWidth=refOddEleven.current.scrollWidth+'px'
-    refOddSeven.current.style.maxWidth= null
-    refOddNine.current.style.maxWidth= null
-    refOddTen.current.style.maxWidth= null
-    refOddSeventeen.current.style.maxWidth= null
-    refOddThirteen.current.style.maxWidth= null
-  }
+
   const handleCollapseOddThirteen = () => {
     refOddThirteen.current.style.maxWidth=refOddThirteen.current.scrollWidth+'px'
     refOddSeven.current.style.maxWidth= null
     refOddNine.current.style.maxWidth= null
     refOddTen.current.style.maxWidth= null
-    refOddEleven.current.style.maxWidth= null
     refOddSeventeen.current.style.maxWidth= null
   }
 
+
   useEffect(()=>{
     refOddSeven.current.style.maxWidth=refOddSeven.current.scrollWidth+'px'
+    console.log(refIframe)
+    //refIframe.current.style.width=refIframe.current.scrollWidth
+    
+    //refIframe.current.style.height=refIframe.current.scrollHeight
   },[])
 
   const titleVariants = {
@@ -211,7 +206,7 @@ export const Home = () => {
         backgroundColor: '#638715',
       }}>
 
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -238,7 +233,7 @@ export const Home = () => {
       </Grid> {/* end grid item*/}
 
       
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -264,7 +259,7 @@ export const Home = () => {
         </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
       
-      <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -279,7 +274,7 @@ export const Home = () => {
         </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
 
-      
+      {/*
       <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
@@ -579,9 +574,9 @@ export const Home = () => {
 
 {/* cibles*/}
     {/* video */}
-    <Grid container px={{xs:1,md:6}} py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
-            <Grid item xs={12} sm={12} md={6}>
-              <Box
+    <Grid container  py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
+            <Grid item xs={12} sm={12} md={6}  px={{xs:0,md:6}}>
+            {/**<Box
                 component={'img'}
                 sx={{
                 
@@ -589,9 +584,28 @@ export const Home = () => {
                 }}
                 alt="rdf"
                 src= {videoImg}
+              />*/}
+             {/* 
+             
+             <iframe ref={refIframe} src='https://www.youtube.com/embed/P6eIQT5IQjM'
+                      frameBorder='0'
+                      allow='autoplay; encrypted-media'
+                      allowFullScreen
+                      title='video-volyvolt'
+                     // width={'100%'}
+                     // height={'100%'}
+              />
+             
+             */} 
+             <CardMedia component={'iframe'}
+              src='https://www.youtube.com/embed/P6eIQT5IQjM'
+              sx={{
+                aspectRatio: '16/9',
+                border: 0
+              }}
               />
             </Grid>
-            <Grid item xs={12} sm={12} md={6} >
+            <Grid item xs={12} sm={12} md={6} px={{xs:2,md:6}} >
               <Box margin={'0px auto'} width={{xs:'100%',md:'80%'}}>
               <ScrollAnimationLayout>
                 <Typography variant='h6' align='center' pb={3} pt={{xs:3,md:0}}
@@ -662,8 +676,7 @@ export const Home = () => {
                   <Typography align='center' color={'white'}
                   sx={{
                     fontSize: {xs:13, sm: 14.5, lg:15}
-                  }}>
-                    En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+                  }}>Énergie propre et d'un coût abordable : VolyVolt joue un rôle essentiel dans la promotion de l'accès à l'énergie propre et abordable, en particulier dans les zones rurales. En utilisant des générateurs d'énergie à partir de cultures locales, VolyVolt fournit une source d'énergie verte aux communautés qui en sont autrement privées.</Typography>
                 </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
@@ -689,9 +702,9 @@ export const Home = () => {
               }}>
               <ScrollAnimationLayout>
                 <Typography align='center' color={'white'}
-                sx={{
-                  fontSize: {xs:13, sm: 14.5, lg:15}
-                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+                  sx={{
+                    fontSize: {xs:13, sm: 14.5, lg:15}
+                  }}>Innovation et infrastructures : VolyVolt apporte une approche innovante à l'électrification des zones rurales en utilisant des générateurs d'énergie basés sur des cultures locales. Cette technologie novatrice contribue à améliorer les infrastructures dans ces régions.</Typography>
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
@@ -715,26 +728,16 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <ScrollAnimationLayout>
-                <Typography align='center' color={'white'}
-                sx={{
-                  fontSize: {xs:13, sm: 14.5, lg:15}
-                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
-              </ScrollAnimationLayout>
-                </Box>
+                <ScrollAnimationLayout>
+                  <Typography align='center' color={'white'}
+                    sx={{
+                      fontSize: {xs:13, sm: 14.5, lg:15}
+                    }}>Réduction des inégalités : En offrant des solutions énergétiques abordables , VolyVolt contribue à réduire les inégalités en matière d'accès à l'énergie. L'accès à l'électricité améliore les conditions de vie de ces communautés et réduit les disparités.</Typography>
+                </ScrollAnimationLayout>
+              </Box>
+              </Box>
             </Box>{/* tobecollapse */}
 
-            <Box 
-              sx={{
-                width: {xs:120, sm: 150, md:150},
-                marginLeft: 1,
-                cursor: 'pointer',
-                '&:hover':{
-                  border: '2px solid transparent',
-                }
-              }}>
-              <OddEleven width={'100%'} onClick={handleCollapseOddEleven}/>
-            </Box>{/* end odd two */}
 
             <Box ref={refOddEleven}className='panel-horizontal' >{/* start tobecollapse */}
               <Box p={{sm:1,md:2}} sx={{
@@ -751,6 +754,7 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+
 
             <Box 
               sx={{
@@ -775,7 +779,7 @@ export const Home = () => {
                 <Typography align='center' color={'white'}
                 sx={{
                   fontSize: {xs:13, sm: 14.5, lg:15}
-                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+                }}>VolyVolt promeut l'utilisation d'énergie propre en fournissant des générateurs d'énergie basée sur les piles microbiennes. En réduisant la dépendance aux combustibles fossiles, en les remplaçant par des alternatives vertes,VolyVolt  aide à atténuer les impacts du changement climatique et à préserver l'environnement pour les générations futures.</Typography>
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
@@ -799,11 +803,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
+
               <ScrollAnimationLayout>
                 <Typography align='center' color={'white'}
                 sx={{
                   fontSize: {xs:13, sm: 14.5, lg:15}
-                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+                }}>VolyVolt collabore étroitement avec des ONG, des fondations et d'autres partenaires pour mettre en œuvre ses projets d'électrification rurale. Cette collaboration renforce la capacité à atteindre les objectifs liés au développement durable.</Typography>
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}

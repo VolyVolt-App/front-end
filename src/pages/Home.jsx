@@ -29,7 +29,9 @@ import { Histoire } from '../component/Home/mission/Histoire'
 
 import { Valeurs } from '../component/Home/mission/Valeurs'
 
-
+import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
+import ImageAnimationLayout from '../component/Layout/ImageAnimationLayout'
+import AmountAnimationLayout from '../component/Layout/AmountAnimationLayout'
 
 
 export const Home = () => {
@@ -51,6 +53,7 @@ export const Home = () => {
   const refOddNine = useRef(null)
   const refOddTen = useRef(null)
   const refOddThirteen = useRef(null)
+  const refOddEleven = useRef(null)
   
   /* iframe */
   const refIframe = useRef(null)
@@ -104,10 +107,10 @@ export const Home = () => {
   },[])
 
   const titleVariants = {
-    initial: {
+    hidden: {
       opacity: 0
     },
-    visibility: {
+    visible: {
       opacity: 1,
       transition: {
         duration: 0.5,
@@ -117,24 +120,22 @@ export const Home = () => {
 
   return (
   <>
-    
     <Grid container px={{xs:2,md:14}} pt={9} sx={{
         backgroundColor: '#082D0E'
-        
       }}>
-
-      <Typography component={motion.h5} align='center' variant='h5' sx={{
-        color: '#96CC1E',
-        fontSize: {xs:18,md:23},
-        fontWeight: 'bold',
-      }}
-        variants={titleVariants}
-        initial="initial"
-        animate="visibility"
-      >
-        Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
-      </Typography>
-
+      <ScrollAnimationLayout>
+        <Typography component={motion.h5} align='center' variant='h5' sx={{
+          color: '#96CC1E',
+          fontSize: {xs:18,md:23},
+          fontWeight: 'bold',
+        }}
+          variants={titleVariants}
+          initial="initial"
+          animate="visible"
+        >
+          Bienvenue chez VolyVolt, où chaque projet est une ode à la responsabilité sociale, à l’impact positif, et à un avenir plus lumineux pour tous.
+        </Typography>
+      </ScrollAnimationLayout>
     </Grid>
 
     <Grid container pt={3} justifyContent={'center'}  
@@ -142,43 +143,51 @@ export const Home = () => {
         backgroundColor: '#082D0E'
       }}>
       <Grid item xs={12} md={5} px={1}>
-        <Typography variant='h6' mt={3} color={'white'}
-        sx={{
-        fontFamily: 'Assistant',
-        }}>
-        Imaginez un avenir où votre engagement a le pouvoir de faire briller un foyer et d’inspirer des sourires au sein des communautés rurales. 
-        </Typography>
-        <Typography sx={{color: '#bbb'}}>
-        Collaborer avec VolyVolt, c'est bien plus que cultiver de l'énergie durable, c'est semer la transformation,  récolter la gratitude de ceux que vous aidez. 
-        </Typography>
-
+        <ScrollAnimationLayout>
+          <Typography variant='h6' mt={3} color={'white'}
+          sx={{
+          fontFamily: 'Assistant',
+          }}>
+          Imaginez un avenir où votre engagement a le pouvoir de faire briller un foyer et d’inspirer des sourires au sein des communautés rurales. 
+          </Typography>
+          <Typography sx={{color: '#bbb'}}>
+          Collaborer avec VolyVolt, c'est bien plus que cultiver de l'énergie durable, c'est semer la transformation,  récolter la gratitude de ceux que vous aidez. 
+          </Typography>
+        </ScrollAnimationLayout>
         <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}}>
+          <ScrollAnimationLayout>
           <Button variant='contained' size='small' sx={{ color: '#fff'}} >NOTRE SOLUTION</Button> 
+          </ScrollAnimationLayout>
+          <ScrollAnimationLayout>
           <Button variant='outlined' size='small'
             sx={{
               marginLeft: 2
             }}>
               COLLABORER AVEC NOUS
           </Button>
+          </ScrollAnimationLayout>
         </Box>
       </Grid> {/* end grid */}
       
       <Grid item xs={12} md={5} display={'flex'} pl={{xs:0, md:3}} >
-      <Box
-         component={motion.img}
-         sx={{
-          width: {md:450, xs:'100%'},
-          mt:{xs:3,md:0},
-          
-         // maxHeight: { xs: 50, md: 60},
-         // maxWidth: {xs: 50, md: 60 }
-         }}
-         alt="rdf"
-         src= {bannerImage}
-        />
+      <ImageAnimationLayout>
+        <Box
+          component={motion.img}
+          sx={{
+            width: {md:450, xs:'100%'},
+            mt:{xs:3,md:0},
+            
+          // maxHeight: { xs: 50, md: 60},
+          // maxWidth: {xs: 50, md: 60 }
+          }}
+          alt="rdf"
+          src= {bannerImage}
+          />
+        </ImageAnimationLayout>
       </Grid> {/* end grid */}
 
     </Grid> {/*end container */}
+
 
     <Typography variant='h5' align='center' p={2} sx={{
       backgroundColor: '#082D0E',
@@ -186,7 +195,10 @@ export const Home = () => {
       color: '#ffbe18',
       pb:3,
       pt:3
-    }}>“Illuminer les cœurs, semer le changement et éclairer les foyers”
+    }}>
+      <ScrollAnimationLayout>
+    “Illuminer les cœurs, semer le changement et éclairer les foyers”
+    </ScrollAnimationLayout>
     </Typography>
 {/* end voloan */}
 {/* faharoa */}
@@ -210,10 +222,15 @@ export const Home = () => {
          alt="rdf"
          src= {img1}
         />*/}
-        <ValuePropositionOne width={70} height={70}/>
+
+        <ScrollAnimationLayout>
+          <ValuePropositionOne width={70} height={70}/>
+        </ScrollAnimationLayout>
+        <ScrollAnimationLayout>
         <Typography align='center' mt={1} sx={{color: '#fff'}}>
           Accès à l’énergie verte  à partir des cultures locales
         </Typography>
+        </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
 
       
@@ -232,22 +249,30 @@ export const Home = () => {
          alt="rdf"
          src= {img2}
         />*/}
-        <ValuePropositionTwo width={70} height={70}/>
-        
-        <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Renforcement de la Responsabilité Sociale des ONGs et des fondations
-        </Typography>
+
+        <ScrollAnimationLayout>
+          <ValuePropositionTwo width={70} height={70}/>
+        </ScrollAnimationLayout>
+        <ScrollAnimationLayout>
+          <Typography align='center' mt={1} sx={{color: '#fff'}}>
+            Renforcement de la Responsabilité Sociale des ONGs et des fondations
+          </Typography>
+        </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
       
       <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <ValuePropositionThree width={70} height={70}/>
+        <ScrollAnimationLayout>
+          <ValuePropositionThree width={70} height={70}/>
+        </ScrollAnimationLayout>
 
-        <Typography align='center' mt={1} sx={{color: '#fff'}}>
-        Une solution clé en main pour l'électrification rurale
-        </Typography>
+        <ScrollAnimationLayout>
+          <Typography align='center' mt={1} sx={{color: '#fff'}}>
+          Une solution clé en main pour l'électrification rurale
+          </Typography>
+        </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
 
       {/*
@@ -255,10 +280,14 @@ export const Home = () => {
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
-        <ValuePropositionFour width={70} height={70} />
-        <Typography align='center' mt={1} sx={{color: '#fff'}}>
-        Une éléctrification à moindre coûts  au sein des foyers ruraux
-        </Typography>
+        <ScrollAnimationLayout>
+          <ValuePropositionFour width={70} height={70} />
+        </ScrollAnimationLayout>
+        <ScrollAnimationLayout>
+          <Typography align='center' mt={1} sx={{color: '#fff'}}>
+          Une éléctrification à moindre coûts  au sein des foyers ruraux
+          </Typography>
+        </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
 
     </Grid> {/* end grid container */}
@@ -579,22 +608,28 @@ export const Home = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6} px={{xs:2,md:6}} >
               <Box margin={'0px auto'} width={{xs:'100%',md:'80%'}}>
-              <Typography variant='h6' align='center' pb={3} pt={{xs:3,md:0}}
-                sx={{
-                  color: '#8BBC1F',
-                  fontWeight: 'bold',
-                }}>À QUI S’ADRESSE LA SOLUTION VOLYVOLT?
-                
-                <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
-              </Typography>
-              <Typography color={'white'}>Notre solution d'électrification rurale est spécialement conçue pour : </Typography>
+              <ScrollAnimationLayout>
+                <Typography variant='h6' align='center' pb={3} pt={{xs:3,md:0}}
+                  sx={{
+                    color: '#8BBC1F',
+                    fontWeight: 'bold',
+                  }}>À QUI S’ADRESSE LA SOLUTION VOLYVOLT?
+                  
+                  <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
+                </Typography>
+              </ScrollAnimationLayout>
+              <ScrollAnimationLayout>
+                <Typography color={'white'}>Notre solution d'électrification rurale est spécialement conçue pour : </Typography>
+              </ScrollAnimationLayout>
               <ul>
-                <li><Typography color={'white'}>les ONG </Typography></li>
-                <li><Typography color={'white'}>les fondations engagées  </Typography></li>
+                <ScrollAnimationLayout><li><Typography color={'white'}>les ONG </Typography></li></ScrollAnimationLayout>
+                <ScrollAnimationLayout><li><Typography color={'white'}>les fondations engagées  </Typography></li></ScrollAnimationLayout>
               </ul>
-              <Typography color={'white'}>               
-                 La solution VolyVolt s’adresse aux acteurs du secteur philanthropique et du développement durable qui cherchent à avoir un impact positif en fournissant de l'énergie propre aux populations rurales.
-              </Typography>
+              <ScrollAnimationLayout>
+                <Typography color={'white'}>               
+                  La solution VolyVolt s’adresse aux acteurs du secteur philanthropique et du développement durable qui cherchent à avoir un impact positif en fournissant de l'énergie propre aux populations rurales.
+                </Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Grid>
             
@@ -606,19 +641,20 @@ export const Home = () => {
 
 {/* ODD */}
     <Grid container sx={{backgroundColor: '#082D0E'}} py={2} >
-      <Typography variant='h6'  pb={3} px={{xs:1,md:6}} 
-          sx={{
-            color: '#8BBC1F',
-            fontWeight: 'bold',
-          }}>
-            Comment participons-nous à l’atteinte des ODD?
-            <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
-        </Typography>
+        <Typography variant='h6'  pb={3} px={{xs:1,md:6}} 
+            sx={{
+              color: '#8BBC1F',
+              fontWeight: 'bold',
+            }}>
+              <ScrollAnimationLayout>
+                Comment participons-nous à l’atteinte des ODD?
+              </ScrollAnimationLayout>
+              <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
+          </Typography>
         
       <Grid item xs={12} md={12} lg={12}>
         <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} >
             
-
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -628,9 +664,8 @@ export const Home = () => {
                   border: '2px solid transparent',
                 }
               }}>
-              <OddSeven width={'100%'} onClick={handleCollapseOddSeven}/>
+                <OddSeven width={'100%'} onClick={handleCollapseOddSeven}/>
             </Box>{/* end odd two */}
-
             <Box ref={refOddSeven}className='panel-horizontal' >{/* start tobecollapse */}
               <Box p={{sm:1,md:2}} sx={{
                 backgroundColor: '#FCC30B',
@@ -638,11 +673,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>Énergie propre et d'un coût abordable : VolyVolt joue un rôle essentiel dans la promotion de l'accès à l'énergie propre et abordable, en particulier dans les zones rurales. En utilisant des générateurs d'énergie à partir de cultures locales, VolyVolt fournit une source d'énergie verte aux communautés qui en sont autrement privées.</Typography>
- 
+                <ScrollAnimationLayout>
+                  <Typography align='center' color={'white'}
+                  sx={{
+                    fontSize: {xs:13, sm: 14.5, lg:15}
+                  }}>Énergie propre et d'un coût abordable : VolyVolt joue un rôle essentiel dans la promotion de l'accès à l'énergie propre et abordable, en particulier dans les zones rurales. En utilisant des générateurs d'énergie à partir de cultures locales, VolyVolt fournit une source d'énergie verte aux communautés qui en sont autrement privées.</Typography>
+                </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -655,7 +691,7 @@ export const Home = () => {
                   border: '2px solid transparent',
                 }
               }}>
-              <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
+                <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
             </Box>{/* end odd two */}
 
             <Box ref={refOddNine}className='panel-horizontal' >{/* start tobecollapse */}
@@ -665,11 +701,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>Innovation et infrastructures : VolyVolt apporte une approche innovante à l'électrification des zones rurales en utilisant des générateurs d'énergie basés sur des cultures locales. Cette technologie novatrice contribue à améliorer les infrastructures dans ces régions.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                  sx={{
+                    fontSize: {xs:13, sm: 14.5, lg:15}
+                  }}>Innovation et infrastructures : VolyVolt apporte une approche innovante à l'électrification des zones rurales en utilisant des générateurs d'énergie basés sur des cultures locales. Cette technologie novatrice contribue à améliorer les infrastructures dans ces régions.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -692,14 +729,32 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>Réduction des inégalités : En offrant des solutions énergétiques abordables , VolyVolt contribue à réduire les inégalités en matière d'accès à l'énergie. L'accès à l'électricité améliore les conditions de vie de ces communautés et réduit les disparités.</Typography>
- 
+                <ScrollAnimationLayout>
+                  <Typography align='center' color={'white'}
+                    sx={{
+                      fontSize: {xs:13, sm: 14.5, lg:15}
+                    }}>Réduction des inégalités : En offrant des solutions énergétiques abordables , VolyVolt contribue à réduire les inégalités en matière d'accès à l'énergie. L'accès à l'électricité améliore les conditions de vie de ces communautés et réduit les disparités.</Typography>
+                </ScrollAnimationLayout>
+              </Box>
               </Box>
             </Box>{/* tobecollapse */}
 
+
+            <Box ref={refOddEleven}className='panel-horizontal' >{/* start tobecollapse */}
+              <Box p={{sm:1,md:2}} sx={{
+                backgroundColor: '#FD9D24',
+                marginBottom: {xs:1, sm: 1},
+                height: {xs:120,sm:150,md:150},
+                width: {xs:350,sm:400, md: 490}
+              }}>
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
+              </Box>
+            </Box>{/* tobecollapse */}
 
 
             <Box 
@@ -721,11 +776,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>VolyVolt promeut l'utilisation d'énergie propre en fournissant des générateurs d'énergie basée sur les piles microbiennes. En réduisant la dépendance aux combustibles fossiles, en les remplaçant par des alternatives vertes,VolyVolt  aide à atténuer les impacts du changement climatique et à préserver l'environnement pour les générations futures.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>VolyVolt promeut l'utilisation d'énergie propre en fournissant des générateurs d'énergie basée sur les piles microbiennes. En réduisant la dépendance aux combustibles fossiles, en les remplaçant par des alternatives vertes,VolyVolt  aide à atténuer les impacts du changement climatique et à préserver l'environnement pour les générations futures.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -748,14 +804,15 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>VolyVolt collabore étroitement avec des ONG, des fondations et d'autres partenaires pour mettre en œuvre ses projets d'électrification rurale. Cette collaboration renforce la capacité à atteindre les objectifs liés au développement durable.</Typography>
- 
+
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>VolyVolt collabore étroitement avec des ONG, des fondations et d'autres partenaires pour mettre en œuvre ses projets d'électrification rurale. Cette collaboration renforce la capacité à atteindre les objectifs liés au développement durable.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
-        </Box>
       </Grid>
       
     </Grid> {/* end grid container */}
@@ -768,39 +825,52 @@ export const Home = () => {
 
 {/* impact */}
     <Grid container sx={{backgroundColor:'#FFC000'}} p={{xs:2,md:6}}>
-      <Grid item xs={6} md={3}>
-         <Typography variant='h2' align='center'
-         sx={{
-          fontWeight: 'bold',
-          fontSize: {xs:30,md:59}
-         }}>
-          +45
-         </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Communes touchées
-         </Typography>
+      <Grid component={motion.div} transition={{ staggerChildren: 0.5 }} item xs={6} md={3}>
+         <AmountAnimationLayout>
+          <Typography 
+            variant='h2' 
+            align='center'
+            sx={{
+              fontWeight: 'bold',
+              fontSize: {xs:30,md:59}
+            }}
+          >
+            +45
+          </Typography>
+         </AmountAnimationLayout>
+          <ScrollAnimationLayout>          
+            <Typography variant='h6' align='center'
+              sx={{
+                fontWeight: 'bold',
+              }}>
+              Communes touchées
+            </Typography>
+          </ScrollAnimationLayout>
+
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3}>
-         <Typography variant='h2' align='center'
-         sx={{
-          fontWeight: 'bold',
-          fontSize: {xs:30,md:59}
-         }}>
-          +200
-         </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Foyers  éclairés
-         </Typography>
+        <AmountAnimationLayout>
+          <Typography variant='h2' align='center'
+          sx={{
+            fontWeight: 'bold',
+            fontSize: {xs:30,md:59}
+          }}>
+            +200
+          </Typography>
+        </AmountAnimationLayout>
+         <ScrollAnimationLayout>
+          <Typography variant='h6' align='center'
+          sx={{
+            fontWeight: 'bold',
+          }}>
+          Foyers  éclairés
+          </Typography>
+         </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3}>
+        <AmountAnimationLayout>
          <Typography variant='h2' align='center'
          sx={{
           fontWeight: 'bold',
@@ -808,15 +878,19 @@ export const Home = () => {
          }}>
           45
          </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Partenaires de projets  
-         </Typography>
+        </AmountAnimationLayout>
+         <ScrollAnimationLayout>
+            <Typography variant='h6' align='center'
+            sx={{
+              fontWeight: 'bold',
+            }}>
+            Partenaires de projets  
+            </Typography>
+          </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3} >
+        <AmountAnimationLayout>
          <Typography variant='h2' align='center'
          sx={{
           fontWeight: 'bold',
@@ -824,12 +898,15 @@ export const Home = () => {
          }}>
           +90
          </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Emplois créés
-         </Typography>
+        </AmountAnimationLayout>
+        <ScrollAnimationLayout>
+          <Typography variant='h6' align='center'
+          sx={{
+            fontWeight: 'bold',
+          }}>
+          Emplois créés
+          </Typography>
+        </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
     </Grid>{/* end container */}

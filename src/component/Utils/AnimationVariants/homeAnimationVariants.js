@@ -1,7 +1,7 @@
 const ScrollAnimationVariants = {
     hidden: {
         opacity: 0,
-        y: -20
+        y: 25
     },
     visible: {
         opacity: 1, 
@@ -9,7 +9,8 @@ const ScrollAnimationVariants = {
         transition: {
             y: {duration: 0.6},
 		    opacity: { duration: 1.2},
-            ease:"easeOut"
+            ease:"easeOut",
+            delay: 0.25
         }
     }
 }

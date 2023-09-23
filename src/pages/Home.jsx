@@ -31,6 +31,7 @@ import { Valeurs } from '../component/Home/mission/Valeurs'
 
 import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
 import ImageAnimationLayout from '../component/Layout/ImageAnimationLayout'
+import AmountAnimationLayout from '../component/Layout/AmountAnimationLayout'
 
 
 export const Home = () => {
@@ -676,9 +677,7 @@ export const Home = () => {
                   border: '2px solid transparent',
                 }
               }}>
-                <ScrollAnimationLayout>
-                  <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
-                </ScrollAnimationLayout>
+                <OddNine width={'100%'} onClick={handleCollapseOddNine}/>
             </Box>{/* end odd two */}
 
             <Box ref={refOddNine}className='panel-horizontal' >{/* start tobecollapse */}
@@ -716,12 +715,13 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
-              </Box>
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
+                </Box>
             </Box>{/* tobecollapse */}
 
             <Box 
@@ -743,11 +743,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -770,11 +771,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
 
@@ -797,11 +799,12 @@ export const Home = () => {
                 height: {xs:120,sm:150,md:150},
                 width: {xs:350,sm:400, md: 490}
               }}>
-              <Typography align='center' color={'white'}
-              sx={{
-                fontSize: {xs:13, sm: 14.5, lg:15}
-              }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
- 
+              <ScrollAnimationLayout>
+                <Typography align='center' color={'white'}
+                sx={{
+                  fontSize: {xs:13, sm: 14.5, lg:15}
+                }}>En optimisant la productivité agricole grâce à notre technologie de prédiction agricole basée sur l'intelligence artificielle, nous aidons les agriculteurs à améliorer leurs rendements et à accroître la production alimentaire dans les zones rurales, contribuant ainsi à l'éradication de la faim.</Typography>
+              </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
         </Box>
@@ -817,39 +820,52 @@ export const Home = () => {
 
 {/* impact */}
     <Grid container sx={{backgroundColor:'#FFC000'}} p={{xs:2,md:6}}>
-      <Grid item xs={6} md={3}>
-         <Typography variant='h2' align='center'
-         sx={{
-          fontWeight: 'bold',
-          fontSize: {xs:30,md:59}
-         }}>
-          +45
-         </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Communes touchées
-         </Typography>
+      <Grid component={motion.div} transition={{ staggerChildren: 0.5 }} item xs={6} md={3}>
+         <AmountAnimationLayout>
+          <Typography 
+            variant='h2' 
+            align='center'
+            sx={{
+              fontWeight: 'bold',
+              fontSize: {xs:30,md:59}
+            }}
+          >
+            +45
+          </Typography>
+         </AmountAnimationLayout>
+          <ScrollAnimationLayout>          
+            <Typography variant='h6' align='center'
+              sx={{
+                fontWeight: 'bold',
+              }}>
+              Communes touchées
+            </Typography>
+          </ScrollAnimationLayout>
+
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3}>
-         <Typography variant='h2' align='center'
-         sx={{
-          fontWeight: 'bold',
-          fontSize: {xs:30,md:59}
-         }}>
-          +200
-         </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Foyers  éclairés
-         </Typography>
+        <AmountAnimationLayout>
+          <Typography variant='h2' align='center'
+          sx={{
+            fontWeight: 'bold',
+            fontSize: {xs:30,md:59}
+          }}>
+            +200
+          </Typography>
+        </AmountAnimationLayout>
+         <ScrollAnimationLayout>
+          <Typography variant='h6' align='center'
+          sx={{
+            fontWeight: 'bold',
+          }}>
+          Foyers  éclairés
+          </Typography>
+         </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3}>
+        <AmountAnimationLayout>
          <Typography variant='h2' align='center'
          sx={{
           fontWeight: 'bold',
@@ -857,15 +873,19 @@ export const Home = () => {
          }}>
           45
          </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Partenaires de projets  
-         </Typography>
+        </AmountAnimationLayout>
+         <ScrollAnimationLayout>
+            <Typography variant='h6' align='center'
+            sx={{
+              fontWeight: 'bold',
+            }}>
+            Partenaires de projets  
+            </Typography>
+          </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
       <Grid item xs={6} md={3} >
+        <AmountAnimationLayout>
          <Typography variant='h2' align='center'
          sx={{
           fontWeight: 'bold',
@@ -873,12 +893,15 @@ export const Home = () => {
          }}>
           +90
          </Typography>
-         <Typography variant='h6' align='center'
-         sx={{
-          fontWeight: 'bold',
-         }}>
-         Emplois créés
-         </Typography>
+        </AmountAnimationLayout>
+        <ScrollAnimationLayout>
+          <Typography variant='h6' align='center'
+          sx={{
+            fontWeight: 'bold',
+          }}>
+          Emplois créés
+          </Typography>
+        </ScrollAnimationLayout>
       </Grid>{/* end item */}
 
     </Grid>{/* end container */}

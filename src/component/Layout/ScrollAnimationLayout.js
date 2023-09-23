@@ -6,7 +6,7 @@ import { ScrollAnimationVariants } from '../Utils/AnimationVariants/homeAnimatio
 const ScrollAnimationLayout = ({children}) => {
     const ref = useRef(null);
     const scrollAnimation = useAnimation();
-    const inView = useInView(ref, { once: true });
+    const inView = useInView(ref, { once: false });
 
     useEffect(() => {
       if(inView) {

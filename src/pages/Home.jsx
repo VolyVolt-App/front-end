@@ -53,6 +53,7 @@ export const Home = () => {
   const refOddNine = useRef(null)
   const refOddTen = useRef(null)
   const refOddThirteen = useRef(null)
+  const refOddEleven = useRef(null)
   
   /* iframe */
   const refIframe = useRef(null)
@@ -812,7 +813,6 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
-        </Box>
       </Grid>
       
     </Grid> {/* end grid container */}

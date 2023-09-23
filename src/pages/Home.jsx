@@ -654,7 +654,7 @@ export const Home = () => {
         
       <Grid item xs={12} md={12} lg={12}>
         <Box display={'flex'} flexWrap={'wrap'} justifyContent={'center'} >
-            
+            {/* start odd 7 */}
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -666,6 +666,7 @@ export const Home = () => {
               }}>
                 <OddSeven width={'100%'} onClick={handleCollapseOddSeven}/>
             </Box>{/* end odd two */}
+
             <Box ref={refOddSeven}className='panel-horizontal' >{/* start tobecollapse */}
               <Box p={{sm:1,md:2}} sx={{
                 backgroundColor: '#FCC30B',
@@ -681,7 +682,9 @@ export const Home = () => {
                 </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+            {/* end odd 7 */}
 
+            {/* start odd 9 */}
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -709,7 +712,9 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+            {/* end odd 9 */}
 
+            {/* start odd 10 */}
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -737,9 +742,10 @@ export const Home = () => {
                 </ScrollAnimationLayout>
               </Box>
               </Box>
-            </Box>{/* tobecollapse */}
+              {/* end odd 10 */}
 
-
+              
+            {/* start odd 11 */}
             <Box ref={refOddEleven}className='panel-horizontal' >{/* start tobecollapse */}
               <Box p={{sm:1,md:2}} sx={{
                 backgroundColor: '#FD9D24',
@@ -755,8 +761,10 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+            {/* start odd 11 */}
 
 
+            {/* start odd 13 */}
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -784,7 +792,9 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+            {/* end odd 13 */}
 
+            {/* start odd 17 */}
             <Box 
               sx={{
                 width: {xs:120, sm: 150, md:150},
@@ -813,6 +823,9 @@ export const Home = () => {
               </ScrollAnimationLayout>
               </Box>
             </Box>{/* tobecollapse */}
+            {/* end odd 17 */}
+            </Box>{/* tobecollapse */} {/* box stack */}
+
       </Grid>
       
     </Grid> {/* end grid container */}

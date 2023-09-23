@@ -2,7 +2,7 @@ import { Box, Grid, Divider, Typography, Stack, TextField, Button, Select, MenuI
 import React, {useState} from 'react'
 
 import backgroundBanner from '../asset/image/contact/equipe-commerciale-reussie-heureuse 1.png'
-import teamvolyvolt from '../asset/image/volvoltteam.png'
+import teamvolyvolt from '../asset/image/équipe verte 1.png'
 import backgroundMobileBanner from '../asset/image/contact/bannermobilecontact.png'
 import { Embarque } from '../component/contact/Embarque'
 

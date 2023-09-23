@@ -1,42 +1,148 @@
-import { Typography, useTheme } from '@mui/material'
-import React from 'react'
+import { Box, Typography, useTheme } from '@mui/material'
+import React, { useState } from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses } from 'react-pro-sidebar'
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
+import { ReactComponent as Logo } from '../../asset/icon/volyvolt-black.svg'
+import { ReactComponent as DashboardIcon } from '../../asset/icon/dashboardIcon.svg'
+
+import { ReactComponent as CustomersIcon } from '../../asset/icon/clientIcon.svg'
+import { ReactComponent as QuoteIcon } from '../../asset/icon/quotegeneratorIcon.svg'
+import { ReactComponent as BellIcon } from '../../asset/icon/icon _bell_.svg'
+import { useNavigate } from 'react-router-dom'
+
 
 const Item = ({ title, to, icon, selected, setSelected, setCollapsed, isCollapsed}) => {
   const theme = useTheme();
  // const colors = tokens(theme.palette.mode)
- // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleClick = () =>{
-   // setSelected(title)
-    //navigate(to)
+    setSelected(title)
+    navigate('/admin'+to)
   }
   return (
     <MenuItem
       active={selected === title}
       style={{
-        color: `blue`,
+        color: `black`,
+        //backgroundColor: selected === title && 'red'
+        background: selected === title && 'linear-gradient(90deg, rgba(139, 188, 31, 0.47) 0%, rgba(183, 217, 108, 0.03) 100%)'
       }}
       onClick={handleClick}
       icon={icon}
     >
-      <Typography>{title}</Typography>
+      <Typography fontWeight={'bold'}>{title}</Typography>
     </MenuItem>
   )
 }
 
-export const Sidebars = () => {
+export const Sidebars = ({isCollapsed,setIsCollapsed}) => {
   const theme = useTheme()
+  
+  const [selected, setSelected] = useState("DASHBOARD")
+
   return (
-    <Sidebar
-    rootStyles={{
-      [`.${sidebarClasses.container}`]:{
-        backgroundColor: `${theme.palette.secondary.main} !important`
-      },
-      height: '100%'
-    }}>
-    </Sidebar>
-  )
+      <Box sx={{
+        position: 'fixed',
+        zIndex:5,
+        height:'100vh',
+        top:0,
+        display:{xs:'none', md:'flex'}
+      }}>
+        <Sidebar
+        collapsed={isCollapsed}
+        rootStyles={{
+          [`.${sidebarClasses.container}`]:{
+            backgroundColor: 'rgba(8, 45, 14, 0.25)'
+            //backgroundColor: `${theme.palette.secondary.main} !important`
+          },
+          height: '100%'
+        }}>
+          <Menu 
+              menuItemStyles={{
+                button: {
+                  ['& .active']:{
+                    backgroundColor: 'red',
+                    color: 'blue'
+                  },
+                  ['&:hover']:{
+                    backgroundColor: '#ffffff11'
+                  },
+                },
+                subMenuContent : {
+                  backgroundColor: '#27282a',
+                }
+
+              }}
+            >
+              {/* LOGO AND MENU ICON */}
+              <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    pt={2}
+                    pb={3}
+                  >
+                    {!isCollapsed && (<Typography variant="h3" color={'primary'} ml={4} mr={2}>
+                    <Logo width={140}  />
+                    </Typography>)}
+                    <MenuItem
+                      onClick={setIsCollapsed}
+                      icon={<MenuOutlinedIcon />}
+                      style={{ 
+                        color: 'black',
+                        width: '75px',
+                        paddingLeft: '13px',
+                      }}
+                      
+                    >
+                    </MenuItem>
+                </Box>
+                <Item
+                    title="DASHBOARD"
+                    to=""
+                    icon={<DashboardIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+
+                <Item
+                    title="CUSTOMERS"
+                    to="/customers"
+                    icon={<CustomersIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+
+                    
+                <Item
+                    title="QUOTE GENERATOR"
+                    to="/quotegenerator"
+                    icon={<QuoteIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+                    <Item
+                        title="NOTIFICATIONS"
+                        to="/notification"
+                        icon={<BellIcon />}
+                        selected={selected}
+                        setSelected={setSelected}
+                        setCollapsed={setIsCollapsed}
+                        isCollapsed={isCollapsed}
+                        />
+            
+            </Menu>
+        </Sidebar>
+      </Box>
+    
+      )
 }
 
 /*

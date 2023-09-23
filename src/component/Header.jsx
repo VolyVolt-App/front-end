@@ -23,7 +23,7 @@ import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material'
 
 const pages = [
     {
-      text:"ACCUEL",
+      text:"ACCUEIL",
       link: ''
     },
     {

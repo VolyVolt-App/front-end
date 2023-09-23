@@ -52,7 +52,6 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
                             marginLeft: '2px',
                             color: 'white'
                         }}> 
-                            
                             {nombre} commentaires
                     </Typography>
                 </ScrollAnimationLayout>

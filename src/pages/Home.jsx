@@ -927,31 +927,38 @@ export const Home = () => {
 
 {/* article */}
     <Box backgroundColor={'#2F2121'} p={{xs:0,md:4}} > 
-      <Typography variant='h5' px={2} pt={{xs:4,md:0}}
-        sx={{
-          color: '#8BBC1F',
-          width: 'fit-content'
-        }}>
-          NOS ARTICLES
-          <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
-      </Typography>
-      <Typography color={'white'} px={2} pt={1}>
-      Restez informés sur nos actualités, et retrouvez nos sélections d’articles les plus récents
-      </Typography>
+    <ScrollAnimationLayout>
+        <Typography variant='h5' px={2} pt={{xs:4,md:0}}
+          sx={{
+            color: '#8BBC1F',
+            width: 'fit-content'
+          }}>
+            NOS ARTICLES
+            <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
+        </Typography>
+      </ScrollAnimationLayout>
+      <ScrollAnimationLayout>
+        <Typography color={'white'} px={2} pt={1}>
+        Restez informés sur nos actualités, et retrouvez nos sélections d’articles les plus récents
+        </Typography>
+      </ScrollAnimationLayout>
       <Grid container>
         <Grid item md={6} lg={4} >
-          <Articles 
-            articleImage={article3} 
-            subheading={'Developpement local'} 
-            heading={"VolyVolt contribue à l’amélioration des conditions de vie"} 
-            date={'14 Aout 2023'} 
-            nombre={'5'}
-            text={"Depuis l’implémentation du projet Volyvolt, les ménages à Miarinarivo voient leurs conditions de vies s’améliorer. Les paysans enregistrent  des hausses d’une moyenne de 20% sur leurs productions agricoles ..."}
-            link={''} />
+          <ImageAnimationLayout>
+            <Articles 
+              articleImage={article3} 
+              subheading={'Developpement local'} 
+              heading={"VolyVolt contribue à l’amélioration des conditions de vie"} 
+              date={'14 Aout 2023'} 
+              nombre={'5'}
+              text={"Depuis l’implémentation du projet Volyvolt, les ménages à Miarinarivo voient leurs conditions de vies s’améliorer. Les paysans enregistrent  des hausses d’une moyenne de 20% sur leurs productions agricoles ..."}
+              link={''} />
+          </ImageAnimationLayout>
         </Grid>{/* end item*/}
         
         <Grid item md={6} lg={4} >
-          <Articles 
+          <ImageAnimationLayout>
+            <Articles 
             articleImage={article2} 
             subheading={'Santé'} 
             heading={"Implantation de VolyVolt : un pas vers l’ autonomie énergétique "} 
@@ -959,18 +966,20 @@ export const Home = () => {
             nombre={'8'}
             text={"Alors que les défis liés à l'accès à l'énergie durable persistent dans les zones rurales, une lueur d'espoir émerge avec l'implantation de VolyVolt. Cette solution novatrice de générateurs d'énergie propre et renouvelable...."}
             link={''} />
+          </ImageAnimationLayout>
         </Grid>{/* end item*/}
 
         <Grid item md={6} lg={4} >
-          <Articles 
-            articleImage={article1} 
-            subheading={'Santé'} 
-            heading={"VolyVolt, projet issu d'Orange Summer Challenge"} 
-            date={'04 Juillet 2023'} 
-            nombre={'3'}
-            text={"Ce projet, porté par une équipe engagée et diversifiée, a vu le jour à la suite de plusieurs mois d'efforts et de recherche. L'idée de combiner l'agriculture durable et l'énergie verte pour répondre ..."}
-            link={''} />
-            
+          <ImageAnimationLayout>
+            <Articles 
+              articleImage={article1} 
+              subheading={'Santé'} 
+              heading={"VolyVolt, projet issu d'Orange Summer Challenge"} 
+              date={'04 Juillet 2023'} 
+              nombre={'3'}
+              text={"Ce projet, porté par une équipe engagée et diversifiée, a vu le jour à la suite de plusieurs mois d'efforts et de recherche. L'idée de combiner l'agriculture durable et l'énergie verte pour répondre ..."}
+              link={''} />
+            </ImageAnimationLayout>
         </Grid>{/* end item*/}
 
       </Grid>{/*end container */}

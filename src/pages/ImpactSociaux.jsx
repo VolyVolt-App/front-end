@@ -30,6 +30,8 @@ import articlejeune from '../asset/image/PXL_20230726_072127091 1.png'
 
 import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.png'
 
+import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
+import BtnAnimationLayout from '../component/Layout/BtnAnimationLayout'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -39,8 +41,6 @@ import { SliderLeft } from '../component/gallery/SliderLeft'
 //end article
 //import {ReactComponent as Icon} from '../asset/icon'
 //import {ReactComponent as Icon} from '../asset/icon'
-
-
 
 export const ImpactSociaux = () => {
   const [isArticleHover, setArticleHover] = useState('')
@@ -97,6 +97,7 @@ export const ImpactSociaux = () => {
                 mb:{xs:3 ,md: '15%'},
                 backgroundColor: {xs: '',md:''}
               }}>
+              <ScrollAnimationLayout>
                 <Typography variant='h6' sx={{
                   color: '#A8E71C',
                   fontWeight: 500,
@@ -104,20 +105,24 @@ export const ImpactSociaux = () => {
                   pb: 3,
                   fontSize: {xs: 15 ,sm: 22}
                 }}>VolyVolt, pas uniquement une solution ÉnErgétique <br/> Une baume  au cœur  pour les familles rurales</Typography>
-              
+              </ScrollAnimationLayout>
                 <Grid container>
                   <Grid item xs={0.2} md={0.2}>
-                    <Divider orientation="vertical"  sx={{ borderLeftWidth: 10,borderRightWidth: 0, borderColor: '#A8E71C' }} />
+                        <Divider orientation="vertical"  sx={{ borderLeftWidth: 10,borderRightWidth: 0, borderColor: '#A8E71C' }} />
                   </Grid>
                   <Grid item xs={11.8} md={11.8} pl={2}>   
-                    <Typography variant='h6' fontWeight={'bold'} color={'white'} sx={{
-                      fontSize: {xs: 15 ,sm: 22}
-                    }} >Bienvenue dans notre section "Impacts Sociaux"</Typography> 
-                    <Typography color={'white'} sx={{
-                      fontSize: {xs: 14 ,sm: 16}
-                    }} >
-                    Découvrez comment nous travaillons main dans la main avec les communautés rurales pour apporter la lumière, l'espoir et le changement. Ici où nous partageons les histoires et les réalisations qui témoignent de notre mission.  Explorez nos projets, nos partenariats et l'empreinte que nous laissons derrière nous.
-                    </Typography>
+                    <ScrollAnimationLayout>
+                      <Typography variant='h6' fontWeight={'bold'} color={'white'} sx={{
+                        fontSize: {xs: 15 ,sm: 22}
+                      }} >Bienvenue dans notre section "Impacts Sociaux"</Typography> 
+                    </ScrollAnimationLayout>
+                    <ScrollAnimationLayout>
+                      <Typography color={'white'} sx={{
+                        fontSize: {xs: 14 ,sm: 16}
+                      }} >
+                      Découvrez comment nous travaillons main dans la main avec les communautés rurales pour apporter la lumière, l'espoir et le changement. Ici où nous partageons les histoires et les réalisations qui témoignent de notre mission.  Explorez nos projets, nos partenariats et l'empreinte que nous laissons derrière nous.
+                      </Typography>
+                    </ScrollAnimationLayout>
                   </Grid>
                   
                 </Grid>{/*end mini container */}
@@ -128,7 +133,7 @@ export const ImpactSociaux = () => {
        
        
     </Grid>
-
+                      
       {/* benificial say */}
       <BenificiairyCarrousel/>
       {/*end benificial say */}
@@ -156,20 +161,44 @@ export const ImpactSociaux = () => {
       </Grid>
 
       <Grid item xs={12} md={7} sx={{bgcolor: '#2F2121'}} display={'flex'} alignItems={'center'} flexDirection={'column'}>
-        <Typography align='center' color={'white'} variant='h6' p={2} fontWeight={'bold'}>COMMUNE RURALE D’ AKADINANDRIANA</Typography>
+        <ScrollAnimationLayout>
+          <Typography align='center' color={'white'} variant='h6' p={2} fontWeight={'bold'}>COMMUNE RURALE D’ AKADINANDRIANA</Typography>
+        </ScrollAnimationLayout>
         <Box width={'fit-content'} px={{xs:3, md:0}} pb={3}>
-          <Typography color={'white'} width={'fit-content'}>Fokotany touchés par la solution : Ambohitrosy, Ambohimahatsinjo,  Andranovelona</Typography>
-          <Typography color={'white'} width={'fit-content'}>Nombre des ménages bénéficiaires de la solution : 57 ménages</Typography>
-          <Typography color={'white'} width={'fit-content'}>Taux d’adoption moyenne des ménages : 99,8%</Typography>
-          <Typography color={'white'} width={'fit-content'}>Production énergétique  moyenne mensuelle : 304 kWh</Typography>
-          <Typography color={'white'} width={'fit-content'}>Consommation énergétique  moyenne mensuelle : 248 kWh</Typography>
-          <Typography color={'white'} width={'fit-content'}>Cumul de la production énergétique  locale : 793 kWh</Typography>
-          <Typography color={'white'} width={'fit-content'}>Cumul de la consommation énergétique locale : 686kWh</Typography>
-          <Typography color={'white'} width={'fit-content'}>Nouveaux emplois locaux créés : 8 emplois fixes </Typography>
+          <ScrollAnimationLayout> 
+            <Typography color={'white'} width={'fit-content'}>Fokotany touchés par la solution : Ambohitrosy, Ambohimahatsinjo,  Andranovelona</Typography>
+          </ScrollAnimationLayout>
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Nombre des ménages bénéficiaires de la solution : 57 ménages</Typography>
+          </ScrollAnimationLayout>
+
+          <ScrollAnimationLayout>
+           <Typography color={'white'} width={'fit-content'}>Taux d’adoption moyenne des ménages : 99,8%</Typography>
+           </ScrollAnimationLayout>
+
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Production énergétique  moyenne mensuelle : 304 kWh</Typography>
+          </ScrollAnimationLayout>
+          
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Consommation énergétique  moyenne mensuelle : 248 kWh</Typography>
+          </ScrollAnimationLayout>
+
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Cumul de la production énergétique  locale : 793 kWh</Typography>
+          </ScrollAnimationLayout>
+
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Cumul de la consommation énergétique locale : 686kWh</Typography>
+          </ScrollAnimationLayout>
+
+          <ScrollAnimationLayout>
+            <Typography color={'white'} width={'fit-content'}>Nouveaux emplois locaux créés : 8 emplois fixes </Typography>
+          </ScrollAnimationLayout>
         </Box>
         <Box pb={3}>
-        <Button variant='outlined'
-          sx={{ color: '#FFC000', borderColor:'#FFC000'}}>NOUS REJOINDRE</Button>
+          <Button variant='outlined'
+            sx={{ color: '#FFC000', borderColor:'#FFC000'}}>NOUS REJOINDRE</Button>
         </Box>
       </Grid>
     </Grid>

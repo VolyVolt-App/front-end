@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { ReactComponent as GillemetStart } from '../../asset/icon/Gillemetstart.svg'
 import { ReactComponent as GillemetEnd } from '../../asset/icon/Gillemetend.svg'
+import ScrollAnimationLayout from '../Layout/ScrollAnimationLayout'
 
 export const BenificiairyCarrousel = () => {
     var items = [
@@ -40,22 +41,24 @@ export const BenificiairyCarrousel = () => {
     ]
 
   return (
-    <Carousel sx={{width: '100%', backgroundColor: '#638715'}}
-        indicatorIconButtonProps={{
-            style: {
-                //padding: '10px',    // 1
-                color: '#84AF4D'       // 3
-            }
-        }}
-
-        activeIndicatorIconButtonProps={{
-            style: {
-                color: '#9AD516' // 2
-            }
-        }}>
-            {
-                items.map( (item, i) => <Item key={i} item={item} /> )
-            }
+      <Carousel sx={{width: '100%', backgroundColor: '#638715'}}
+      indicatorIconButtonProps={{
+          style: {
+              //padding: '10px',    // 1
+              color: '#84AF4D'       // 3
+                }
+            }}
+            
+            activeIndicatorIconButtonProps={{
+                style: {
+                    color: '#9AD516' // 2
+                }
+            }}>
+            
+                {
+                    items.map( (item, i) => <ScrollAnimationLayout><Item key={i} item={item} /> </ScrollAnimationLayout>)
+                }
+            
     </Carousel>
   )
 }

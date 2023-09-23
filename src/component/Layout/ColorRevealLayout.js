@@ -2,15 +2,15 @@ import { Box } from '@mui/material'
 import { motion } from 'framer-motion'
 import React, { useRef } from 'react'
 
-export const BackgroundRevealLayout = ({startBgColor,endBgColor,children, amount}) => {
+export const ColorRevealLayout = ({startColor,endColor,children}) => {
     const ref = useRef(null);
 
-    const backgroundRevealAnimation = {
+    const colorRevealVariants = {
         hidden: {
-            backgroundColor: `${startBgColor}`
+            color: `${startColor}`
         },
         visible: {
-            backgroundColor: `${endBgColor}`,
+            color: `${endColor}`,
             transition: {
                 duration:0.25,
                 ease: 'easeIn'
@@ -21,10 +21,10 @@ export const BackgroundRevealLayout = ({startBgColor,endBgColor,children, amount
     return (
       <Box component={motion.div}
         ref={ref}
-        variants={backgroundRevealAnimation}
+        variants={colorRevealVariants}
         initial='hidden'
         whileInView="visible"
-        viewport={{ once: false, amount:amount }}
+        viewport={{ once: false }}
       >
           {children}
       </Box>

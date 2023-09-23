@@ -32,6 +32,7 @@ import { Valeurs } from '../component/Home/mission/Valeurs'
 import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
 import ImageAnimationLayout from '../component/Layout/ImageAnimationLayout'
 import AmountAnimationLayout from '../component/Layout/AmountAnimationLayout'
+import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayout'
 
 
 export const Home = () => {
@@ -202,11 +203,8 @@ export const Home = () => {
     </Typography>
 {/* end voloan */}
 {/* faharoa */}
-    <Grid container
-      sx={{
-        backgroundColor: '#638715',
-      }}>
-
+  <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#638715" amount={0.5}  >
+    <Grid container>
       <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{
           p: {xs: 1,sm: 3, md: 3}
@@ -274,27 +272,28 @@ export const Home = () => {
           </Typography>
         </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
-
       {/*
       <Grid item xs={6} sm={6} md={3} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
-        sx={{
-          p: {xs: 1,sm: 3, md: 3}
-        }}>
-        <ScrollAnimationLayout>
-          <ValuePropositionFour width={70} height={70} />
-        </ScrollAnimationLayout>
-        <ScrollAnimationLayout>
-          <Typography align='center' mt={1} sx={{color: '#fff'}}>
-          Une éléctrification à moindre coûts  au sein des foyers ruraux
-          </Typography>
-        </ScrollAnimationLayout>
+      sx={{
+        p: {xs: 1,sm: 3, md: 3}
+      }}>
+      <ScrollAnimationLayout>
+      <ValuePropositionFour width={70} height={70} />
+      </ScrollAnimationLayout>
+      <ScrollAnimationLayout>
+      <Typography align='center' mt={1} sx={{color: '#fff'}}>
+      Une éléctrification à moindre coûts  au sein des foyers ruraux
+      </Typography>
+      </ScrollAnimationLayout>
       </Grid> {/* end grid item*/}
 
     </Grid> {/* end grid container */}
+    </BackgroundRevealLayout>
     
 {/* end faharoa */}
 
 {/* mission */}
+  <BackgroundRevealLayout startBgColor="#638715" endBgColor="#fff" amount={0.8} >
     <Grid container pl={{xs:2, md:6}} pr={{xs:2, md:0}} py={3} justifyContent={'space-between'}
       sx={{
         '& .hoverbuttonnn': {
@@ -319,6 +318,7 @@ export const Home = () => {
           backgroundColor: '#8BBC1F'
         }
       }} >
+        
         <Box display={'flex'} mb={3} mt={6}>
 
           <Box width={'33.333%'} position={'relative'} onClick={()=>setMission('mission')}
@@ -571,6 +571,7 @@ export const Home = () => {
       </Grid>
 
     </Grid>
+    </BackgroundRevealLayout>
 {/* end mission */}
 
 {/* cibles*/}

@@ -3,6 +3,7 @@ import React from 'react'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
 
+import ScrollAnimationLayout from '../Layout/ScrollAnimationLayout'
 
 export const Articles = ({articleImage,subheading,heading,date,nombre, text, link}) => {
   return (
@@ -15,48 +16,61 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
          alt="rdf"
          src= {articleImage}
         />
-
-        <Typography sx={{py:1}} color={'white'}>{subheading}</Typography>
-        <Typography variant='h5'  color={'white'}
-        sx={{
-            fontWeight: 'bold'
-        }}
-        >
-            {heading}
-        </Typography>
+        <ScrollAnimationLayout>
+            <Typography sx={{py:1}} color={'white'}>{subheading}</Typography>
+        </ScrollAnimationLayout>
+        <ScrollAnimationLayout>
+            <Typography variant='h5'  color={'white'}
+            sx={{
+                fontWeight: 'bold'
+            }}
+            >
+                {heading}
+            </Typography>
+        </ScrollAnimationLayout>
         <Stack direction={'row'} spacing={1}>
             <Box display={'flex'} alignItems={'center'}>
-                <CalendarTodayIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
-                <Typography  color={'white'}
-                    sx={{
-                        fontSize: 10,
-                        marginLeft:'2px'
-                    }}> 
-                    {date}
-                </Typography>
+                <ScrollAnimationLayout>
+                    <CalendarTodayIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
+                </ScrollAnimationLayout>
+                <ScrollAnimationLayout>
+                    <Typography  color={'white'}
+                        sx={{
+                            fontSize: 10,
+                            marginLeft:'2px'
+                        }}> 
+                        {date}
+                    </Typography>
+                </ScrollAnimationLayout>
             </Box>
             <Box display={'flex'} alignItems={'center'} >
                 <ChatBubbleOutlineIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
-                <Typography
-                    sx={{
-                        fontSize: 10,
-                        marginLeft: '2px',
-                        color: 'white'
-                    }}> 
-                        
-                        {nombre} commentaires
-                </Typography>
+                <ScrollAnimationLayout>
+                    <Typography
+                        sx={{
+                            fontSize: 10,
+                            marginLeft: '2px',
+                            color: 'white'
+                        }}> 
+                            
+                            {nombre} commentaires
+                    </Typography>
+                </ScrollAnimationLayout>
             </Box>
         </Stack>
-        <Typography 
-            sx={{
-                paddingTop: 2,
-                paddingBottom: 1,
-                color: 'white'
-            }}>
-                {text}
-        </Typography>
-        <Link>Voir plus</Link>
+        <ScrollAnimationLayout>
+            <Typography 
+                sx={{
+                    paddingTop: 2,
+                    paddingBottom: 1,
+                    color: 'white'
+                }}>
+                    {text}
+            </Typography>
+        </ScrollAnimationLayout>
+        <ScrollAnimationLayout>
+            <Link>Voir plus</Link>
+        </ScrollAnimationLayout>
     </Box>
   )
 }

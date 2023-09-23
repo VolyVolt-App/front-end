@@ -8,6 +8,7 @@ import { Solution } from './pages/Solution';
 import { ImpactSociaux } from './pages/ImpactSociaux';
 import { Don } from './pages/Don';
 import { Confidentialite } from './pages/Confidentialite';
+import { AdminApp } from './AdminApp';
 
 
 function App() {
@@ -24,7 +25,12 @@ function App() {
         <Route path='don' element={<Don/>} />
 
         <Route path='confidentialite' element={<Confidentialite/>} />
+
       </Route>
+      
+      {/* admin route */}
+  
+      <Route path='/admin/*' element={<AdminApp/>} />
       
   {/*<Route path='' element={} /> */}
     </Routes>

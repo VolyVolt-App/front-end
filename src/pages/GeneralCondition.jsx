@@ -1,9 +1,11 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 
 export const GeneralCondition = () => {
   return (
-    <div>GeneralCondition</div>
-  )
+   <Typography variant='h6' fontWeight={'bold'}>Conditions Générales d'Utilisation de VolyVolt
+   </Typography>
+   )
 }
 /*
 

@@ -216,8 +216,8 @@ export const Home = () => {
 {/* end voloan */}
 {/* faharoa */}
   <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#638715" amount={0.5}  >
-    <Grid container>
-      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+    <Grid container justifyContent={'center'}>
+      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'} 
         sx={{
           p: {xs: 1,sm: 3, md: 3}
         }}>
@@ -244,10 +244,10 @@ export const Home = () => {
       </Grid> {/* end grid item*/}
 
       
-      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
+ {/*      <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'} 
         sx={{
           p: {xs: 1,sm: 3, md: 3}
-        }}>
+        }}>*/}
         {/*<Box
          component={'img'}
          sx={{
@@ -260,6 +260,7 @@ export const Home = () => {
          src= {img2}
         />*/}
 
+{/* 
         <ScrollAnimationLayout>
           <ValuePropositionTwo width={70} height={70}/>
         </ScrollAnimationLayout>
@@ -268,7 +269,7 @@ export const Home = () => {
             Renforcement de la Responsabilité Sociale des ONGs et des fondations
           </Typography>
         </ScrollAnimationLayout>
-      </Grid> {/* end grid item*/}
+      </Grid>*/} {/* end grid item*/}
       
       <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'}
         sx={{

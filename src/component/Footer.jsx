@@ -49,10 +49,10 @@ export const Footer = () => {
         }}>
             
         <Grid container display={'flex'} justifyContent={'center'}>
-            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3} marginX={{xs:1,md:0}}>
+            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
                 <Stack direction={{xs:'column',sm:'row'}} alignItems={'center'} justifyContent={'center'} spacing={2}>
                     <Typography color={'white'}>S’abonner aux Newsletters</Typography>
-                    <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white'}}
+                    <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white', borderRadius:2}}
                         InputProps={{
                             endAdornment: <InputAdornment position='end'>
                                 <Button variant='contained' sx={{backgroundColor: '#FFBE18'}} >S'abonner</Button>

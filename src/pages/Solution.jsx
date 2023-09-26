@@ -1,4 +1,4 @@
-import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography, Chip } from '@mui/material'
+import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography, Chip, CardMedia } from '@mui/material'
 import React, { useState } from 'react'
 
 
@@ -18,6 +18,7 @@ import { Processus } from '../component/solution/Processus';
 import { AvantageClient } from '../component/solution/AvantageClient'
 import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayout';
 import { Link } from 'react-router-dom';
+import { CarouselAvantageClient } from '../component/solution/CarouselAvantageClient';
 
 //https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3dV8VGIPs3KpA2PutMkTCvdoiSAqoyj47q-WxxHOqIDc_su2Qbtm6nL2Y&mid=1ztgqsEQAZ5ej0DNawjHzxl10_N5x1f8&ll=-18.95798824431245%2C47.92853244749729&z=10
 
@@ -87,18 +88,13 @@ export const Solution = () => {
             
         </Grid>
         <Grid item xs={12} md={4} pt={{xs:3, md:0}} >
-            <Box
-                component={'img'}
-                sx={{
-                    width: {md:'100%',lg:'80%', xs:'95%'},
-                    mt: 'auto',
-                    
-                    // maxHeight: { xs: 50, md: 60},
-                    // maxWidth: {xs: 50, md: 60 }
-                }}
-                alt="rdf"
-                src= {bannerVideo}
-            />
+            <CardMedia component={'iframe'}
+              src='https://www.youtube.com/embed/XESK2DleVro?si=kuxpv2AhAu-I1bip'
+              sx={{
+                aspectRatio: '16/9',
+                border: 0
+              }}
+              />
         </Grid>
       </Grid>{/*end container */}
       </BackgroundRevealLayout>
@@ -732,3 +728,4 @@ export const Solution = () => {
     </>
   )
 }
+

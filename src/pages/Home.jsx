@@ -154,8 +154,7 @@ export const Home = () => {
           Imaginez un avenir où votre engagement a le pouvoir de faire briller un foyer et d’inspirer des sourires au sein des communautés rurales. 
           </Typography>
           <Typography sx={{color: '#bbb'}}>
-          Collaborer avec VolyVolt, c'est bien plus que cultiver de l'énergie durable, c'est semer la transformation,  récolter la gratitude de ceux que vous aidez. 
-          </Typography>
+          VolyVolt est une solution l’électrification rurale propre et durable, qui utilise les cultures locales pour générer de l’énergie pour les foyers ruraux.          </Typography>
         </ScrollAnimationLayout>
         <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}}>
           <ScrollAnimationLayout>
@@ -591,27 +590,7 @@ export const Home = () => {
     {/* video */}
     <Grid container  py={5} sx={{backgroundColor:'#082D0E'}} alignItems={'center'}>
             <Grid item xs={12} sm={12} md={6}  px={{xs:0,md:6}}>
-            {/**<Box
-                component={'img'}
-                sx={{
-                
-                  width: '100%',
-                }}
-                alt="rdf"
-                src= {videoImg}
-              />*/}
-             {/* 
-             
-             <iframe ref={refIframe} src='https://www.youtube.com/embed/P6eIQT5IQjM'
-                      frameBorder='0'
-                      allow='autoplay; encrypted-media'
-                      allowFullScreen
-                      title='video-volyvolt'
-                     // width={'100%'}
-                     // height={'100%'}
-              />
-             
-             */} 
+           
              <CardMedia component={'iframe'}
               src='https://www.youtube.com/embed/P6eIQT5IQjM'
               sx={{

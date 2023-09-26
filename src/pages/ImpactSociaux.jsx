@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { BenificiairyCarrousel } from '../component/impactsociaux/BenificiairyCarrousel'
 
 
-import banner from '../asset/image/enfants-smiley-coup-moyen-fenetre 1.png'
-import bannerMobile from '../asset/image/enfants-smiley-coup-moyen-fenetre1-mobile.png'
+import banner from '../asset/image/enfants-smiley-coup-moyen-fenetre-1.webp'
+import bannerMobile from '../asset/image/enfants-smiley-coup-moyen-fenetre1-mobile.webp'
 
 
 import {ReactComponent as FoyerIcon} from '../asset/icon/icons-foyers 1.svg'

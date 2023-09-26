@@ -3,15 +3,26 @@ import React from 'react'
 
 export const GeneralCondition = () => {
   return (
-   <Typography variant='h6' fontWeight={'bold'}>Conditions Générales d'Utilisation de VolyVolt
+   <>
+   <Typography variant='h6' fontWeight={'bold'}>
+      Conditions Générales d'Utilisation de VolyVolt
    </Typography>
+   <Typography>
+   Dernière mise à jour : [Date]
+   </Typography>
+   <Typography>
+      Merci de lire attentivement ces Conditions Générales d'Utilisation ("Conditions") avant d'utiliser les services de VolyVolt ("VolyVolt", "nous", "notre", "nos") ou notre site web. En utilisant nos services ou notre site web, vous acceptez d'être lié par ces Conditions. Si vous n'acceptez pas ces Conditions, veuillez ne pas utiliser nos services.
+   </Typography>
+   <Typography>
+   1. **Utilisation de nos Services**
+   </Typography>
+   </>
    )
 }
 /*
 
-Conditions Générales d'Utilisation de VolyVolt
 
-Dernière mise à jour : [Date]
+
 
 Merci de lire attentivement ces Conditions Générales d'Utilisation ("Conditions") avant d'utiliser les services de VolyVolt ("VolyVolt", "nous", "notre", "nos") ou notre site web. En utilisant nos services ou notre site web, vous acceptez d'être lié par ces Conditions. Si vous n'acceptez pas ces Conditions, veuillez ne pas utiliser nos services.
 

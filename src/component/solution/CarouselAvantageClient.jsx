@@ -39,7 +39,6 @@ export const CarouselAvantageClient = () => {
       </div>
       <button onClick={handleNext}>Suivant</button>
     </div>
-  
   )
 }
 

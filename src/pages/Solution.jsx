@@ -112,8 +112,7 @@ export const Solution = () => {
         </Typography>
 
         <Typography py={2} >
-        Notre offre principale consiste à fournir des <span style={{fontWeight: 'bold'}}> services techniques complets  clé en main pour l'installation de générateurs d'énergie locaux</span>, en utilisant les cultures locales aux ONG et aux fondations qui cherchent à avoir un impact positif en électrifiant les zones rurales. VolyVolt prend en charge l'ensemble du processus d'implémentation des projets, de l’étude et planification à l'installation des systèmes d'électrification, en veillant à ce que tout fonctionne de manière transparente.
-
+        Notre offre principale consiste à <span style={{fontWeight: 'bold'}}> fournir des services d’électrification rurale complets clé en main </span> pour l'installation de générateurs d'énergie locaux, en utilisant les cultures locales.Notre solution s’adresse aux acteurs du secteur philanthropique qui souhaitent maximiser leurs impacts sociaux à travers l’électrification rurale :  Organismes Non Gouvernementaux et Fondations. VolyVolt prend en charge l'ensemble du processus d'implémentation des projets, de l’étude et planification à l'installation des systèmes d'électrification, en veillant à ce que tout fonctionne de manière transparente.
         </Typography>
 
         {/* action */}

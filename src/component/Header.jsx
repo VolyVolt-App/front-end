@@ -16,6 +16,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 import {ReactComponent as Logo} from '../asset/image/logo-volyvolt.svg'
 import { Divider, Drawer, List, ListItem, ListItemText } from '@mui/material'
+import { useEffect } from 'react'
 
 
 
@@ -72,6 +73,7 @@ export const Header = (props) => {
 
     const [collapse, setCollapse] = useState(false)
     const [navActive, setNavActive] = useState('')
+
 
 
   const handleOpenNavMenu = (event) => {

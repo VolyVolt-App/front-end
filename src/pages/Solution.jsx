@@ -17,6 +17,7 @@ import { ReactComponent as IconMiseOeuvre } from '../asset/icon/icons-mise en oe
 import { Processus } from '../component/solution/Processus';
 import { AvantageClient } from '../component/solution/AvantageClient'
 import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayout';
+import { Link } from 'react-router-dom';
 
 //https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3dV8VGIPs3KpA2PutMkTCvdoiSAqoyj47q-WxxHOqIDc_su2Qbtm6nL2Y&mid=1ztgqsEQAZ5ej0DNawjHzxl10_N5x1f8&ll=-18.95798824431245%2C47.92853244749729&z=10
 
@@ -58,10 +59,11 @@ export const Solution = () => {
         </Grid>
       </Grid>{/* end container */}
 
-      <BackgroundRevealLayout initial={'#082D0E'} bgColor={'#638715'}>
+      
+    <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#638715" amount={0.5}  >
       <Grid container px={{xs:2,md:14}} py={3} 
       sx={{
-        //backgroundColor: '#638715ff'
+        //backgroundColor: '#638715'
       }}>
         <Grid item xs={12} md={8} >
             <Typography variant='h6' sx={{color: '#08280D', fontSize:15}}>
@@ -515,7 +517,7 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Investir dans un projet à impact énergétique, tel que VolyVolt, revêt une importance cruciale en raison de la disparité d'accès à l'énergie dans les zones rurales. Dans ces régions, de nombreuses communautés sont laissées dans l'obscurité, sans accès à l'électricité de base, ce qui crée une fracture entre les zones rurales et urbaines. Opter pour un projet à impact énergétique signifie reconnaître le potentiel de faire une différence significative dans la vie des ménages ruraux. L'accès à l'énergie permet d’améliorer de manière significative la qualité de vie. En investissant dans de tels projets, vous devenez un catalyseur du changement, un acteur clé pour combler le fossé énergétique et créer un avenir plus égalitaire et prospère pour tous.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -536,7 +538,13 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              VolyVolt se distingue des autres sources d'énergie par plusieurs caractéristiques uniques qui en font une option exceptionnelle. Tout d'abord, VolyVolt est résolument respectueux de l'environnement, fournissant une énergie verte grâce à la technologie innovante de la pile microbienne. Cette approche novatrice promet également de renforcer la visibilité de votre organisation grâce à son caractère avant-gardiste.
+              </Typography>
+              <Typography pt={1}>
+              En produisant de l'énergie directement à partir des cultures locales, VolyVolt favorise l'autonomie énergétique des communautés rurales, ce qui est un avantage significatif par rapport aux sources d'énergie traditionnelles souvent inaccessibles dans ces zones. De plus, notre flexibilité opérationnelle permet une personnalisation des services pour répondre précisément aux besoins de notre clientèle. Nous travaillons en étroite collaboration avec nos clients, tels que les ONG et les Fondations, pour concevoir des solutions sur mesure qui maximisent l'impact social.
+              </Typography>
+              <Typography pt={1}>
+              En fin de compte, choisir VolyVolt signifie choisir une solution qui a un impact positif sur l'environnement, sur les communautés rurales que nous servons, et sur votre organisation. C'est un choix qui incarne l'innovation, la durabilité et la responsabilité sociale, renforçant ainsi votre image et votre engagement envers un avenir plus vert et plus équitable pour tous.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -557,7 +565,10 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Pour nous assurer que notre offre d'énergie répond convenablement aux demandes d'énergie de chaque communauté rurale que nous servons, nous mettons en place un processus rigoureux. Avant d'installer nos systèmes d'énergie dans une communauté, nous effectuons une étude pour estimer les besoins énergétiques de la localité en tenant compte du nombre de ménages et des besoins énergétiques. Cette étude nous permet de déterminer la taille optimale de nos installations ainsi que la capacité de stockage d'énergie nécessaire pour répondre aux besoins spécifiques de chaque communauté. Nous nous assurons ainsi que nos installations sont dimensionnées de manière à fournir une quantité suffisante d'énergie tout en conservant une marge pour faire face aux éventuels pics de consommation.
+              </Typography>
+              <Typography pt={1}>
+              Une fois que nos installations sont opérationnelles, nous assurons un suivi constant des consommations de chaque ménage. Nous utilisons des technologies avancées, telles que l'intelligence artificielle, pour analyser les tendances de consommation énergétique. En fonction de ces données, nous ajustons notre offre pour fournir une alimentation en énergie adaptée à la demande. 
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -578,7 +589,7 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Nos dispositifs sont conçus pour répondre aux besoins essentiels en énergie des ménages ruraux. Cela comprend l'éclairage (ampoules LED), le rechargement de téléphones mobiles, les radios et d'autres petits appareils électroniques. Notre objectif est de fournir une source d'énergie fiable pour les activités de base. 
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -599,7 +610,7 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Nous nous assurons de la durabilité de nos installations grâce à une conception robuste qui résiste aux conditions difficiles des zones rurales. De plus, nous effectuons une maintenance régulière avec des visites sur site pour inspecter et entretenir nos installations. Nous collaborons également avec les communautés locales, en les formant pour qu'elles puissent prendre en charge certaines opérations de maintenance de base, ce qui renforce la pérennité de nos projets. Cette approche globale garantit que nos installations restent opérationnelles et bénéfiques pour les communautés rurales sur le long terme.              
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -620,8 +631,7 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
-              </Typography>
+              VolyVolt propose aux ONG et aux Fondations une opportunité exceptionnelle de maximiser leur impact social. En optant pour notre solution énergétique durable, vous contribuez directement à l'amélioration des conditions de vie des communautés rurales, en fournissant un accès à une énergie verte et propre. Votre soutien à VolyVolt crée également des opportunités de visibilité, mettant en avant votre engagement envers le développement durable et votre responsabilité sociale. Notre modèle clé en main simplifie la gestion de projet, permettant à votre organisation de se concentrer pleinement sur sa mission humanitaire et sociale tout en laissant VolyVolt s'occuper des aspects techniques et opérationnels. Ensemble, nous pouvons faire une différence significative dans la vie des communautés rurales tout en renforçant l'impact social de votre organisation.              </Typography>
             </AccordionDetails>
           </Accordion>
 
@@ -641,7 +651,13 @@ export const Solution = () => {
                 bgcolor: '#E4EFC38A'
               }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Vous pouvez être assuré que votre collaboration avec VolyVolt renforcera votre image de RSE (Responsabilité Sociétale des Entreprises) et votre impact social de manière significative. Les projets de VolyVolt apportent des améliorations réelles et tangibles dans la vie des communautés rurales en fournissant un accès à l'énergie propre. Votre soutien direct contribue à ces améliorations, ce qui montre clairement votre engagement envers des causes sociales et environnementales essentielles.
+              </Typography>
+              <Typography pt={1}>
+              VolyVolt s'engage à mesurer et à communiquer de manière transparente les données de consommation et de production d'énergie au niveau local de ses projets. Cela vous permet de suivre et d'évaluer de manière précise l'impact de votre collaboration. Vous pouvez utiliser des indicateurs spécifiques ou collecter les témoignages de bénéficiaires pour mesurer les résultats de vos actions.
+              </Typography>
+              <Typography>
+              En mettant en avant ces résultats concrets dans vos communications externes, vous renforcez votre image de RSE et votre impact social, ce qui peut également susciter la reconnaissance publique. Votre collaboration avec VolyVolt est un moyen efficace de démontrer votre engagement envers des actions positives pour la société et l'environnement, avec des impacts visibles et mesurables.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -662,7 +678,7 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              La durée typique d'un contrat avec VolyVolt varie en fonction des besoins et des objectifs spécifiques de chaque organisation cliente. En général, nos contrats sont conçus pour être flexibles et adaptés aux préférences de nos clients, y compris les ONG et les fondations. Cela signifie que la durée de l'engagement peut être définie en fonction des projets particuliers que nous entreprenons ensemble. Certaines organisations peuvent choisir de s'engager sur des projets à court terme, tandis que d'autres préfèrent des collaborations à plus long terme pour maximiser leur impact social. Nous travaillons en étroite collaboration avec nos clients pour élaborer des accords qui répondent le mieux à leurs objectifs et à leur mission tout en soutenant nos initiatives d'accès à l'énergie verte dans les communautés rurales. Notre objectif principal est de créer des collaborations fructueuses qui apportent des avantages durables aux communautés que nous servons, et nous sommes ouverts à discuter des modalités de collaboration pour répondre à ces objectifs.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -683,7 +699,30 @@ export const Solution = () => {
               bgcolor: '#E4EFC38A'
             }}>
               <Typography>
-              Notre solution repose sur une technologie appelée "pile microbienne". Les micro-organismes présents dans le sol décomposent la matière organique des plantes en produisant de l'électricité. Cette électricité est ensuite stockée dans des batteries pour être utilisée par les ménages ruraux. Ainsi, nous générons de l'énergie propre directement à partir des cultures.
+              Les personnes intéressées à s'impliquer ou à soutenir les initiatives de VolyVolt ont plusieurs options pour contribuer à notre mission de fournir de l'énergie verte aux communautés rurales et améliorer leurs conditions de vie. Voici comment elles peuvent le faire :              
+              </Typography>
+              <ul>
+                <li>
+                Devenir un bénévole : Les individus souhaitant s'impliquer activement peuvent devenir des bénévoles pour VolyVolt. Ils peuvent participer à des missions sur le terrain, aider à la mise en place des systèmes d'énergie, ou contribuer à la sensibilisation et à la collecte de fonds.
+                </li>
+                <li>
+                Faire un don : Les personnes qui souhaitent soutenir financièrement nos projets peuvent 
+                &nbsp;
+                <Link to={'/don'} style={{
+                  fontWeight: 'bold',
+                  textDecoration: 'underline'
+                }}>  faire un don </Link>&nbsp;
+                 à VolyVolt. Ces dons contribuent à alléger les coûts financiers de VolyVolt et pourraient permettre à VolyVolt de financer un projet autonome dans des petites localités si le montant collecté le permet.
+                </li>
+                <li>
+                Sensibiliser et partager : Sensibiliser les autres à la mission de VolyVolt en partageant nos initiatives sur les médias sociaux, en participant à nos campagnes de sensibilisation et en encourageant d'autres personnes à s'impliquer.
+                </li>
+                <li>
+                Devenir un ambassadeur : Les personnes passionnées par notre mission peuvent devenir des ambassadeurs de VolyVolt, en représentant notre organisation, en sensibilisant le public et en mobilisant des ressources.
+                </li>
+              </ul>
+              <Typography>
+              En choisissant l'une ou plusieurs de ces options, les personnes intéressées peuvent jouer un rôle actif dans notre effort pour fournir de l'énergie propre aux communautés rurales et contribuer à notre mission d'amélioration des conditions de vie. Chaque contribution  fait une différence significative.
               </Typography>
             </AccordionDetails>
           </Accordion>

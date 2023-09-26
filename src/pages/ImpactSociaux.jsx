@@ -36,6 +36,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Article } from '../component/impactsociaux/Article'
 import { SliderRight } from '../component/gallery/SliderRight'
 import { SliderLeft } from '../component/gallery/SliderLeft'
+import { useNavigate } from 'react-router-dom'
 //end article
 //import {ReactComponent as Icon} from '../asset/icon'
 //import {ReactComponent as Icon} from '../asset/icon'
@@ -44,6 +45,8 @@ import { SliderLeft } from '../component/gallery/SliderLeft'
 
 export const ImpactSociaux = () => {
   const [isArticleHover, setArticleHover] = useState('')
+  const navigate = useNavigate()
+
   return (
     <>
     <Grid container pt={{xs:8,ms:9}} sx={{
@@ -337,9 +340,14 @@ export const ImpactSociaux = () => {
         Rejoignez-nous pour changer des vies et apporter un avenir plus lumineux aux communautés rurales.
         </Typography>
 
-        <Button variant='outlined' sx={{
-          mt: 4,
-        }}
+        <Button 
+          variant='outlined' 
+          sx={{
+            mt: 4,
+          }}
+          onClick={()=>{
+            navigate('/contact')
+          }}
         >COLLABORER AVEC NOUS</Button>
       </Grid>
       <Grid item xs={12} md={5}>

@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useState } from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses } from 'react-pro-sidebar'
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
@@ -36,10 +36,27 @@ const Item = ({ title, to, icon, selected, setSelected, setCollapsed, isCollapse
   )
 }
 
-export const Sidebars = ({isCollapsed,setIsCollapsed}) => {
+export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobileCollapsed}) => {
   const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   
   const [selected, setSelected] = useState("DASHBOARD")
+
+  const handleCollapseSidebar = () => {
+    if(isMobile){
+      
+        if(isMobileCollapsed === 'init'){
+          setIsCollapsed()
+        
+      }
+      else{
+        setMobileCollapsed('hide')
+      }
+    }
+    else {
+      setIsCollapsed()
+    }
+  }
 
   return (
       <Box sx={{
@@ -47,13 +64,16 @@ export const Sidebars = ({isCollapsed,setIsCollapsed}) => {
         zIndex:5,
         height:'100vh',
         top:0,
-        display:{xs:'none', md:'flex'}
+        display:{xs:'flex', md:'flex'}
       }}>
-        <Sidebar
+        { (!isMobile || ( isMobile && isMobileCollapsed ==='init')) &&
+        
+        (<Sidebar
         collapsed={isCollapsed}
+        breakPoint={isMobile?'xs':''}
         rootStyles={{
           [`.${sidebarClasses.container}`]:{
-            backgroundColor: 'rgba(8, 45, 14, 0.25)'
+            backgroundColor: '#b4c1af'
             //backgroundColor: `${theme.palette.secondary.main} !important`
           },
           height: '100%'
@@ -87,7 +107,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed}) => {
                     <Logo width={140}  />
                     </Typography>)}
                     <MenuItem
-                      onClick={setIsCollapsed}
+                      onClick={handleCollapseSidebar}
                       icon={<MenuOutlinedIcon />}
                       style={{ 
                         color: 'black',
@@ -139,7 +159,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed}) => {
                         />
             
             </Menu>
-        </Sidebar>
+        </Sidebar>)}
       </Box>
     
       )

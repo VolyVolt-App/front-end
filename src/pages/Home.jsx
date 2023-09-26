@@ -33,11 +33,13 @@ import ScrollAnimationLayout from '../component/Layout/ScrollAnimationLayout'
 import ImageAnimationLayout from '../component/Layout/ImageAnimationLayout'
 import AmountAnimationLayout from '../component/Layout/AmountAnimationLayout'
 import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayout'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 export const Home = () => {
   //mission
   const [mission, setMission] = useState('mission')
+  const navigate = useNavigate()
 
  // const refMission = useRef
 
@@ -157,12 +159,22 @@ export const Home = () => {
         </ScrollAnimationLayout>
         <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}}>
           <ScrollAnimationLayout>
-          <Button variant='contained' size='small' sx={{ color: '#fff'}} >NOTRE SOLUTION</Button> 
+          <Button 
+            variant='contained' 
+            size='small' 
+            sx={{ color: '#fff'}}
+            onClick={()=>{
+              navigate('/solution')
+            }} >NOTRE SOLUTION</Button> 
           </ScrollAnimationLayout>
           <ScrollAnimationLayout>
-          <Button variant='outlined' size='small'
+          <Button 
+            variant='outlined' size='small'
             sx={{
               marginLeft: 2
+            }}
+            onClick={()=>{
+              navigate('/contact')
             }}>
               COLLABORER AVEC NOUS
           </Button>

@@ -85,7 +85,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -103,7 +103,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -121,7 +121,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -139,7 +139,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -157,7 +157,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -175,7 +175,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -193,7 +193,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -241,7 +241,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -259,7 +259,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -277,7 +277,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -295,7 +295,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -313,7 +313,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -331,7 +331,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{
@@ -349,7 +349,7 @@ export const SliderRight = () => {
               />
       </SwiperSlide>
       <SwiperSlide 
-        style={{position:'relative',backgroundColor: 'blue',height: 229}}>
+        style={{position:'relative',backgroundColor: '#2F2121',height: 229}}>
           <Box
               component={'img'}
               sx={{

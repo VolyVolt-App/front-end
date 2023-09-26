@@ -6,7 +6,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
 
 
 
-export const TopBar = () => {
+export const TopBar = ({ isMobileCollapsed, setMobileCollapsed}) => {
   return (
     <Box sx={{
         //bgcolor: 'red',
@@ -17,7 +17,9 @@ export const TopBar = () => {
     }}>
     
         <Box display={'flex'}>
-        <IconButton sx={{display : {xs:'block', md: 'none'}, bgcolor: 'rgba(8, 45, 14, 0.25)', width:45, height:45, pt:1.5, mr:3}}>
+        <IconButton 
+          onClick={()=>{setMobileCollapsed('init');console.log(isMobileCollapsed)}}
+          sx={{display : {xs:'block', md: 'none'}, bgcolor: 'rgba(8, 45, 14, 0.25)', width:45, height:45, pt:1.5, mr:3}}>
             <MenuOutlinedIcon/>
         </IconButton>
         <TextField size='small' placeholder='Recherche' sx={{backgroundColor: '#EAE4DC', borderColor: '#296307'}}

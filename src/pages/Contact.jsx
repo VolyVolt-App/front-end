@@ -371,24 +371,28 @@ export const Contact = () => {
     </Grid>
 
     {/* formulaire in small screen */}
-    <Stack  py={2} mx={1} px={1} my={1}  color={'warning'} backgroundColor={'white'} borderRadius={2} spacing={2} display={{xs:'flex',md:'none'}}>
-          <TextField label='Nom  et Prénoms / Nom de l’organisme' color='warning' />
-          <TextField label='Adresse E-mail' color='warning' />
-          <TextField label='Numéro de téléphone' color='warning' />
-          <TextField label='Moyen de communication préféré' color='warning' />
-          
-          <Select label='Comment avez-vous connu VolyVolt?' color='warning'>
-            <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
-            <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
-            <MenuItem value={'Linkin'}>Linkin</MenuItem>
-            <MenuItem value={'Facebook'}>Facebook</MenuItem>
-            <MenuItem value={'Evenement'}>Evenement</MenuItem>
-            <MenuItem value={'Autre'}>Autre</MenuItem>
-          </Select>
+    <Stack  py={2} mx={1} px={1} my={1}  color={'yellowVoly'} backgroundColor={'white'} borderRadius={2} spacing={2} display={{xs:'flex',md:'none'}}>
+          <TextField label='Nom  et Prénoms / Nom de l’organisme' color='yellowVoly' />
+          <TextField label='Adresse E-mail' color='yellowVoly' />
+          <TextField label='Numéro de téléphone' color='yellowVoly' />
+          <TextField label='Moyen de communication préféré' color='yellowVoly' />
 
-          <TextField label='Objet' color='warning'/>
-          <TextField label='Message' color='warning' multiline rows={5}/>
-          <Button variant='contained' color='warning'>Envoyez le message</Button>
+          <FormControl color='yellowVoly'>
+
+          <InputLabel id="connuvoly">Comment avez-vous connu VolyVolt?</InputLabel>
+            <Select labelId="connuvoly" label='Comment avez-vous connu VolyVolt?' color='yellowVoly'>
+              <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
+              <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
+              <MenuItem value={'Linkin'}>Linkin</MenuItem>
+              <MenuItem value={'Facebook'}>Facebook</MenuItem>
+              <MenuItem value={'Evenement'}>Evenement</MenuItem>
+              <MenuItem value={'Autre'}>Autre</MenuItem>
+            </Select>
+          </FormControl>
+          
+          <TextField label='Objet' color='yellowVoly'/>
+          <TextField label='Message' color='yellowVoly' multiline rows={5}/>
+          <Button variant='contained' color='yellowVoly'>Envoyez le message</Button>
           <Typography fontSize={12}>
           En soumettant ce formulaire, vous consentez à notre politique de confidentialité et à l'utilisation de vos informations personnelles aux fins de votre demande.
           </Typography>

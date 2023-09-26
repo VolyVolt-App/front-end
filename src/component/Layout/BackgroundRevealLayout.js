@@ -24,7 +24,7 @@ export const BackgroundRevealLayout = ({startBgColor,endBgColor,children, amount
         variants={backgroundRevealAnimation}
         initial='hidden'
         whileInView="visible"
-        viewport={{ once: false, amount:amount }}
+        viewport={{ once: true, amount:amount }}
       >
           {children}
       </Box>

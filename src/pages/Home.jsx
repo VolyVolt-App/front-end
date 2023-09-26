@@ -4,14 +4,13 @@ import '../styles/accordion.css'
 
 import { motion } from 'framer-motion'
 
-import bannerImage from '../asset/image/banner-image.png'
+import bannerImage from '../asset/image/image banner 1.webp'
 import { ReactComponent as ValuePropositionOne } from '../asset/icon/val1.svg'
-import { ReactComponent as ValuePropositionTwo } from '../asset/icon/icons-commitment 1.svg'
+//import { ReactComponent as ValuePropositionTwo } from '../asset/icon/icons-commitment 1.svg'
 import { ReactComponent as ValuePropositionThree } from '../asset/icon/icons-clee 1.svg'
-import { ReactComponent as ValuePropositionFour } from '../asset/icon/icons-eco 1.svg'
+//import { ReactComponent as ValuePropositionFour } from '../asset/icon/icons-eco 1.svg'
 
 
-import videoImg from '../asset/image/video.png'
 import article1 from '../asset/image/image 19.png'
 import article2 from '../asset/image/image 20.png'
 import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.png'
@@ -19,7 +18,7 @@ import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.pn
 import { ReactComponent as OddSeven } from '../asset/image/odd7_adobe_express.svg'
 import { ReactComponent as OddNine } from '../asset/image/odd09_adobe_express.svg'
 import { ReactComponent as OddTen } from '../asset/image/odd10_adobe_express.svg'
-import { ReactComponent as OddEleven } from '../asset/image/odd11.svg'
+//import { ReactComponent as OddEleven } from '../asset/image/odd11.svg'
 import { ReactComponent as OddThirteen } from '../asset/image/odd13_adobe_express.svg'
 import { ReactComponent as OddSeventeen } from '../asset/image/odd17.svg'
 
@@ -145,7 +144,7 @@ export const Home = () => {
       sx={{
         backgroundColor: '#082D0E'
       }}>
-      <Grid item xs={12} md={5} px={1}>
+      <Grid item xs={12} md={5} px={1} display={'flex'} flexDirection={'column'}  justifyContent={'center'}>
         <ScrollAnimationLayout>
           <Typography variant='h6' mt={3} color={'white'}
           sx={{
@@ -156,7 +155,7 @@ export const Home = () => {
           <Typography sx={{color: '#bbb'}}>
           VolyVolt est une solution l’électrification rurale propre et durable, qui utilise les cultures locales pour générer de l’énergie pour les foyers ruraux.          </Typography>
         </ScrollAnimationLayout>
-        <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}}>
+        <Box mt={2} display={'flex'} justifyContent={{xs:'center',md:'start'}} >
           <ScrollAnimationLayout>
           <Button 
             variant='contained' 
@@ -181,14 +180,15 @@ export const Home = () => {
         </Box>
       </Grid> {/* end grid */}
       
-      <Grid item xs={12} md={5} display={'flex'} pl={{xs:0, md:3}} >
+      <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center'}}>
       <ImageAnimationLayout>
+            
         <Box
           component={motion.img}
           sx={{
-            width: {md:450, xs:'100%'},
+            width: {md:350, xs:'100%'},
             mt:{xs:3,md:0},
-            
+            //mx:'auto'
           // maxHeight: { xs: 50, md: 60},
           // maxWidth: {xs: 50, md: 60 }
           }}

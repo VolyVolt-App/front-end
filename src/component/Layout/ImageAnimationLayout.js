@@ -22,6 +22,7 @@ const ImageAnimationLayout = ({children}) => {
             variants={imageVariants} 
             initial="hidden"
             animate={imageControl}
+            
         >
             {children}
         </Box>

@@ -18,6 +18,7 @@ import { LinkedinIcon } from '../asset/dynamic/LinkedinIcon'
 import { TwitterIcon } from '../asset/dynamic/TwitterIcon'
 import { InstagramIcon } from '../asset/dynamic/InstagramIcon'
 import { FbIcon } from '../asset/dynamic/FbIcon'
+import { ENDPOINT, FRONTENDPOINT } from '../services/BaseUrl'
 
 const pages = [
     {
@@ -40,6 +41,7 @@ const pages = [
 
 export const Footer = () => {
     const [isHover, setHover] = useState('')
+
   return (
     <Box 
         sx={{
@@ -47,34 +49,43 @@ export const Footer = () => {
             width: '100%'
         }}>
          <Grid container display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{backgroundColor: '#FFFFFF'}}  >
-         <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
-            <Box
+         
+            <Grid item xs={12}  p={1} my={1} px={{xs:2,md:6, lg: 12}}>
+                <Box sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: {xs: 'center',sm:'space-between'},
+                }}>
+                    <Box
                         component={'img'}
                         sx={{
-                            width: {xs:'20%', sm: '35%'},
+                            //width: {xs: 50, sm: 150},
+                            height: {xs:'7vh', sm: '10vh', md: '15vh'},
+                            my:1
                         //mt:{xs:3,md:0},
                         
                         // maxHeight: { xs: 50, md: 60},
                         // maxWidth: {xs: 50, md: 60 }
                         }}
                         alt="rdf"
-                        src= {'http://localhost:3000/logo-orange.svg'}
-                        />
-        </Grid>
-        <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
+                        src= {FRONTENDPOINT+'logo-orange.svg'}
+                    />
                         <Box
                         component={'img'}
                         sx={{
-                            width: {xs:'5%', sm: '13%'},
+                            //width: {xs:50, sm: 150},
+                            height: {xs:'7vh', sm: '10vh', md: '15vh'},
+                            my:1,
                         //mt:{xs:3,md:0},
                         
                         // maxHeight: { xs: 50, md: 60},
                         // maxWidth: {xs: 50, md: 60 }
                         }}
                         alt="rdf"
-                        src= {'http://localhost:3000/logo-aws.svg'}
+                        src= {FRONTENDPOINT+'logo-aws.svg'}
                         />
-                      </Grid> 
+                    </Box>
+            </Grid> 
         
 
             </Grid>{/*end grid item*/}   
@@ -109,7 +120,7 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
             <Grid item xs={12} sm={4} >
                 <Stack direction={'row'} spacing={2} p={2} justifyContent={'center'}>
-                    <FbIcon isHover={isHover} setHover={setHover}/>
+                    <a href='https://www.facebook.com/profile.php?id=61550528378165'><FbIcon isHover={isHover} setHover={setHover}/></a>
                     <InstagramIcon isHover={isHover} setHover={setHover}/>
                     <TwitterIcon isHover={isHover} setHover={setHover}/>
                     <LinkedinIcon isHover={isHover} setHover={setHover}/>
@@ -117,64 +128,7 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
             
 
-            <Grid item xs={12} sm={4} >
-                <Stack direction={'row'} spacing={1} p={2} justifyContent={'center'}>
-                    <OrangeLogo width={{xs:'24.12%',sm:56}}/>
-                    {/*<Box
-                        component={'img'}
-                        sx={{
-                            //width: 100,
-                        //mt:{xs:3,md:0},
-                        
-                        // maxHeight: { xs: 50, md: 60},
-                        // maxWidth: {xs: 50, md: 60 }
-                        }}
-                        alt="rdf"
-                        src= {partnerlogo}
-                        />
-                    */}
-                    <Box
-                        component={'img'}
-                        sx={{
-                            width: {xs:'24.1%', sm: 99.81},
-                            height: {sm:55},
-                        //mt:{xs:3,md:0},
-                        
-                        // maxHeight: { xs: 50, md: 60},
-                        // maxWidth: {xs: 50, md: 60 }
-                        }}
-                        alt="rdf"
-                        src= {german}
-                        />
-                    <Box
-                        component={'img'}
-                        sx={{
-                            width: {xs:'32.8%',sm:136.4},
-                            height: {sm:55},
-                        //mt:{xs:3,md:0},
-                        
-                        // maxHeight: { xs: 50, md: 60},
-                        // maxWidth: {xs: 50, md: 60 }
-                        }}
-                        alt="rdf"
-                        src= {africa}
-                        />
-                        <Box
-                            component={'img'}
-                            sx={{
-                                width: {xs:'18.91%', sm:78.42},
-                                height: {sm:55},
-                            //mt:{xs:3,md:0},
-                            
-                            // maxHeight: { xs: 50, md: 60},
-                            // maxWidth: {xs: 50, md: 60 }
-                            }}
-                            alt="rdf"
-                            src= {giz}
-                            />
-                </Stack>
-            </Grid>{/*end grid item*/}
-
+           
         </Grid>{/*end grid container*/}
         
         <Divider variant="middle" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />

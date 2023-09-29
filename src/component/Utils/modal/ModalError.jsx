@@ -2,7 +2,7 @@ import { Backdrop, Box, Fade, IconButton, Modal, Typography } from '@mui/materia
 import React from 'react'
 import CancelIcon from '@mui/icons-material/Cancel';
 
-export const ModalError = ({open, handleClose}) => {
+export const ModalError = ({open, handleClose, message}) => {
     const style = {
         position: 'absolute',
         top: '50%',
@@ -39,7 +39,7 @@ export const ModalError = ({open, handleClose}) => {
                 <CancelIcon  sx={{fill: 'white'}}/>
             </IconButton>
             <Typography align='center' sx={{ color: 'white' }}>
-            Mauvais mot de passe ou email
+                {message}
             </Typography>
           </Box>
         </Fade>

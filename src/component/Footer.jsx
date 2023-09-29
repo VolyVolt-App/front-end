@@ -172,12 +172,14 @@ export const Footer = () => {
                     </Typography>
                 </Link>
                     
-                <Typography color={'white'} 
+                <Link to={'/condition'} style={{textDecoration: 'none'}}>
+                <Typography color={'white'} condition
                     sx={{
                     fontSize: '12px',
                     marginLeft: 1}}>
                         Conditions et Termes
                     </Typography>
+                </Link>
             </Grid>{/*end grid item*/}
         </Grid>{/*end grid container*/}
     </Box>

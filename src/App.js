@@ -8,7 +8,9 @@ import { Solution } from './pages/Solution';
 import { ImpactSociaux } from './pages/ImpactSociaux';
 import { Don } from './pages/Don';
 import { Confidentialite } from './pages/Confidentialite';
+import { GeneralCondition } from './pages/GeneralCondition';
 import { AdminApp } from './AdminApp';
+import { Login } from './auth/Login';
 
 
 function App() {
@@ -25,12 +27,14 @@ function App() {
         <Route path='don' element={<Don/>} />
 
         <Route path='confidentialite' element={<Confidentialite/>} />
+        <Route path='condition' element={<GeneralCondition/>}/>
 
       </Route>
       
       {/* admin route */}
   
       <Route path='/admin/*' element={<AdminApp/>} />
+      <Route path='/login' element={<Login/>}/>
       
   {/*<Route path='' element={} /> */}
     </Routes>

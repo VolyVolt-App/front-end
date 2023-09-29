@@ -2,6 +2,8 @@ import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { CardDashboard } from './component/dasboard/CardDashboard'
 import { LineChart } from '@mui/x-charts'
+import { TendencyChart } from './component/chart/TendencyChart'
+import { MultiLineTendancy } from './component/chart/MultiLineTendancy'
 
 export const Dashboard = () => {
   return (
@@ -21,7 +23,7 @@ export const Dashboard = () => {
       <Grid container>
         <Grid item xs={12}>
           <Typography variant='h6'>COURBES DE TENDANCE</Typography>
-          <LineChart
+         {/*  <LineChart
             xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
             
             series={[
@@ -31,7 +33,13 @@ export const Dashboard = () => {
             ]}
             width={500}
             height={300}
-          />
+          /> */}
+          <TendencyChart 
+            xdata = {['semaine 1','semaine 2','semaine 3','semaine 4','semaine 5','semaine 6', 'semaine 7']}
+            ydata = {[0.8,1,2.1,4,1,9,7]}
+            title = {'Consommation réelle'}
+            />
+          <MultiLineTendancy/>
         </Grid>
       </Grid>
     </Box>

@@ -11,7 +11,30 @@ export const Confidentialite = () => {
         <Typography variant='h5' fontWeight={'bold'} py={4}>POLITIQUE DE CONFIDENTIALITÉ</Typography>
         <Typography variant='h6' fontWeight={'bold'} py={1}>Définitions</Typography>
         <Typography>Aux fins de la présente politique de confidentialité :</Typography>
-{/* menu liste */}
+        <ul>
+         <li>
+         Compte désigne un compte unique créé pour vous permettre d’accéder à notre service ou à des parties de notre service.
+         </li>
+         <li>
+         La Société (ci-après dénommée « la Société », « Nous », « Notre » ou « Notre » dans le présent Contrat) fait référence à VolyVolt.
+         </li>
+         <li>
+         Les cookies sont de petits fichiers qui sont placés sur votre ordinateur, appareil mobile ou tout autre appareil par un site Web, 
+         contenant les détails de votre historique de navigation sur ce site Web parmi ses nombreuses utilisations.
+         </li>
+         <li>
+         Le pays fait référence à : Madagascar       
+         </li>
+         <li>
+         Appareil désigne tout appareil pouvant accéder au Service tel qu’un ordinateur, un téléphone portable ou une tablette numérique.      
+         </li>
+         <li>
+         Les données personnelles sont toutes les informations relatives à une personne identifiée ou identifiable.
+         </li>
+         <li>
+         Le service fait référence au site Web.
+         </li>
+        </ul>
         <Typography pt={1}>
         Les données d’utilisation font référence aux données collectées automatiquement, soit générées par l’utilisation du service, soit à partir de l’infrastructure du service elle-même (par exemple, la durée d’une visite de page).
         </Typography>
@@ -27,13 +50,17 @@ export const Confidentialite = () => {
         <Typography variant='h6' fontWeight={'bold'} fontSize={18} pt={1}>
         Types de données collectées
         </Typography>
-        
-{/* list */}
+        <ul>
+                <li><strong>Données personnelles</strong></li>
+        </ul>
+
         <Typography>
         Lors de l’utilisation de notre service, nous pouvons vous demander de nous fournir certaines informations personnellement identifiables qui peuvent être utilisées pour vous contacter ou vous identifier. Les informations personnellement identifiables peuvent inclure, mais sans s’y limiter :
         </Typography>
+        <ul>
+                <li><strong>Données d’utilisation</strong></li>
+        </ul>
 
-{/* list */}
         <Typography>
         Les données d’utilisation sont collectées automatiquement lors de l’utilisation du service.
         </Typography>
@@ -49,20 +76,41 @@ export const Confidentialite = () => {
         Nous pouvons également collecter des informations que votre navigateur envoie chaque fois que vous visitez notre service ou lorsque vous accédez au service par ou via un appareil mobile.
         </Typography>
 
-{/* list */}
+        <ul>
+                <li><strong>Technologies de suivi et cookies</strong></li>
+        </ul>
         <Typography>
         Nous utilisons des cookies et des technologies de suivi similaires pour suivre l’activité sur notre service et stocker certaines informations. Les technologies de suivi utilisées sont des balises, des balises et des scripts pour collecter et suivre les informations et pour améliorer et analyser notre service. Les technologies que nous utilisons peuvent inclure :
         </Typography>
-
-{/* grand list */}
+        <ul>
+         <li>
+         Cookies ou cookies de navigateur: Un cookie est un petit fichier placé sur  Votre Appareil. Vous pouvez demander à Votre navigateur de refuser tous les Cookies ou de vous signaler l’envoi d’un Cookie. Cependant, si vous n’acceptez pas les cookies, vous ne pourrez peut-être pas utiliser certaines parties de notre service. À moins que vous n’ayez réglé les paramètres de votre navigateur pour qu’il refuse les cookies, notre service peut utiliser des cookies.
+         </li>
+         <li>
+         Balises Web: Certaines sections de notre Service et nos e-mails peuvent contenir de petits fichiers électroniques connus sous le nom de balises Web (également appelés gifs clairs, balises pixel et gifs à pixel unique) qui permettent à la Société, par exemple, de compter les utilisateurs qui ont visité ces pages. ou ouvert un e-mail et pour d’autres statistiques de site Web connexes (par exemple, enregistrer la popularité d’une certaine section et vérifier l’intégrité du système et du serveur).
+         </li>
+        </ul>
         <Typography>
         Les cookies peuvent être des cookies « persistants » ou « de session ». Les cookies persistants restent sur votre ordinateur personnel ou votre appareil mobile lorsque vous vous déconnectez, tandis que les cookies de session sont supprimés dès que vous fermez votre navigateur Web. En savoir plus sur les cookies sur l’ article du site Web Politique de confidentialité gratuite .
         </Typography>
-
         <Typography py={2}>
         Nous utilisons à la fois des cookies de session et des cookies persistants aux fins décrites ci-dessous :
         </Typography>
-{/* GRAND */}
+         <ul>
+         <li>
+         Cookies nécessaires / essentiels - Type : Cookies de session Administré par : Nous
+Objectif : Ces cookies sont essentiels pour vous fournir les services disponibles via le site Web et pour vous permettre d’utiliser certaines de ses fonctionnalités. Ils aident à authentifier les utilisateurs et à empêcher l’utilisation frauduleuse des comptes d’utilisateurs. Sans ces cookies, les services que vous avez demandés ne peuvent pas être fournis, et nous n’utilisons ces cookies que pour vous fournir ces services.
+         </li>
+          <li>
+          Politique relative aux cookies / Avis d’acceptation des cookies - Type : Cookies persistants Administré par : Nous
+          Finalité : ces cookies identifient si les utilisateurs ont accepté l’utilisation de cookies sur le site Web.
+          </li>
+          <li>
+          Cookies de fonctionnalité  - Type : Cookies persistants Administré par : Nous
+Finalité : ces cookies nous permettent de mémoriser les choix que vous faites lorsque vous utilisez le site Web, tels que la mémorisation de vos informations de connexion ou de votre préférence de langue
+          </li>
+         </ul>
+         Le but de ces Cookies est de Vous offrir une expérience plus personnelle et de Vous éviter d’avoir à ressaisir vos préférences à chaque fois que Vous utilisez le Site.
 
         <Typography variant='h6' fontWeight={'bold'} pt={3}>
         Utilisation de vos données personnelles
@@ -71,12 +119,33 @@ export const Confidentialite = () => {
         <Typography pb={2}>
         La Société peut utiliser les Données Personnelles aux fins suivantes :
         </Typography>
-{/* LIS */}
+        <ul>
+         <li><strong>Pour fournir et maintenir notre Service</strong>, y compris pour surveiller l’utilisation de notre Service.
+         </li>
+         <li><strong>Pour vous contacter :</strong> pour vous contacter par e-mail, appels téléphoniques ou  SMS, lorsque cela est nécessaire ou raisonnable pour leur mise en œuvre.
+         </li>
+         <li><strong>Pour vous fournir des actualités,</strong> des offres spéciales et des informations générales, des contenus instructifs et événements que nous proposons, sauf si vous avez choisi de ne pas recevoir ces informations.
+         </li>
+         <li>
+           <strong>Pour gérer vos demandes :</strong> pour assister et gérer vos demandes que vous nous adressez.
+         </li>
+         <li>
+           <strong>Pour les transferts d’entreprise :</strong> nous pouvons utiliser vos informations pour évaluer ou mener une fusion, une cession, une restructuration, une réorganisation, une dissolution ou toute autre vente ou transfert de tout ou partie de nos actifs, que ce soit dans le cadre d’une entreprise en activité ou dans le cadre d’une faillite, d’une liquidation, ou procédure similaire, dans laquelle les données personnelles que nous détenons sur les utilisateurs de nos services font partie des actifs transférés
+         </li>
+         <li>
+           <strong>À d’autres fins :</strong>nous pouvons utiliser vos informations à d’autres fins, telles que l’analyse de données, l’identification des tendances d’utilisation, la détermination de l’efficacité de nos campagnes promotionnelles et pour évaluer et améliorer notre service, nos produits, nos services, notre marketing et votre expérience.
+         </li>
+        </ul>
+
 
         <Typography>
         Nous pouvons partager vos informations personnelles dans les situations suivantes :
         </Typography>
-{/* LIST */}
+        <ul>
+         <li><strong>Pour les transferts d’entreprise :</strong> nous pouvons partager ou transférer vos informations personnelles dans le cadre de, ou pendant les négociations de, toute fusion, vente d’actifs de la société, financement ou acquisition de tout ou partie de nos activités à une autre société.      </li>
+         <li><strong>Avec votre consentement : </strong>Nous pouvons divulguer vos informations personnelles à toute autre fin avec votre consentement.</li>
+        </ul>
+
        
         <Typography variant='h6' fontWeight={'bold'} pt={3}>
         Conservation de vos données personnelles
@@ -135,13 +204,20 @@ export const Confidentialite = () => {
         <Typography>
         La Société peut divulguer vos données personnelles en croyant de bonne foi qu’une telle action est nécessaire pour :
         </Typography>
-{/* list */}
+        <ul>
+         <li>Respecter une obligation légale</li>
+         <li>Protéger et défendre les droits ou la propriété de la Société</li>
+         <li>Prévenir ou enquêter sur d’éventuels actes répréhensibles en rapport avec le Service</li>
+         <li>Protégez-vous contre la responsabilité légale</li>
+         <li>Protéger la sécurité personnelle des Utilisateurs du Service ou du public</li>
+        </ul>
         <Typography  variant='h6' fontWeight={'bold'} pt={3}>
         Sécurité de vos données personnelles
         </Typography>
         <Typography>
         La sécurité de vos données personnelles est importante pour nous, mais rappelez-vous qu’aucune méthode de transmission sur Internet ou méthode de stockage électronique n’est sécurisée à 100 %. Bien que nous nous efforcions d’utiliser des moyens commercialement acceptables pour protéger vos données personnelles, nous ne pouvons garantir leur sécurité absolue.
         </Typography>
+        
 
         <Typography variant='h6' fontWeight={'bold'} pt={3}>
         Liens vers d’autres sites Web

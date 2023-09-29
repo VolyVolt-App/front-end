@@ -172,7 +172,7 @@ export const ImpactSociaux = () => {
         </Box>
         <Box pb={3}>
         <Button variant='outlined'
-          sx={{ color: '#FFC000', borderColor:'#FFC000'}}>NOUS REJOINDRE</Button>
+          sx={{ color: '#FFC000', borderColor:'#FFC000'}} onClick={()=> navigate("/Contact")}>NOUS REJOINDRE</Button>
         </Box>
       </Grid>
     </Grid>

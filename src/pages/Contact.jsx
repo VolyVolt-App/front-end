@@ -177,7 +177,7 @@ export const Contact = () => {
                 <Box sx={{
                   display: {xs:'none',md:'block'}
                 }}>
-                  <Typography variant='h5' sx={{
+                  <Typography variant='h3' sx={{
                     color: '#96CC1E',
                     fontWeight: 'bold'
                   }}>
@@ -245,7 +245,9 @@ export const Contact = () => {
                   <Link to={'/solution'} style={{textDecoration: 'none' , fontWeight: 'bold' , color: 'white'}}>
                      &nbsp;Notre Solution&nbsp; 
                   </Link> 
-                     pour obtenir toutes les informations nécessaires. Si vous souhaitez plus de détails, notre équipe est à votre disposition pour répondre à vos questions. Contactez-nous.
+                     pour obtenir toutes les informations nécessaires. Si vous souhaitez plus de détails, notre équipe est à votre disposition pour répondre à vos questions. <a href='#ContactForm' style={{textDecoration: 'none' , fontWeight: 'bold' , color: 'white'}}>
+                     &nbsp;Contactez-nous.&nbsp; 
+                  </a> 
                 </Typography>}
             />
       </Grid>
@@ -255,8 +257,8 @@ export const Contact = () => {
             image={<MoneyIcon width={120} height={120}/>}
             text={
                 <Typography color={'white'} fontSize={{xs:14.5,sm:16}}>
-                Si l'idée de contribuer financièrement à notre mission vous séduit, vous pouvez faire 
-                <Link to='/don' style={{textDecoration: 'none' , fontWeight: 'bold' , color: 'white'}}>&nbsp;un don à VolyVolt&nbsp;</Link>
+                Si l'idée de contribuer financièrement à notre mission vous séduit, vous pouvez 
+                <Link to='/don' style={{textDecoration: 'none' , fontWeight: 'bold' , color: 'white'}}>&nbsp; faire un don &nbsp;</Link> à VolyVolt
                 . Votre soutien nous aidera à étendre nos opérations, indépendamment des clients et à fournir de l'électricité propre à davantage de communautés rurales, créant ainsi un impact social positif.  Votre don peut faire une réelle différence.
                 </Typography>}
             />
@@ -281,7 +283,7 @@ export const Contact = () => {
             text={
                 <Typography color={'white'} fontSize={{xs:13.5,sm:16}}>
                   La sensibilisation joue un rôle essentiel dans notre mission. En partageant nos réalisations, nos histoires d'impact et nos articles sur les réseaux sociaux, vous contribuez à sensibiliser davantage aux enjeux de l'électrification rurale et à nous aider à gagner en visibilité. Vous augmentez ainsi les chances que les communautés rurales accèdent à l'électricité. Nous avons préparé de 
-                  jolis Photoframes
+                  <a href='https://getdp.co/iuE' target="_blank" rel="noreferrer" to='/don' style={{textDecoration: 'none' , fontWeight: 'bold' , color: 'white'}}>&nbsp;jolis Photoframes&nbsp;</a>
                    que vous pouvez utiliser dans vos publications pour soutenir notre cause.
                 </Typography>}
             />
@@ -340,7 +342,7 @@ export const Contact = () => {
       </Grid>
 
       
-      <Grid item xs={12} md={6} position={'relative'}>
+      <Grid item xs={12} md={6} position={'relative'} id='ContactForm'>
         <Stack px={3} py={3} mx={3} width={'100%'} color={'warning'} backgroundColor={'white'} borderRadius={2} spacing={2} position={'absolute'} display={{xs:'none',md:'flex'}}>
           <TextField label='Nom  et Prénoms / Nom de l’organisme' color={'yellowVoly'} />
           <TextField label='Adresse E-mail' color='yellowVoly' />

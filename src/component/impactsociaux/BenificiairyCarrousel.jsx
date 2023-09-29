@@ -40,7 +40,7 @@ export const BenificiairyCarrousel = () => {
     ]
 
   return (
-    <Carousel sx={{width: '100%', backgroundColor: '#638715'}}
+    <Carousel sx={{width: '100%', backgroundColor: '#6E9F00'}}
         indicatorIconButtonProps={{
             style: {
                 //padding: '10px',    // 1

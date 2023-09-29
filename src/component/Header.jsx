@@ -32,11 +32,11 @@ const pages = [
       link: 'solution'
     },
     {
-      text:"IMPACTS SOCIAUX",
+      text:"NOS IMPACTS",
       link: 'impactsociaux'
     },
     {
-      text:"CONTACTS",
+      text:"CONTACT",
       link: 'contact'
     },
      ]

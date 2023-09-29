@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import { theme } from './theme';
 import { ScrollToTop } from './component/ScrollToTop';
+import { AuthContextProvider } from './auth/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,14 +16,14 @@ root.render(
     <ThemeProvider theme={theme}>
     <Router>
 
-    {/*<AuthContextProvider>*/}
+    <AuthContextProvider>
     <ScrollToTop>
       <Routes>
         <Route path='/*' element={<App />} />
       </Routes>
     </ScrollToTop>
       
-    {/*</AuthContextProvider>*/}
+    </AuthContextProvider>
   </Router>
   </ThemeProvider>
   </React.StrictMode>

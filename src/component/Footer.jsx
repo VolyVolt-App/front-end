@@ -85,7 +85,7 @@ export const Footer = () => {
                     <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white', borderRadius:2}}
                         InputProps={{
                             endAdornment: <InputAdornment position='end'>
-                                <Button variant='contained' sx={{backgroundColor: '#FFBE18'}} >S'abonner</Button>
+                                <Button variant='contained' color='yellowVoly'sx={{color:'black'}} >S'abonner</Button>
                                 </InputAdornment>
                         }}/>
                 </Stack>

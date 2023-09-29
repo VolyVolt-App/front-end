@@ -61,10 +61,10 @@ export const Solution = () => {
       </Grid>{/* end container */}
 
       
-    <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#638715" amount={0.5}  >
+    <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#6E9F00" amount={0.5}  >
       <Grid container px={{xs:2,md:14}} py={3} 
       sx={{
-        //backgroundColor: '#638715'
+        //backgroundColor: '#6E9F00'
       }}>
         <Grid item xs={12} md={8} >
             <Typography variant='h6' sx={{color: '#08280D', fontSize:15}}>
@@ -92,7 +92,7 @@ export const Solution = () => {
               src='https://www.youtube.com/embed/XESK2DleVro?si=kuxpv2AhAu-I1bip'
               sx={{
                 aspectRatio: '16/9',
-                border: 0
+                border: 0, 
               }}
               />
         </Grid>

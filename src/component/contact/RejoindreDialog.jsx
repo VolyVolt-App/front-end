@@ -6,6 +6,7 @@ import ClearIcon from '@mui/icons-material/Clear'
 export const RejoindreDialog = ({rejoindreDialog, setRejoindreDialog}) => {
     const theme = useTheme()
     const fullscreen = useMediaQuery(theme.breakpoints.down('md'))
+
   return (
     <Dialog 
     open={rejoindreDialog}
@@ -49,7 +50,7 @@ export const RejoindreDialog = ({rejoindreDialog, setRejoindreDialog}) => {
                 </Typography>
             </DialogContentText>
         </DialogContent>
-        <DialogActions sx={{ display: 'flex', justifyContent: 'center', bgcolor: '#082D0E'}}>
+        <DialogActions sx={{ display: 'flex', justifyContent: 'center', bgcolor: '#082D0E'}}>;
             <Button variant='contained' sx={{
                 color: 'white'
             }}

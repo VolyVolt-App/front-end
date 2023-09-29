@@ -10,7 +10,6 @@ import {ReactComponent as OrangeLogo} from '../asset/icon/orange_master_logo 1.s
 import german from '../asset/logo/german.png'
 import africa from '../asset/logo/africa.png'
 import giz from '../asset/logo/giz.png'
-import partnerlogo from '../asset/logo/partner.png'
 
 
 
@@ -30,7 +29,7 @@ const pages = [
       link: 'solution'
     },
     {
-      text:"Espace Client",
+      text:"Nos Impacts",
       link: 'client'
     },
     {
@@ -47,15 +46,46 @@ export const Footer = () => {
             background: 'linear-gradient(180deg, #082D0E 37.50%, #1B470C 100%)',
             width: '100%'
         }}>
-            
+         <Grid container display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{backgroundColor: '#FFFFFF'}}  >
+         <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
+            <Box
+                        component={'img'}
+                        sx={{
+                            width: {xs:'20%', sm: '35%'},
+                        //mt:{xs:3,md:0},
+                        
+                        // maxHeight: { xs: 50, md: 60},
+                        // maxWidth: {xs: 50, md: 60 }
+                        }}
+                        alt="rdf"
+                        src= {'http://localhost:3000/logo-orange.svg'}
+                        />
+        </Grid>
+        <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
+                        <Box
+                        component={'img'}
+                        sx={{
+                            width: {xs:'5%', sm: '13%'},
+                        //mt:{xs:3,md:0},
+                        
+                        // maxHeight: { xs: 50, md: 60},
+                        // maxWidth: {xs: 50, md: 60 }
+                        }}
+                        alt="rdf"
+                        src= {'http://localhost:3000/logo-aws.svg'}
+                        />
+                      </Grid> 
+        
+
+            </Grid>{/*end grid item*/}   
         <Grid container display={'flex'} justifyContent={'center'}>
-            <Grid item xs={12} sm={6} sx={{backgroundColor: '#638715'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
+            <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
                 <Stack direction={{xs:'column',sm:'row'}} alignItems={'center'} justifyContent={'center'} spacing={2}>
                     <Typography color={'white'}>S’abonner aux Newsletters</Typography>
                     <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white', borderRadius:2}}
                         InputProps={{
                             endAdornment: <InputAdornment position='end'>
-                                <Button variant='contained' sx={{backgroundColor: '#FFBE18'}} >S'abonner</Button>
+                                <Button variant='contained' color='yellowVoly'sx={{color:'black'}} >S'abonner</Button>
                                 </InputAdornment>
                         }}/>
                 </Stack>

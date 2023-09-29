@@ -130,6 +130,7 @@ export const Home = () => {
           color: '#96CC1E',
           fontSize: {xs:18,md:23},
           fontWeight: 'bold',
+          pt: {xs: 3,sm: 5, md: 10}
         }}
           variants={titleVariants}
           initial="initial"
@@ -214,7 +215,7 @@ export const Home = () => {
     </Typography>
 {/* end voloan */}
 {/* faharoa */}
-  <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#638715" amount={0.5}  >
+  <BackgroundRevealLayout startBgColor="#082D0E" endBgColor="#6E9F00" amount={0.5}  >
     <Grid container justifyContent={'center'}>
       <Grid item xs={6} sm={6} md={4} mt={1}  display={'flex'} flexDirection={'column'} alignItems={'center'} 
         sx={{

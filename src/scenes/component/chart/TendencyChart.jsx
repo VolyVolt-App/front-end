@@ -22,7 +22,7 @@ ChartJS.register(
     Legend
 )
 
-export const TendencyChart = ({xdata,ydata,ytitle, title}) => { 
+export const TendencyChart = ({xdata,ydata,ytitle,bigtitle, title}) => { 
 
    const data = {
     labels: xdata,
@@ -60,10 +60,10 @@ export const TendencyChart = ({xdata,ydata,ytitle, title}) => {
         },
         y: {
             min:0,
-            max:10,
+            //max:10,
             ticks: {
                 callback: (value) => value + ' kWH',
-                stepSize: 2,
+                //stepSize: 2,
             },
             grid: {
                 borderDash: [100]
@@ -85,7 +85,7 @@ export const TendencyChart = ({xdata,ydata,ytitle, title}) => {
             pb:2,
             color: '#8BBC1F',
             width: 'fit-content'
-        }}>CONSOMMATION MOYENNE MENSUELLE 
+        }}>{bigtitle} 
             
             <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
         </Typography>

@@ -4,6 +4,11 @@ import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses } from 'react-pro-side
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined"
 import { ReactComponent as Logo } from '../../asset/icon/volyvolt-black.svg'
 import { ReactComponent as DashboardIcon } from '../../asset/icon/dashboardIcon.svg'
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt'
+import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined'
+import AodOutlinedIcon from '@mui/icons-material/AodOutlined'
+import ImportantDevicesOutlinedIcon from '@mui/icons-material/ImportantDevicesOutlined'
+import AddToQueueOutlinedIcon from '@mui/icons-material/AddToQueueOutlined'
 
 import { ReactComponent as CustomersIcon } from '../../asset/icon/clientIcon.svg'
 import { ReactComponent as QuoteIcon } from '../../asset/icon/quotegeneratorIcon.svg'
@@ -47,7 +52,6 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
       
         if(isMobileCollapsed === 'init'){
           setIsCollapsed()
-        
       }
       else{
         setMobileCollapsed('hide')
@@ -90,7 +94,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
                   },
                 },
                 subMenuContent : {
-                  backgroundColor: '#27282a',
+                  backgroundColor: '#95a78f88',
                 }
 
               }}
@@ -127,17 +131,60 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
                     setCollapsed={setIsCollapsed}
                     isCollapsed={isCollapsed}
                     />
-
-                <Item
-                    title="CUSTOMERS"
+                <SubMenu
+                label='CUSTOMERS'
+                icon={<CustomersIcon />}
+                style={{
+                  fontWeight: 'bold'
+                  //fontSize: '13px'
+                }}
+                >
+                  <Item
+                    title="Les client"
                     to="/customers"
-                    icon={<CustomersIcon />}
+                    icon={<Diversity3OutlinedIcon />}
                     selected={selected}
                     setSelected={setSelected}
                     setCollapsed={setIsCollapsed}
                     isCollapsed={isCollapsed}
                     />
-
+                  <Item
+                    title="Ajouter"
+                    to="/newCustomers"
+                    icon={<PersonAddAltIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+                </SubMenu>
+                <SubMenu
+                label='APPAREIL'
+                icon={<AodOutlinedIcon />}
+                style={{
+                  fontWeight: 'bold'
+                  //fontSize: '13px'
+                }}
+                >
+                  <Item
+                    title="Les Appareils"
+                    to="/appareil"
+                    icon={<ImportantDevicesOutlinedIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+                  <Item
+                    title="Ajouter"
+                    to="/newAppareil"
+                    icon={<AddToQueueOutlinedIcon />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                    />
+                </SubMenu>
                     
                 <Item
                     title="QUOTE GENERATOR"

@@ -25,7 +25,7 @@ ChartJS.register(
   Legend
 );
 
-export const MultiLineTendancy = () => {
+export const MultiLineTendancy = ({xdata,ydataReel,ydataPredit,ytitle,bigtitle, title}) => {
     const options = {
         responsive: true,
         interaction: {
@@ -46,7 +46,7 @@ export const MultiLineTendancy = () => {
             position: 'left' ,
             ticks: {
                 callback: (value) => value + 'kWH',
-                stepSize: 2
+                //stepSize: 2
             },
             grid: {
                 display: false
@@ -69,21 +69,21 @@ export const MultiLineTendancy = () => {
         },
       };
 
-      const labels = ['semaine 1','semaine 2','semaine 3','semaine 4','semaine 5','semaine 6', 'semaine 7']
+      const labels = xdata
 
       const data = {
         labels,
         datasets: [
           {
             label: 'Consommation réelle',
-            data: [0.8,1,2.1,4,1,9,7],
+            data: ydataReel,
             borderColor: '#FFC000',//couleur main
             backgroundColor: '#FFC000',//couleur round point
             yAxisID: 'y',
           },
           {
             label: 'Consommation estimée',
-            data: [3,4,1.1,4,1,8,9],
+            data: ydataPredit,
             borderColor: '#8BBC1F',//couleur main
             backgroundColor: '#8BBC1F',//couleur round point
            // yAxisID: 'y',
@@ -105,8 +105,8 @@ export const MultiLineTendancy = () => {
             pb:2,
             color: '#8BBC1F',
             width: 'fit-content'
-        }}>CONSOMMATION ESTIMÉE  / CONSOMMATION RÉELLE
-            
+        }}>
+            {bigtitle}
             <Divider variant="fullwidth" sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
         </Typography>
         <Line options={options} data={data} />

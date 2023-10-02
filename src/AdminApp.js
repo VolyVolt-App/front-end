@@ -7,6 +7,8 @@ import { Box } from '@mui/material';
 import { TopBar } from './scenes/component/TopBar';
 import { QuoteGenerator } from './scenes/QuoteGenerator';
 import { SidebarsFiction } from './scenes/component/SidebarsFiction';
+import { Client } from './scenes/client/Client';
+import { ClientDetail } from './scenes/client/ClientDetail';
 
 export const AdminApp = () => {
   
@@ -38,6 +40,8 @@ export const AdminApp = () => {
           <Routes>   
             <Route path={'/'} element={<AppOutlet/>}>quotegenerator
               <Route index element={<Dashboard/>}/>
+              <Route path='/customers' element={<Client/>}/>
+              <Route path='/customers/detail/:id' element={<ClientDetail/>}/>
               <Route path='quotegenerator' element={<QuoteGenerator/>}/>
             </Route>
           </Routes>

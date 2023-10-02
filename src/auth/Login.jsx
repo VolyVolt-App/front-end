@@ -13,7 +13,7 @@ import { useAuth } from './useAuth'
 export const Login = () => {
 
   const [isLoading,setIsLoading] = useState(false)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(false)
   const [errorMessage, setErrorMessage] = useState(null)
 
     const auth = useAuth()
@@ -128,7 +128,7 @@ export const Login = () => {
               // maxWidth: {xs: 50, md: 60 }
               }}
               alt="rdf"
-              src= 'http://localhost:3000/volivolt-logo.svg'
+              src= {ENDPOINT+'volivolt-logo.svg'}
             />
           </Box>
           <TextField 

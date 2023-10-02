@@ -62,7 +62,7 @@ export const TendencyChart = ({xdata,ydata,ytitle,bigtitle, title}) => {
             min:0,
             //max:10,
             ticks: {
-                callback: (value) => value + ' kWH',
+                callback: (value) => value + ' WH',
                 //stepSize: 2,
             },
             grid: {

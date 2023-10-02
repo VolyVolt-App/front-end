@@ -45,7 +45,7 @@ export const MultiLineTendancy = ({xdata,ydataReel,ydataPredit,ytitle,bigtitle, 
             display: true,
             position: 'left' ,
             ticks: {
-                callback: (value) => value + 'kWH',
+                callback: (value) => value + 'WH',
                 //stepSize: 2
             },
             grid: {

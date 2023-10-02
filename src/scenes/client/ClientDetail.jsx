@@ -100,7 +100,7 @@ export const ClientDetail = () => {
                     <ErrorFromServer/>
                 }
                 {consomationPredit.status === 'success'  &&
-                  <ClientCourbePredit data={consomationPredit.data}/>
+                  <ClientCourbePredit data={consomationPredit.data} id={params.id}/>
                 }
         </Grid>
       </Grid>

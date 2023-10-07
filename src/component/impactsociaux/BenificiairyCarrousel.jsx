@@ -14,27 +14,27 @@ export const BenificiairyCarrousel = () => {
         {
             owner: "Nadia",
             address: "Commune de Anjanadoria",
-            text: "Je suis Nadia, du village d'Anjanadoria. Avant VolyVolt, la nuit était synonyme de pénombre et d'insécurité. Notre communauté était limitée dans ses activités. Maintenant, grâce à l'éclairage de VolyVolt, nous organisons des réunions communautaires en soirée et nos enfants jouent en toute sécurité. C'est un changement tangible dans notre vie quotidienne."
+            text: "Je suis Nadia, du village d'Anjanadoria. La nuit ici, est synonyme de pénombre et d'insécurité. Notre communauté est limitée dans ses activités. "
         },{
             owner: "Clarelle",
             address: "Commune de Ankadinandriana",
-            text: "Je m'appelle Clarelle, je réside dans le fokontany d'Ambohitromby, et je suis veuve. Ma fille unique poursuit ses études à Antananarivo. VolyVolt a véritablement révolutionné notre vie. Auparavant, nous devions rationner l'utilisation de nos téléphones et radios, et l'ensemble du fokontany se sentait isolé, privé de nouvelles. Je n'avais que peu de contacts avec ma fille. Désormais, je peux m'informer grâce à la radio, appeler plus fréquemment ma fille."
+            text: "Je m'appelle Clarelle, je réside dans le fokontany d'Ambohitromby, et je suis veuve. Ma fille unique poursuit ses études à Antananarivo. Nous devons rationner l'utilisation de nos téléphones et radios, et l'ensemble du fokontany se sent isolé, privé de nouvelles. Je n'ai que peu de contacts avec ma fille. "
         },{
             owner: "Lalaina et Prisca",
             address: "Commune de Ranovao",
-            text: "Nous sommes Lalaina et Prisca, une famille du fokontany d'Ambohimiadana. Avant VolyVolt, nos enfants luttaient pour leurs études la nuit. Grâce à cette solution, nos enfants peuvent maintenant étudier avec facilité. Nous sommes fiers de les voir réussir et sommes reconnaissants envers VolyVolt pour avoir éclairé leur avenir."
+            text: "Nous sommes Lalaina et Prisca, une famille du fokontany d'Ambohimiadana. Nos enfants luttent pour leurs études la nuit. Ils ne peuvent pas étudier convenablement."
         },{
             owner: "Edmond",
             address: "Commune de Ranovao",
-            text: "Avant l'arrivée de VolyVolt, nos soirées à Ambohimiadana étaient plongées dans l'obscurité. La radio était un luxe que nous ne pouvions pas nous permettre. Maintenant, grâce à l'électricité fournie par VolyVolt, nous écoutons la radio chaque soir. Nous avons également installé des ampoules dans nos maisons, ce qui rend nos soirées plus lumineuses et agréables."
+            text: "Nos soirées à Ambohimiadana sont toujours plongées dans l'obscurité. La radio reste un luxe que nous ne pouvons pas nous permettre. Nous aimerons bien avoir ce luxe mais surtout avoir l’électricité. "
         },{
             owner: "Claudette",
             address: "Commune de Ranovao",
-            text: "En tant que mère de famille, j'ai toujours voulu que mes enfants réussissent à l'école. Avant VolyVolt, les devoirs du soir étaient un défi, car nous n'avions pas d'électricité pour l'éclairage. Maintenant, avec les dispositifs fournies par VolyVolt et l’ONG Angovosoa, mes enfants peuvent étudier confortablement le soir. Leurs résultats scolaires s'améliorent, et cela me remplit de fierté."
+            text: "En tant que mère de famille, j'ai toujours voulu que mes enfants réussissent à l'école. Les devoirs du soir leurs sont un défi, car nous n'avons pas d'électricité pour l'éclairage. J’aimerai tellement que mes enfants puissent étudier confortablement le soir. Leurs résultats scolaires devraient s’améliorer."
         },{
             owner: "Lantoniaina",
             address: "Commune de Masindray",
-            text: "Mon enfant ne supportait ni les bougies ni l'odeur des lampes à pétrole, ce qui rendait nos soirées . Grâce à l'électricité fournie par VolyVolt, nous pouvons maintenant éclairer notre maison avec des ampoules lumineuses et sans danger pour la santé. La sécurité et le bien-être de ma famille sont ma priorité, et VolyVolt a contribué à les améliorer considérablement."
+            text: "Mon enfant ne supporte ni les bougies ni l'odeur des lampes à pétrole, ce qui rend nos soirées interminables. Nous sommes conscients des dangers causés par les bougies et les lampes à pétrole mais nous n’avons pas le choix. "
         },
         
     ]

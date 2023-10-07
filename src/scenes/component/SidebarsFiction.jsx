@@ -14,6 +14,7 @@ export const SidebarsFiction = ({isCollapsed}) => {
     }}>
       <Sidebar  
       collapsed={isCollapsed}
+      breakPoint='md'
       rootStyles={{
         [`.${sidebarClasses.container}`]:{
           backgroundColor: `#00000000 !important`

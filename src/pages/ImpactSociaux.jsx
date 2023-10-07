@@ -106,7 +106,7 @@ export const ImpactSociaux = () => {
                   width: 'fit-content',
                   pb: 3,
                   fontSize: {xs: 15 ,sm: 22}
-                }}>VolyVolt, pas uniquement une solution ÉnErgétique <br/> Une baume  au cœur  pour les familles rurales</Typography>
+                }}>VolyVolt, pas uniquement une solution Énergétique <br/> Une baume  au cœur  pour les familles rurales</Typography>
               
                 <Grid container>
                   <Grid item xs={0.2} md={0.2}>
@@ -147,13 +147,14 @@ export const ImpactSociaux = () => {
     <Grid container >
       <Grid item xs={12} md={5} sx={{bgcolor: '#FFC000'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <Stack spacing={3} alignItems={'center'}>
+          <Typography variant='h6' align='center' sx={{fontWeight: 'bold', fontSize:17}}>Les statistiques previsionnelles de Volyvolt pour sa première année</Typography>
           <Stack display={'flex'} direction={'row'} spacing={3}>
-            <Impact value='16' icon={<CommuneIcon width={50} height={50}/>} text='Communes touchées'/>
-            <Impact value='156' icon={<FoyerIcon width={50} height={50}/>} text='Foyers     éclairés'/>
+            <Impact value='3' icon={<CommuneIcon width={50} height={50}/>} text='Communes à toucher'/>
+            <Impact value='60' icon={<FoyerIcon width={50} height={50}/>} text='Foyers à  éclairer'/>
           </Stack>
           <Stack display={'flex'} direction={'row'}  spacing={3}>
-            <Impact value='25' icon={<FidelIcon width={50} height={50}/>} text='Partenaires de projets '/>
-            <Impact value='49' icon={<JobIcon width={50} height={50}/>} text='Emplois créés'/>
+            <Impact value='10' icon={<FidelIcon width={50} height={50}/>} text='Partenaires de projets '/>
+            <Impact value='10' icon={<JobIcon width={50} height={50}/>} text='Emplois à créer'/>
           </Stack>
         </Stack>
       </Grid>
@@ -200,8 +201,8 @@ export const ImpactSociaux = () => {
       {/* end testomony */}
 
       {/* Impact  */}
-      <Grid item xs={12} md={5} sx={{bgcolor: '#8BBC1F'}} p={6} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-        <Stack spacing={3} alignItems={'center'} justifyContent={'center'}>
+      <Grid item xs={12} md={5} sx={{bgcolor: '#8BBC1F'}} p={6} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>
+       {/*  <Stack spacing={3} alignItems={'center'} justifyContent={'center'}>
           <Stack display={'flex'} direction={'row'} spacing={3}>
             <ImpactTwo value='100%' icon={<CommuneIcon width={50} height={50}/>} text='Collaborateurs satisfaits'/>
             <ImpactTwo value='76%' icon={<FidelIcon width={50} height={50}/>} text='Taux de Renouvellement des contrats'/>
@@ -210,7 +211,16 @@ export const ImpactSociaux = () => {
             <ImpactTwo value='99%' icon={<SatisfiedIcon width={50} height={50}/>} text='Ménages bénéficiaires satisfaits'/>
             <ImpactTwo value='89%' icon={<ShareIcon width={60} height={60}/>} text='Taux de Recommandation des clients'/>
           </Stack>
-        </Stack>
+        </Stack>*/}
+          <Typography sx={{
+            fontWeight: 'bold',
+            mb:2
+            //fontSize: 17
+          }}>
+          Notre solution est en cours de developpement, nous n'avons pas encore de clients mais peut être seriez vous notre premier client?
+          </Typography>
+
+          <Button variant='outlined' color='blackvoly' onClick={()=>navigate('/contact')}>Nous Contacter</Button>
       </Grid>
        {/* End Impact  */}
     </Grid>
@@ -330,7 +340,7 @@ export const ImpactSociaux = () => {
           color: 'white',
           pt:3
         }}>
-        VolyVolt a dejà travaillé avec un grand nombre d’ entités pour faire la différence au niveau des communautés rurales. Ensemble, nous avons créé une dynamique positive et illuminé de nombreux foyers. En plus d' éclairer les foyers, travailler avec VolyVolt c'est illuminer les coeurs, semer le changement et faire sourire des familles entières. Nous valorisons le changement grace à la collaboration, et nous avons besoin de vous pour la poursuivre.Et si vous aussi, vous deveniez le responsable des sourires dans les foyers des communautés rurales ? 
+        VolyVolt a dejà travaillé avec un grand nombre d’ entités pour faire la différence au niveau des communautés rurales. Ensemble, nous avons créé une dynamique positive et illuminé de nombreux foyers. En plus d' éclairer les foyers, travailler avec VolyVolt c'est illuminer les coeurs, semer le changement et faire sourire des familles entières. Nous valorisons le changement grâce à la collaboration, et nous avons besoin de vous pour la poursuivre.Et si vous aussi, vous deveniez le responsable des sourires dans les foyers des communautés rurales ? 
         </Typography>
 
         <Typography sx={{

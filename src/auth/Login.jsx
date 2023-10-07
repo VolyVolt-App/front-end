@@ -1,14 +1,29 @@
-import { Box, Button, Grid, TextField } from '@mui/material'
+import { Box, Button, Grid, OutlinedInput, TextField } from '@mui/material'
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { ENDPOINT } from '../services/BaseUrl'
+import { ENDPOINT, FRONTENDPOINT } from '../services/BaseUrl'
 import { LoadingSpinner } from '../component/Utils/modal/LoadingSpinner'
 import { useState } from 'react'
 import { ModalError } from '../component/Utils/modal/ModalError'
 import { instance } from '../services/RequestWithAuth'
 import { useAuth } from './useAuth'
+
+import { styled } from '@mui/system'
 //import { ReactComponent as logo } from '../asset/logo/volivolt-logo.svg'
+
+const CustomTextField = styled(TextField)({
+  '& .MuiInput-underline:before': {
+    borderBottomColor: 'red', // Change this to your desired inactive color
+  },
+  '& .MuiInput-underline:hover:before': {
+    borderBottomColor: 'green', // Change this to your desired hover color
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'blue', // Change this to your desired active color
+  },
+});
+
 
 export const Login = () => {
 
@@ -105,7 +120,7 @@ export const Login = () => {
   
 
   return (
-    <Box width={'100%'} height={'100vh'} sx={{/*backgroundColor: '#082D0E'*/}}>
+    <Box width={'100%'} height={'100vh'} sx={{px:{xs:2,md:0},/*backgroundColor: '#082D0E'*/}}>
       {isLoading && <LoadingSpinner/>}
       {error && <ModalError open={error} message={errorMessage} handleClose={()=>setError(false)}/>}
       
@@ -116,7 +131,8 @@ export const Login = () => {
           <Box sx={{
             width: '100%',
             display: 'flex',
-            justifyContent: 'center'
+            justifyContent: 'center',
+
           }}>
             <Box
               component={'img'}
@@ -128,7 +144,7 @@ export const Login = () => {
               // maxWidth: {xs: 50, md: 60 }
               }}
               alt="rdf"
-              src= {ENDPOINT+'volivolt-logo.svg'}
+              src= {FRONTENDPOINT+'volivolt-logo.svg'}
             />
           </Box>
           <TextField 
@@ -162,6 +178,7 @@ export const Login = () => {
           }}/>
           <Button variant='contained' color={'yellowVoly'} type='submit'>Connexion</Button>
           
+
         </Grid>
         
       </Grid>

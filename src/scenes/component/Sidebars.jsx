@@ -14,6 +14,7 @@ import { ReactComponent as CustomersIcon } from '../../asset/icon/clientIcon.svg
 import { ReactComponent as QuoteIcon } from '../../asset/icon/quotegeneratorIcon.svg'
 import { ReactComponent as BellIcon } from '../../asset/icon/icon _bell_.svg'
 import { useNavigate } from 'react-router-dom'
+import { MessageOutlined } from '@mui/icons-material'
 
 
 const Item = ({ title, to, icon, selected, setSelected, setCollapsed, isCollapsed}) => {
@@ -41,25 +42,22 @@ const Item = ({ title, to, icon, selected, setSelected, setCollapsed, isCollapse
   )
 }
 
-export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobileCollapsed}) => {
+export const Sidebars = ({isCollapsed,setIsCollapsed, toggled, setToggled}) => {
+
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  //const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   
   const [selected, setSelected] = useState("DASHBOARD")
 
+ // const [toggled, setToggled] = useState(false);
+  const [broken, setBroken] = useState(false);
+
+
+
   const handleCollapseSidebar = () => {
-    if(isMobile){
-      
-        if(isMobileCollapsed === 'init'){
-          setIsCollapsed()
-      }
-      else{
-        setMobileCollapsed('hide')
-      }
-    }
-    else {
+    
       setIsCollapsed()
-    }
+
   }
 
   return (
@@ -70,11 +68,13 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
         top:0,
         display:{xs:'flex', md:'flex'}
       }}>
-        { (!isMobile || ( isMobile && isMobileCollapsed ==='init')) &&
-        
-        (<Sidebar
+ 
+        <Sidebar
         collapsed={isCollapsed}
-        breakPoint={isMobile?'xs':''}
+        breakPoint={'md'}
+        toggled={toggled}
+        onBackdropClick={() => setToggled(false)}
+        onBreakPoint={setBroken}
         rootStyles={{
           [`.${sidebarClasses.container}`]:{
             backgroundColor: '#b4c1af'
@@ -130,7 +130,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
                     setSelected={setSelected}
                     setCollapsed={setIsCollapsed}
                     isCollapsed={isCollapsed}
-                    />
+                />
                 <SubMenu
                 label='CUSTOMERS'
                 icon={<CustomersIcon />}
@@ -150,7 +150,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
                     />
                   <Item
                     title="Ajouter"
-                    to="/newCustomers"
+                    to="/addclient"
                     icon={<PersonAddAltIcon />}
                     selected={selected}
                     setSelected={setSelected}
@@ -187,26 +187,36 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, isMobileCollapsed, setMobi
                 </SubMenu>
                     
                 <Item
-                    title="QUOTE GENERATOR"
-                    to="/quotegenerator"
-                    icon={<QuoteIcon />}
-                    selected={selected}
-                    setSelected={setSelected}
-                    setCollapsed={setIsCollapsed}
-                    isCollapsed={isCollapsed}
-                    />
-                    <Item
-                        title="NOTIFICATIONS"
-                        to="/notification"
-                        icon={<BellIcon />}
-                        selected={selected}
-                        setSelected={setSelected}
-                        setCollapsed={setIsCollapsed}
-                        isCollapsed={isCollapsed}
-                        />
+                  title="QUOTE GENERATOR"
+                  to="/quotegenerator"
+                  icon={<QuoteIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                  setCollapsed={setIsCollapsed}
+                  isCollapsed={isCollapsed}
+                />
+                <Item
+                  title="NOTIFICATIONS"
+                  to="/notification"
+                  icon={<BellIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                  setCollapsed={setIsCollapsed}
+                  isCollapsed={isCollapsed}
+                />
+
+                <Item
+                  title="MESSAGE"
+                  to="/message"
+                  icon={<MessageOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                  setCollapsed={setIsCollapsed}
+                  isCollapsed={isCollapsed}
+                />
             
             </Menu>
-        </Sidebar>)}
+        </Sidebar>
       </Box>
     
       )

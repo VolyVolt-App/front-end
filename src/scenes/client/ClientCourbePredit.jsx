@@ -9,7 +9,9 @@ import { ModalError } from '../../component/Utils/modal/ModalError'
 export const ClientCourbePredit = ({data,id}) => {
     console.log(data)
 
-    
+   // const [dataPredit,setDataPredit]= useState(); 
+
+  
   const [isLoading,setIsLoading] = useState(false)
   const [error, setError] = useState(false)
   const [errorMessage, setErrorMessage] = useState(null)
@@ -18,8 +20,16 @@ export const ClientCourbePredit = ({data,id}) => {
         setIsLoading(true)
         axios.post(ENDPOINT+'getPredictionToIA/'+id)
         .then((data)=>{
-            setIsLoading(false)
+            
             console.log('mety')
+
+            //const {data,isLoading,isError, isSuccess} = useQuery(['tgetConsomationPredit/'+id],()=>
+            axios.get(ENDPOINT+'getConsomationPredit/'+id)
+            .then(
+                setIsLoading(false)
+                
+            )
+
         })
         .catch(()=>{
             setIsLoading(false)

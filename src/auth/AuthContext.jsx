@@ -8,9 +8,9 @@ export const AuthContext= createContext()
 export const AuthContextProvider = ({children}) => {
 
     
-    const [user,setUser] = useState(null)
+    const [user,setUser] = useState([])
     const [token,setToken] = useState(null)
-    const [roles,setRoles] = useState(null)//resp.data.roles
+    const [roles,setRoles] = useState([])//resp.data.roles
     const [isAuthenticated, setAuthenticated] = useState(false)
 
     const navigate = useNavigate()
@@ -46,6 +46,9 @@ export const AuthContextProvider = ({children}) => {
     setToken(token)
     setRoles(roles)
     setAuthenticated(true)
+    //console.log('tafiditra')
+    //navigate('/admin')
+    console.log(isAuthenticated)
 
   }
 
@@ -64,9 +67,11 @@ export const AuthContextProvider = ({children}) => {
       //when the user reload the page 
       useEffect(()=>{
         const storedData = JSON.parse(localStorage.getItem('userData'))
-        console.log('reload', storedData)
+       console.log('reload', storedData)
 
         if(storedData && storedData.token && storedData.roles){
+          
+          //setAuthenticated(true)
           reload(storedData.user, storedData.token, storedData.roles) 
         }
         

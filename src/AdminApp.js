@@ -9,40 +9,46 @@ import { QuoteGenerator } from './scenes/QuoteGenerator';
 import { SidebarsFiction } from './scenes/component/SidebarsFiction';
 import { Client } from './scenes/client/Client';
 import { ClientDetail } from './scenes/client/ClientDetail';
+import { RequireAuth } from './auth/RequireAuth';
+import { Playground } from './scenes/component/SideBarTest';
+import { AddClient } from './scenes/client/AddClient';
 
 export const AdminApp = () => {
   
   const [isCollapsed, setIsCollapsed] = useState(false)
-  const [isMobileCollapsed, setMobileCollapsed] = useState('hide')
+  const [toggled,setToggled] = useState(false)
 
   return (
     <Box sx={{height:'100%', bgcolor:'red'}}>
       <Sidebars
       isCollapsed={isCollapsed} 
       setIsCollapsed={()=>setIsCollapsed(!isCollapsed)}
-      isMobileCollapsed={isMobileCollapsed}
-      setMobileCollapsed={setMobileCollapsed}/>
-
-    <Box display={'flex'}  sx={{bgcolor: '#EEF3E4'}} >
-      <SidebarsFiction
-      isCollapsed={isCollapsed} 
+      toggled={toggled}
+      setToggled={setToggled}
       />
+
+      <Box display={'flex'}  sx={{bgcolor: '#EEF3E4'}} >
+      <SidebarsFiction
+          isCollapsed={isCollapsed} 
+      /> 
+
       <main style={{ flexGrow:1}}>
 
         <TopBar 
           isCollapsed={isCollapsed} 
           setIsCollapsed={()=>setIsCollapsed(!isCollapsed)}
-          isMobileCollapsed={isMobileCollapsed}
-          setMobileCollapsed={setMobileCollapsed}
+          toggled={toggled}
+          setToggled={setToggled}
           />
 
         <Box sx={{px:{xs:2,md:3,lg:6}}} py={3} bgcolor={'secondary'}>
           <Routes>   
-            <Route path={'/'} element={<AppOutlet/>}>quotegenerator
+            <Route path={'/'} element={<RequireAuth allowedRoles={['ADMIN']}/>}>
               <Route index element={<Dashboard/>}/>
               <Route path='/customers' element={<Client/>}/>
               <Route path='/customers/detail/:id' element={<ClientDetail/>}/>
-              <Route path='quotegenerator' element={<QuoteGenerator/>}/>
+              <Route path='/addclient' element={<AddClient/>}/>
+              <Route path='/quotegenerator' element={<QuoteGenerator/>}/>
             </Route>
           </Routes>
         </Box>

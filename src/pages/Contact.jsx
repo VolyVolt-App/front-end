@@ -16,10 +16,10 @@ import {ReactComponent as PhoneIcon} from '../asset/icon/icons-phone 1.svg'
 import {ReactComponent as MailIcon} from '../asset/icon/Vector.svg'
 
 import { FbOutlinedIcon } from "../asset/dynamic/FbOutlinedIcon"
-import {ReactComponent as FacebookIcon} from '../asset/icon/icons-fb outline 1.svg'
-import {ReactComponent as InstagramIcon} from '../asset/icon/insta.svg'
-import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin out.svg'
-import {ReactComponent as TwitterIcon} from '../asset/icon/twitter-svgrepo-com.svg'
+//import {ReactComponent as FacebookIcon} from '../asset/icon/icons-fb outline 1.svg'
+//import {ReactComponent as InstagramIcon} from '../asset/icon/insta.svg'
+//import {ReactComponent as LinkedinIcon} from '../asset/icon/linkedin out.svg'
+//import {ReactComponent as TwitterIcon} from '../asset/icon/twitter-svgrepo-com.svg'
 
 import { Link } from 'react-router-dom';
 import { RejoindreDialog } from '../component/contact/RejoindreDialog'
@@ -29,6 +29,7 @@ import { useTheme } from '@emotion/react'
 import { InstagramOutlined } from '../asset/dynamic/InstagramOutlined'
 import { TwitterOutlined } from '../asset/dynamic/TwitterOutlined'
 import { LinkedInOutlinedIcon } from '../asset/dynamic/LinkedInOutlinedIcon'
+import { MessageForm } from '../component/contact/MessageForm'
 
 export const Contact = () => {
     const [isHover, setHover] = useState('')
@@ -343,66 +344,18 @@ export const Contact = () => {
 
       
       <Grid item xs={12} md={6} position={'relative'} id='ContactForm'>
-        <Stack px={3} py={3} mx={3} width={'100%'} color={'warning'} backgroundColor={'white'} borderRadius={2} spacing={2} position={'absolute'} display={{xs:'none',md:'flex'}}>
-          <TextField label='Nom  et Prénoms / Nom de l’organisme' color={'yellowVoly'} />
-          <TextField label='Adresse E-mail' color='yellowVoly' />
-          <TextField label='Numéro de téléphone' color='yellowVoly' />
-          <TextField label='Moyen de communication préféré' color='yellowVoly' />
-
-          <FormControl color='yellowVoly'>
-
-          <InputLabel id="connuvoly">Comment avez-vous connu VolyVolt?</InputLabel>
-            <Select labelId="connuvoly" label='Comment avez-vous connu VolyVolt?' color='yellowVoly'>
-              <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
-              <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
-              <MenuItem value={'Linkin'}>Linkin</MenuItem>
-              <MenuItem value={'Facebook'}>Facebook</MenuItem>
-              <MenuItem value={'Evenement'}>Evenement</MenuItem>
-              <MenuItem value={'Autre'}>Autre</MenuItem>
-            </Select>
-          </FormControl>
-          
-          <TextField label='Objet' color='yellowVoly'/>
-          <TextField label='Message' color='yellowVoly' multiline rows={5}/>
-          <Button variant='contained' color='yellowVoly'>Envoyez le message</Button>
-          <Typography fontSize={12}>
-          En soumettant ce formulaire, vous consentez à notre politique de confidentialité et à l'utilisation de vos informations personnelles aux fins de votre demande.
-          </Typography>
-        </Stack>
+          <MessageForm position={'absolute'} display={{xs:'none',md:'flex'}}/>
       </Grid>
     </Grid>
 
     {/* formulaire in small screen */}
-    <Stack  py={2} mx={1} px={1} my={1}  color={'yellowVoly'} backgroundColor={'white'} borderRadius={2} spacing={2} display={{xs:'flex',md:'none'}}>
-          <TextField label='Nom  et Prénoms / Nom de l’organisme' color='yellowVoly' />
-          <TextField label='Adresse E-mail' color='yellowVoly' />
-          <TextField label='Numéro de téléphone' color='yellowVoly' />
-          <TextField label='Moyen de communication préféré' color='yellowVoly' />
 
-          <FormControl color='yellowVoly'>
-
-          <InputLabel id="connuvoly">Comment avez-vous connu VolyVolt?</InputLabel>
-            <Select labelId="connuvoly" label='Comment avez-vous connu VolyVolt?' color='yellowVoly'>
-              <MenuItem value={'Mouteur de recherche'}>Mouteur de recherche</MenuItem>
-              <MenuItem value={'Recommandation'}>Recommandation</MenuItem>
-              <MenuItem value={'Linkin'}>Linkin</MenuItem>
-              <MenuItem value={'Facebook'}>Facebook</MenuItem>
-              <MenuItem value={'Evenement'}>Evenement</MenuItem>
-              <MenuItem value={'Autre'}>Autre</MenuItem>
-            </Select>
-          </FormControl>
+    <MessageForm display={{xs:'flex',md:'none'}}/>
           
-          <TextField label='Objet' color='yellowVoly'/>
-          <TextField label='Message' color='yellowVoly' multiline rows={5}/>
-          <Button variant='contained' color='yellowVoly'>Envoyez le message</Button>
-          <Typography fontSize={12}>
-          En soumettant ce formulaire, vous consentez à notre politique de confidentialité et à l'utilisation de vos informations personnelles aux fins de votre demande.
-          </Typography>
-        </Stack>
     {/* end formulaire in small screen */}
 
     {/* section contact info */}
-    <Grid container px={{xs:2,md:6, lg: 12}} py={{xs:3,md:12}}>
+    <Grid container px={{xs:2,md:6, lg: 12}} py={{xs:3,md:16}}>
       <Grid item xs={12} md={6}>
         <Stack direction={'row'} alignItems={'center'} spacing={2}>
           <PhoneIcon width={60} height={60}/>

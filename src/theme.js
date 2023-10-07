@@ -18,6 +18,10 @@ export const theme = createTheme({
       contrastText: '#fff',
       //dark:'#CC9600',
       //light:'#FFD800',
+    },
+    blackvoly: {
+      main: '#000',
+      contrastText: '#fff'
     }
   },
     typography: {

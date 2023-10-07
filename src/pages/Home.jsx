@@ -831,7 +831,7 @@ export const Home = () => {
 
 
 {/* impact */}
-    <Grid container sx={{backgroundColor:'#FFC000'}} p={{xs:2,md:6}}>
+{/*     <Grid container sx={{backgroundColor:'#FFC000'}} p={{xs:2,md:6}}>
       <Grid component={motion.div} transition={{ staggerChildren: 0.5 }} item xs={6} md={3}>
          <AmountAnimationLayout>
           <Typography 
@@ -854,7 +854,7 @@ export const Home = () => {
             </Typography>
           </ScrollAnimationLayout>
 
-      </Grid>{/* end item */}
+      </Grid> end item 
 
       <Grid item xs={6} md={3}>
         <AmountAnimationLayout>
@@ -874,7 +874,7 @@ export const Home = () => {
           Foyers  éclairés
           </Typography>
          </ScrollAnimationLayout>
-      </Grid>{/* end item */}
+      </Grid> end item 
 
       <Grid item xs={6} md={3}>
         <AmountAnimationLayout>
@@ -894,7 +894,7 @@ export const Home = () => {
             Partenaires de projets  
             </Typography>
           </ScrollAnimationLayout>
-      </Grid>{/* end item */}
+      </Grid> end item 
 
       <Grid item xs={6} md={3} >
         <AmountAnimationLayout>
@@ -914,9 +914,10 @@ export const Home = () => {
           Emplois créés
           </Typography>
         </ScrollAnimationLayout>
-      </Grid>{/* end item */}
+      </Grid> end item 
 
-    </Grid>{/* end container */}
+    </Grid> end container 
+    */}
 {/* end impact */}
 
 {/* article */}

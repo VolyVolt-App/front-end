@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton"
 import MenuIcon from "@mui/icons-material/Menu"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
-import { Link} from 'react-router-dom'
+import { Link, useLocation} from 'react-router-dom'
 
 import ClearIcon from '@mui/icons-material/Clear';
 
@@ -25,19 +25,19 @@ import { useEffect } from 'react'
 const pages = [
     {
       text:"ACCUEIL",
-      link: ''
+      link: '/'
     },
     {
       text:"NOTRE SOLUTION",
-      link: 'solution'
+      link: '/solution'
     },
     {
       text:"NOS IMPACTS",
-      link: 'impactsociaux'
+      link: '/impactsociaux'
     },
     {
       text:"CONTACT",
-      link: 'contact'
+      link: '/contact'
     },
      ]
 
@@ -74,6 +74,11 @@ export const Header = (props) => {
     const [collapse, setCollapse] = useState(false)
     const [navActive, setNavActive] = useState('')
 
+    const location = useLocation()
+
+    useEffect(()=>{
+      setNavActive(location.pathname)
+    },[location.pathname])
 
 
   const handleOpenNavMenu = (event) => {
@@ -165,7 +170,7 @@ export const Header = (props) => {
                     <List>
                       {pages.map((page, index) => (
                         <ListItem button key={page.text}>
-                          <Link to={`/${page.link}`} style={{fontFamily:'Astro',textDecoration: 'none', color: 'white'}}>
+                          <Link to={`${page.link}`} style={{fontFamily:'Astro',textDecoration: 'none', color: 'white'}}>
                             <ListItemText primary={page.text} onClick={()=>setCollapse(false)}/>
                           </Link>
                         </ListItem>
@@ -198,7 +203,7 @@ export const Header = (props) => {
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                <Link 
-                to={`/${page.link}`} 
+                to={`${page.link}`} 
                 style={{
                   fontFamily:'Astro',
                   textDecoration: 'none', 

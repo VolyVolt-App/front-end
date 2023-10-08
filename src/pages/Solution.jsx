@@ -20,6 +20,12 @@ import { BackgroundRevealLayout } from '../component/Layout/BackgroundRevealLayo
 import { Link } from 'react-router-dom';
 import { CarouselAvantageClient } from '../component/solution/CarouselAvantageClient';
 
+//for the 3d modeling
+
+import { Model } from "../PowerVolyVolt"
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls } from "@react-three/drei"
+
 //https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3dV8VGIPs3KpA2PutMkTCvdoiSAqoyj47q-WxxHOqIDc_su2Qbtm6nL2Y&mid=1ztgqsEQAZ5ej0DNawjHzxl10_N5x1f8&ll=-18.95798824431245%2C47.92853244749729&z=10
 
 export const Solution = () => {
@@ -448,6 +454,21 @@ export const Solution = () => {
       {/*end  processus */}
 
       {/* END OFFRE */}
+
+      {/* dispositif */}
+      <Grid container>
+        <Grid item xs={12}>
+        <Box sx={{height: '50vh', backgroundColor: '#082D0E'}}>
+        <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
+        <ambientLight intensity={5} />
+        <OrbitControls enableZoom={true} />
+        <Model />
+      </Canvas>
+
+        </Box>
+        </Grid>
+      </Grid>
+      {/* end dispositif */}
 
       {/* Avantage client */}
       <Grid container py={3}  sx={{

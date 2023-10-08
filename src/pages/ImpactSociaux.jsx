@@ -36,7 +36,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Article } from '../component/impactsociaux/Article'
 import { SliderRight } from '../component/gallery/SliderRight'
 import { SliderLeft } from '../component/gallery/SliderLeft'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 //end article
 //import {ReactComponent as Icon} from '../asset/icon'
 //import {ReactComponent as Icon} from '../asset/icon'
@@ -160,9 +160,9 @@ export const ImpactSociaux = () => {
       </Grid>
 
       <Grid item xs={12} md={7} sx={{bgcolor: '#2F2121'}} display={'flex'} alignItems={'center'} flexDirection={'column'}>
-        <Typography align='center' color={'white'} variant='h6' p={2} fontWeight={'bold'}>COMMUNE RURALE D’ AKADINANDRIANA</Typography>
+        {/*<Typography align='center' color={'white'} variant='h6' p={2} fontWeight={'bold'}>COMMUNE RURALE D’ AKADINANDRIANA</Typography>*/}
         <Box width={'fit-content'} px={{xs:3, md:0}} pb={3}>
-          <Typography color={'white'} width={'fit-content'}>Fokotany touchés par la solution : Ambohitrosy, Ambohimahatsinjo,  Andranovelona</Typography>
+        {/*   <Typography color={'white'} width={'fit-content'}>Fokotany touchés par la solution : Ambohitrosy, Ambohimahatsinjo,  Andranovelona</Typography>
           <Typography color={'white'} width={'fit-content'}>Nombre des ménages bénéficiaires de la solution : 57 ménages</Typography>
           <Typography color={'white'} width={'fit-content'}>Taux d’adoption moyenne des ménages : 99,8%</Typography>
           <Typography color={'white'} width={'fit-content'}>Production énergétique  moyenne mensuelle : 304 kWh</Typography>
@@ -170,10 +170,15 @@ export const ImpactSociaux = () => {
           <Typography color={'white'} width={'fit-content'}>Cumul de la production énergétique  locale : 793 kWh</Typography>
           <Typography color={'white'} width={'fit-content'}>Cumul de la consommation énergétique locale : 686kWh</Typography>
           <Typography color={'white'} width={'fit-content'}>Nouveaux emplois locaux créés : 8 emplois fixes </Typography>
+        */}
+          <Typography p={6} color={'white'}>
+          Pour l'instant, nous n'avons pas encore deployé la solution mais nous avons dejà quelques localités cibles sur le map au-dessus
+          Si vous êtes prêts à apporter votre contribution au niveau de ces localilés, si vous êtes onvaincus que ces localités ont besoin de votre contribution, {/*<Link to={'/contact'}></Link> */} 
+          </Typography>
         </Box>
         <Box pb={3}>
         <Button variant='outlined'
-          sx={{ color: '#FFC000', borderColor:'#FFC000'}} onClick={()=> navigate("/Contact")}>NOUS REJOINDRE</Button>
+          sx={{ color: '#FFC000', borderColor:'#FFC000'}} onClick={()=> navigate("/Contact")}>contactez- nous</Button>
         </Box>
       </Grid>
     </Grid>

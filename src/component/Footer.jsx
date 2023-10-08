@@ -62,7 +62,7 @@ export const Footer = () => {
                         component={'img'}
                         sx={{
                             //width: {xs: 50, sm: 150},
-                            height: {xs:'8vh', sm: '10vh', md: '15vh'},
+                            height: {xs:'9vh', sm: '10vh', md: '15vh'},
                             my:1
                         //mt:{xs:3,md:0},
                         
@@ -76,7 +76,7 @@ export const Footer = () => {
                         component={'img'}
                         sx={{
                             //width: {xs:50, sm: 150},
-                            height: {xs:'8vh', sm: '10vh', md: '15vh'},
+                            height: {xs:'9vh', sm: '10vh', md: '15vh'},
                             my:1,
                         //mt:{xs:3,md:0},
                         
@@ -123,11 +123,11 @@ export const Footer = () => {
             </Grid>{/*end grid item*/}
             <Grid item xs={12} sm={4} >
                 <Stack direction={'row'} spacing={2}   py={2} justifyContent={{xs:'center',md:'end'}}>
-                    <a href='https://www.facebook.com/profile.php?id=61550528378165'><FbIcon isHover={isHover} setHover={setHover}/></a>
+                    <a href='https://www.facebook.com/profile.php?id=61550528378165' target="_blank" rel="noopener noreferrer"><FbIcon isHover={isHover} setHover={setHover}/></a>
                     <InstagramIcon isHover={isHover} setHover={setHover}/>
                     {/*<TwitterIcon isHover={isHover} setHover={setHover}/>*/}
-                    <a href='https://www.youtube.com/@VolyVolt-mg2023'><Youtube isHover={isHover} setHover={setHover}/></a>
-                    <LinkedinIcon isHover={isHover} setHover={setHover}/>
+                    <a href='https://www.youtube.com/@VolyVolt-mg2023' target="_blank" rel="noopener noreferrer"><Youtube isHover={isHover} setHover={setHover}/></a>
+                    <a href='https://www.linkedin.com/posts/volyvolt-mg_volyvolt-activity-7114875840256970752-sfkV?utm_source=share&utm_medium=member_android' target="_blank" rel="noopener noreferrer"><LinkedinIcon isHover={isHover} setHover={setHover}/></a>
                     
                 </Stack>
             </Grid>{/*end grid item*/}

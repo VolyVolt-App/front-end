@@ -2,8 +2,8 @@ import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typog
 import React, { useState } from 'react'
 
 
-import bannerImage from '../asset/image/Group 104.png'
-import bannerVideo from '../asset/image/Group 103.png'
+import bannerImage from '../asset/image/Group 104.webp'
+//import bannerVideo from '../asset/image/Group 103.png'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Analyse } from '../component/solution/Analyse';

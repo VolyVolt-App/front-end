@@ -1,9 +1,9 @@
 import { Box, Grid, Divider, Typography, Stack, TextField, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material'
 import React, {useState} from 'react'
 
-import backgroundBanner from '../asset/image/contact/equipe-commerciale-reussie-heureuse 1.png'
-import teamvolyvolt from '../asset/image/équipe verte 1.png'
-import backgroundMobileBanner from '../asset/image/contact/bannermobilecontact.png'
+import backgroundBanner from '../asset/image/contact/equipe-commerciale-reussie-heureuse 1.webp'
+import teamvolyvolt from '../asset/image/équipe verte 1.webp'
+import backgroundMobileBanner from '../asset/image/contact/bannermobilecontact.webp'
 import { Embarque } from '../component/contact/Embarque'
 
 import {ReactComponent as ConventionIcon} from '../asset/icon/icons-convention 1.svg'

@@ -19,16 +19,16 @@ import { Testimony } from '../component/impactsociaux/Testimony'
 
 
 //article
-import article1 from '../asset/image/image 19.png'
-import article2 from '../asset/image/image 20.png'
-import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.png'
-import articlefemmenoir from '../asset/image/vue-face-senior-femme-noire-posant 1.png'
+import article1 from '../asset/image/image 19.webp'
+import article2 from '../asset/image/image 20.webp'
+import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.webp'
+import articlefemmenoir from '../asset/image/vue-face-senior-femme-noire-posant 1.webp'
 
-import articleloren from '../asset/image/loren-joseph-XoBWUBA3Amg-unsplash 2.png'
-import articlejeune from '../asset/image/PXL_20230726_072127091 1.png'
+import articleloren from '../asset/image/loren-joseph-XoBWUBA3Amg-unsplash 2.webp'
+import articlejeune from '../asset/image/PXL_20230726_072127091 1.webp'
 
 
-import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.png'
+import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.webp'
 
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';

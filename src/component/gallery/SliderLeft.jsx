@@ -1,13 +1,13 @@
 import React from 'react'
 
 //image slides right
-import slideLeft1 from '../../asset/image/slideLeft/PXL_20230725_065945816 1.png'
-import slideLeft2 from '../../asset/image/slideLeft/coup-moyen-femme-souriante-exterieur 1.png'
-import slideLeft3 from '../../asset/image/slideLeft/loren-joseph-XoBWUBA3Amg-unsplash 1.png'
-import slideLeft4 from '../../asset/image/slideLeft/loren-joseph-XoBWUBA3Amg-unsplash 2.png'
-import slideLeft5 from '../../asset/image/slideLeft/prise-vue-au-grand-angle-maisons-construites-champ-sec-cote-quelques-plantes 1.png'
-import slideLeft6 from '../../asset/image/slideLeft/travailleurs-campagne-ensemble-terrain 1.png'
-import slideLeft7 from '../../asset/image/slideLeft/PXL_20230726_072127091 1 (1).png'
+import slideLeft1 from '../../asset/image/slideLeft/PXL_20230725_065945816 1.webp'
+import slideLeft2 from '../../asset/image/slideLeft/coup-moyen-femme-souriante-exterieur 1.webp'
+import slideLeft3 from '../../asset/image/slideLeft/loren-joseph-XoBWUBA3Amg-unsplash 1.webp'
+import slideLeft4 from '../../asset/image/slideLeft/loren-joseph-XoBWUBA3Amg-unsplash 2.webp'
+import slideLeft5 from '../../asset/image/slideLeft/prise-vue-au-grand-angle-maisons-construites-champ-sec-cote-quelques-plantes 1.webp'
+import slideLeft6 from '../../asset/image/slideLeft/travailleurs-campagne-ensemble-terrain 1.webp'
+import slideLeft7 from '../../asset/image/slideLeft/PXL_20230726_072127091 1 (1).webp'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'

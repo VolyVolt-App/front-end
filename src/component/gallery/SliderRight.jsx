@@ -1,14 +1,14 @@
 import React from 'react'
 
 //image slides right
-import slideRight1 from '../../asset/image/slideright/371927658_1030419691302630_7834568546544710039_n 3.png'
-import slideRight2 from '../../asset/image/slideright/PXL_20230725_062759167 1.png'
-import slideRight3 from '../../asset/image/slideright/PXL_20230725_063353941 1.png'
-import slideRight4 from '../../asset/image/slideright/coup-moyen-enfants-hecureux-posant 1.png'
-import slideRight5 from '../../asset/image/slideright/gros-plan-enfant-africain-smiley 1.png'
-import slideRight6 from '../../asset/image/slideright/siddhant-soni-CvqCzwVOhCM-unsplash 1.png'
-import slideRight7 from '../../asset/image/slideright/siddhant-soni-CvqCzwVOhCM-unsplash 2.png'
-import slideRight8 from '../../asset/image/slideright/PXL_20230725_063353941 1 (1).png'
+import slideRight1 from '../../asset/image/slideright/371927658_1030419691302630_7834568546544710039_n 3.webp'
+import slideRight2 from '../../asset/image/slideright/PXL_20230725_062759167 1.webp'
+import slideRight3 from '../../asset/image/slideright/PXL_20230725_063353941 1.webp'
+import slideRight4 from '../../asset/image/slideright/coup-moyen-enfants-hecureux-posant 1.webp'
+import slideRight5 from '../../asset/image/slideright/gros-plan-enfant-africain-smiley 1.webp'
+import slideRight6 from '../../asset/image/slideright/siddhant-soni-CvqCzwVOhCM-unsplash 1.webp'
+import slideRight7 from '../../asset/image/slideright/siddhant-soni-CvqCzwVOhCM-unsplash 2.webp'
+import slideRight8 from '../../asset/image/slideright/PXL_20230725_063353941 1 (1).webp'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'

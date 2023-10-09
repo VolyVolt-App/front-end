@@ -64,7 +64,7 @@ export const AvantageClient = () => {
 
   
   const handleNextSlideLarge = useCallback(() => {
-    if(md){
+    /*if(md){
       if(swiperRef.activeIndex !== 3){
         setIndexActive(indexActive+1)
         //swiperRef.slideTo(ind)
@@ -72,10 +72,10 @@ export const AvantageClient = () => {
     }
      if(sm){
       console.log('sm')
-    }
+    }*/
     console.log('activeIndex: ',swiperRef.activeIndex)
     //isEnd,isBeginning previousIndex
-    //swiperRef.slideNext()
+    swiperRef.slideNext()
   },[swiperRef])
 
   const handlePrevSlideLarge = useCallback(() => {
@@ -88,7 +88,7 @@ export const AvantageClient = () => {
     <>
 
     {/* xs */}
-    <Box display={{xs:'flex', sm:'none'}} >
+    <Box display={{xs:'flex'}} >
       <Box display={'flex'} alignItems={'center'} pr={{xs:0, md:2}}>
         <IconButton onClick={handlePrevSlide}>
           <ArrowBack width={30}/>
@@ -144,7 +144,7 @@ export const AvantageClient = () => {
 
     {/* large */}
 
-    <Box display={{xs:'none', sm:'flex'}} >
+   {/**  <Box display={{xs:'none', sm:'flex'}} >
       <Box display={'flex'} alignItems={'center'} pr={{xs:0, md:2}}>
         <IconButton onClick={handlePrevSlideLarge}>
           <ArrowBack width={30}/>
@@ -194,7 +194,7 @@ export const AvantageClient = () => {
           <ArrowForward width={30}/>
         </IconButton>
       </Box>
-    </Box>
+    </Box>*/}
     
       
     </>
@@ -205,8 +205,8 @@ const SwiperLayout = ({isActive,item, index}) => {
   const swiper = useSwiper()
   return (
     <>
-    {
-      isActive ?
+    {/*{
+      isActive ?*/}
         <Box sx={{
             p: 2,
             display: 'flex',
@@ -230,7 +230,7 @@ const SwiperLayout = ({isActive,item, index}) => {
           </Typography>
         </Box>
 
-      :
+    {/*   :
         <Box sx={{
           display: 'flex',
           alignItems: 'center',
@@ -257,9 +257,9 @@ const SwiperLayout = ({isActive,item, index}) => {
                 {item.title}
               </Typography>
             </Box>
-        </Box>
+        </Box>*/}
         
-    }
+    {/** }*/}
     </>
   )
 }

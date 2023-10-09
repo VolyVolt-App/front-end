@@ -11,9 +11,9 @@ import { ReactComponent as ValuePropositionThree } from '../asset/icon/icons-cle
 //import { ReactComponent as ValuePropositionFour } from '../asset/icon/icons-eco 1.svg'
 
 
-import article1 from '../asset/image/image 19.png'
-import article2 from '../asset/image/image 20.png'
-import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.png'
+import article1 from '../asset/image/image 19.webp'
+import article2 from '../asset/image/image 20.webp'
+import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.webp'
 //import { ReactComponent as OddTwo } from '../asset/image/odd2.svg'
 import { ReactComponent as OddSeven } from '../asset/image/odd7_adobe_express.svg'
 import { ReactComponent as OddNine } from '../asset/image/odd09_adobe_express.svg'

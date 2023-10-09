@@ -395,7 +395,7 @@ export const Contact = () => {
           <Typography>Nous suivre sur les réseaux :</Typography>
           <Stack direction={'row'} pl={2} spacing={1} pt={{xs:1,sm:0}}>
           <a href='https://www.facebook.com/profile.php?id=61550528378165' target="_blank" rel="noopener noreferrer"><FbOutlinedIcon isHover={isHover} setHover={setHover}/></a>
-            <InstagramOutlined isHover={isHover} setHover={setHover}/>
+          <a href='https://www.instagram.com/volyvolt.mg/' target="_blank" rel="noopener noreferrer"><InstagramOutlined isHover={isHover} setHover={setHover}/></a>
           <a href='https://www.youtube.com/@VolyVolt-mg2023' target="_blank" rel="noopener noreferrer"><YoutubeOutlined style={{marginBottom:52}} isHover={isHover} setHover={setHover}/></a>
           <a href='https://www.linkedin.com/posts/volyvolt-mg_volyvolt-activity-7114875840256970752-sfkV?utm_source=share&utm_medium=member_android' target="_blank" rel="noopener noreferrer"><LinkedInOutlinedIcon isHover={isHover} setHover={setHover}/></a>
           </Stack>

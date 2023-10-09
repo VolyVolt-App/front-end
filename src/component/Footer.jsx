@@ -124,7 +124,7 @@ export const Footer = () => {
             <Grid item xs={12} sm={4} >
                 <Stack direction={'row'} spacing={2}   py={2} justifyContent={{xs:'center',md:'end'}}>
                     <a href='https://www.facebook.com/profile.php?id=61550528378165' target="_blank" rel="noopener noreferrer"><FbIcon isHover={isHover} setHover={setHover}/></a>
-                    <InstagramIcon isHover={isHover} setHover={setHover}/>
+                    <a href='https://www.instagram.com/volyvolt.mg/' target="_blank" rel="noopener noreferrer"><InstagramIcon isHover={isHover} setHover={setHover}/></a>
                     {/*<TwitterIcon isHover={isHover} setHover={setHover}/>*/}
                     <a href='https://www.youtube.com/@VolyVolt-mg2023' target="_blank" rel="noopener noreferrer"><Youtube isHover={isHover} setHover={setHover}/></a>
                     <a href='https://www.linkedin.com/posts/volyvolt-mg_volyvolt-activity-7114875840256970752-sfkV?utm_source=share&utm_medium=member_android' target="_blank" rel="noopener noreferrer"><LinkedinIcon isHover={isHover} setHover={setHover}/></a>

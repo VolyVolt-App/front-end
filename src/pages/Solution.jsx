@@ -457,14 +457,13 @@ export const Solution = () => {
       {/* END OFFRE */}
 
       {/* dispositif */}
-      <Grid container>
-        <Grid item xs={12}>
-        <Box sx={{height: '50vh', backgroundColor: '#082D0E'}}>
-          
-        <Typography variant='h6' sx={{color: '#8BBC1F',mt:3}}>LE DISPOSITIF DE STOCKAGE</Typography>
-        <Typography color={'white'} my={2}>
+      <Grid container sx={{backgroundColor: '#082D0E'}}>
+        <Grid item xs={12} >
+        <Typography variant='h6' sx={{color: '#8BBC1F',mt:3}} px={{xs:2,md:6,lg:12}}>LE DISPOSITIF DE STOCKAGE</Typography>
+        <Typography color={'white'} my={2} px={{xs:2,md:6,lg:12}}>
         Notre dispositif de stockage d'énergie est au cœur de notre solution d'électrification rurale. Elle permet aux ménages de stocker de l’énergie pour alimenter les  équipements éléctriques au sein des foyers.
         </Typography>
+        <Box sx={{height: '50vh', cursor: 'pointer'}}>
 
         <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
           <ambientLight intensity={5} />

@@ -326,9 +326,9 @@ export const ImpactSociaux = () => {
               <Divider sx={{ borderBottomWidth: 1, bgcolor: '#8BBC1F', mt:1 }} />
           </Typography>
       <Typography pt={3} pb={1} >
-      Pour des détails plus approfondis sur notre impact social, consultez nos rapports d'impact annuels. Nous sommes fiers de partager les chiffres et les histoires qui témoignent de notre réussite.
+      Pour des détails plus approfondis sur notre impact social, vous pourriez bientôt consulter nos rapports d'impact annuels. Nous sommes fiers de partager les chiffres et les histoires qui témoignent de notre réussite.
       </Typography>
-      <Typography sx={{textDecoration: 'underline', pb:3}} >2023 Rapport d'Impact </Typography>
+      {/*<Typography sx={{textDecoration: 'underline', pb:3}} >2023 Rapport d'Impact </Typography>*/}
     </Box>
     <Grid container sx={{
       bgcolor:'#2F2121',
@@ -345,8 +345,7 @@ export const ImpactSociaux = () => {
           color: 'white',
           pt:3
         }}>
-        VolyVolt a dejà travaillé avec un grand nombre d’ entités pour faire la différence au niveau des communautés rurales. Ensemble, nous avons créé une dynamique positive et illuminé de nombreux foyers. En plus d' éclairer les foyers, travailler avec VolyVolt c'est illuminer les coeurs, semer le changement et faire sourire des familles entières. Nous valorisons le changement grâce à la collaboration, et nous avons besoin de vous pour la poursuivre.Et si vous aussi, vous deveniez le responsable des sourires dans les foyers des communautés rurales ? 
-        </Typography>
+        L'équipe VolyVolt s'acharne à donner le meilleur pour un impact positif effectif. Nous tenons à coeur Notre mission, nous prônons que l'électricité ne devrait pas être un luxe mais un droit fondamental.  Ensemble, nous pourrions créer ne dynamique positive et illuminer de nombreux foyers. En plus d' éclairer les foyers, travailler avec VolyVolt c'est illuminer les coeurs, semer le changement et faire sourire des familles entières. Nous valorisons le changement grace à la collaboration, et nous avons besoin de vous pour la poursuivre.Et si vous aussi, vous deveniez le responsable des sourires dans les foyers des communautés rurales ?        </Typography>
 
         <Typography sx={{
           color: 'white',

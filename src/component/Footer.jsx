@@ -54,10 +54,9 @@ export const Footer = () => {
     }
 
     const handleAbonnement = () => {
-        if(input === ''){
-            setError(true)
-        }
-        else {
+        let pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+        if(pattern.test(input)){
             setError(false)
             setIsLoading(true)
             setTimeout(function() {
@@ -66,6 +65,9 @@ export const Footer = () => {
                 setSuccess(true)
                 
             }, 3000)
+        }
+        else {
+            setError(true)
         }
       }
 

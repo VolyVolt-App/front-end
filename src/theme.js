@@ -22,7 +22,11 @@ export const theme = createTheme({
     blackvoly: {
       main: '#000',
       contrastText: '#fff'
-    }
+    },
+    whitevoly:{
+      main: '#fff',
+      contrastText: '#8bbc1f'
+    },
   },
     typography: {
       "fontFamily": `"Assistant","Roboto", "Helvetica", "Arial", sans-serif`,

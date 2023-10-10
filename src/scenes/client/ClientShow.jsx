@@ -37,17 +37,6 @@ export const ClientShow = ({data}) => {
           fontWeight: 'bold'
           }}>{data.uDevices}</Typography>
       </Box>
-
-      <Box sx={{
-        display:'flex',
-      }}>
-        <Typography variant='h6'>CIN : </Typography>
-        <Typography variant='h6' sx={{ 
-          color: '#8bbc1f',
-          ml:2,
-          fontWeight: 'bold'
-          }}>{data.cin}</Typography>
-      </Box>
       <Box sx={{
         display:'flex',
       }}>

@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 
-export const Article = ({title,subtitle,image, isArticleHover, setArticleHover}) => {
+export const Article = ({title,subtitle,image, isArticleHover, setArticleHover,link}) => {
   return (
     <Box
      component={'div'}
@@ -27,7 +27,7 @@ export const Article = ({title,subtitle,image, isArticleHover, setArticleHover})
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
-              <Button variant='outlined' size='large' 
+              <Button component='a' variant='outlined' size='large' href={link} target="_blank" rel="noopener noreferrer"
                 sx={{ 
                     fontWeight: 'bold',
                     border: 3,

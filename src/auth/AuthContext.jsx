@@ -39,6 +39,29 @@ export const AuthContextProvider = ({children}) => {
       navigate('/admin')
   }
 
+  const handleLoginAgain = (user,token,roles) => {
+     
+    console.log('authcontext',user)
+
+    setUser(user)
+    setToken(token)
+    setRoles(roles)
+    setAuthenticated(true)
+
+    
+
+    //save everything in local storage
+    localStorage.setItem(
+      'userData' , 
+      JSON.stringify({
+        user,
+        token,
+        roles
+      }) 
+    )
+    navigate('/admin')
+}
+
   //on reload check if the user is still logged in in server
   const reload = (user,token,roles) => {
     
@@ -72,9 +95,9 @@ export const AuthContextProvider = ({children}) => {
         if(storedData && storedData.token && storedData.roles){
           
           //setAuthenticated(true)
-          reload(storedData.user, storedData.token, storedData.roles) 
+          handleLoginAgain(storedData.user,storedData.token,storedData.roles)
+         // reload(storedData.user, storedData.token, storedData.roles) 
         }
-        
       }, [])
 
    return (

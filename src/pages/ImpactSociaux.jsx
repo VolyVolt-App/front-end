@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Grid, Stack, Typography } from '@mui/material'
+import { Box, Button, CircularProgress, Divider, Grid, Stack, Typography, Alert, Snackbar, } from '@mui/material'
 import React, { useState } from 'react'
 import { BenificiairyCarrousel } from '../component/impactsociaux/BenificiairyCarrousel'
 
@@ -20,12 +20,12 @@ import { Testimony } from '../component/impactsociaux/Testimony'
 
 //article
 import article1 from '../asset/image/image 19.webp'
-import article2 from '../asset/image/image 20.webp'
-import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.webp'
-import articlefemmenoir from '../asset/image/vue-face-senior-femme-noire-posant 1.webp'
+import article2 from '../asset/image/article2i.webp'
+import article3 from '../asset/image/artricle1.webp'
+import articlefemmenoir from '../asset/image/image 20.webp'
 
-import articleloren from '../asset/image/loren-joseph-XoBWUBA3Amg-unsplash 2.webp'
-import articlejeune from '../asset/image/PXL_20230726_072127091 1.webp'
+import articleloren from '../asset/image/PXL_20230726_072127091 1.webp'
+import articlejeune from '../asset/image/article5.webp'
 
 
 import grosplanenfant from '../asset/image/gros-plan-enfant-africain-smiley 1.webp'
@@ -46,9 +46,32 @@ import { Link, useNavigate } from 'react-router-dom'
 export const ImpactSociaux = () => {
   const [isArticleHover, setArticleHover] = useState('')
   const navigate = useNavigate()
+  const [more,setMore] = useState(false)
+
+  const handleMore = () => {
+    setMore(true)
+    setTimeout(function() {
+      setMore(false)
+      setSnackbar({children:'Pas de nouvel article', severity: 'warning'})
+    }, 2000)
+  }
+
+  const [snackbar, setSnackbar] = useState(null)
+  const handleCloseSnackbar = () => setSnackbar(null)
 
   return (
     <>
+    {!!snackbar && (
+        <Snackbar 
+          open 
+          onClose={handleCloseSnackbar} 
+          anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+          autoHideDuration={3000}
+          >
+          <Alert {...snackbar} onClose={handleCloseSnackbar}/>
+        </Snackbar>
+      )}
+
     <Grid container pt={{xs:8,ms:9}} sx={{
       backgroundColor: '#082D0E',
       position: 'relative',
@@ -252,8 +275,9 @@ export const ImpactSociaux = () => {
             isArticleHover={isArticleHover}
             setArticleHover={setArticleHover}
             image={article3} 
-            subtitle={'Developpement local'} 
-            title={"VolyVolt contribue à l’amélioration des conditions de vie"}
+            subtitle={'Communication'} 
+            title={"Fournir des armes pour mieux combattre : formation Pitch"}
+            link={'https://medium.com/@volyvolt.contact/fournir-des-armes-pour-mieux-combattre-formation-pitch-404395417f16'}
           />
       </Grid>
       <Grid item xs={12} md={6} lg={4} p={2}>
@@ -262,7 +286,8 @@ export const ImpactSociaux = () => {
             setArticleHover={setArticleHover}
             image={article2} 
             subtitle={'Human Centered Design'} 
-            title={"Implantation de VolyVolt : L'Étude de Terrain au Cœur des Besoins"}
+            title={"Le 02/10/2023 s'est déroulée une présentation au niveau Interne des projets issus d'Orange Summer Challenge"}
+            link={'https://medium.com/@volyvolt.contact/ale-02-10-2023-sest-d%C3%A9roul%C3%A9e-une-pr%C3%A9sentation-au-niveau-interne-des-projets-issus-d-orange-summer-a7873faa8cdd'}
           />
       </Grid>
       <Grid item xs={12} md={6} lg={4} p={2}>
@@ -271,25 +296,8 @@ export const ImpactSociaux = () => {
             setArticleHover={setArticleHover}
             image={articlefemmenoir} 
             subtitle={'Developpement rural'} 
-            title={"L'Électrification Rurale en Action : Des Rires d'Enfants aux Sourires des Aînés"}
-          />
-      </Grid>
-      <Grid item xs={12} md={6} lg={4} p={2}>
-          <Article
-            isArticleHover={isArticleHover}
-            setArticleHover={setArticleHover}
-            image={articleloren} 
-            subtitle={'Education'} 
-            title={"Créer un Environnement Propice à l'Apprentissage pour les Enfants"}
-          />
-      </Grid>
-      <Grid item xs={12} md={6} lg={4} p={2}>
-          <Article
-            isArticleHover={isArticleHover}
-            setArticleHover={setArticleHover}
-            image={articlejeune} 
-            subtitle={'Innovation technologique'} 
-            title={"De l'Idée à la Réalité : VolyVolt Crée des Emplois et des Opportunités"}
+            title={"VolyVolt utilise l’approche centrée sur l’humain pour le développement de la solution"}
+            link={'https://medium.com/@volyvolt.contact/threvolyvolt-utilise-lapproche-centr%C3%A9e-sur-l-humain-pour-le-d%C3%A9veloppement-de-la-solution-d50c0d86e726'}
           />
       </Grid>
       <Grid item xs={12} md={6} lg={4} p={2}>
@@ -301,15 +309,37 @@ export const ImpactSociaux = () => {
             title={"VolyVolt, projet issu d'Orange Summer Challenge"}
           />
       </Grid>
+      <Grid item xs={12} md={6} lg={4} p={2}>
+          <Article
+            isArticleHover={isArticleHover}
+            setArticleHover={setArticleHover}
+            image={articlejeune} 
+            subtitle={'Énergie'} 
+            title={"L’accès à l’énergie"}
+            link={'https://www.encyclopedie-energie.org/lacces-a-lenergie/'}
+          />
+      </Grid>
+      <Grid item xs={12} md={6} lg={4} p={2}>
+          <Article
+            isArticleHover={isArticleHover}
+            setArticleHover={setArticleHover}
+            image={articleloren} 
+            subtitle={'Développement rural'} 
+            title={"Implantation de VolyVolt : un pas vers l’ autonomie énergétique"}
+            link={'https://medium.com/@volyvolt.contact/cieimplantation-de-volyvolt-un-pas-vers-lautonomie-%C3%A9nerg%C3%A9tique-0f5d2112ccb8'}
+          />
+      </Grid>
+      
     </Grid>
     <Box px={{xs:2,md:6}} py={3}>
       <Divider variant='fullwidth'>
-        <Button variant='contained' sx={{
-          color: '#799C2B',
-          bgcolor: 'rgba(217, 217, 217, 0.21)',
+        <Button variant='contained' color='whitevoly' sx={{
+          //color: '#799C2B',
+          //bgcolor: 'rgba(217, 217, 217, 0.21)',
           boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
         }}
-        startIcon={<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}>CHARGER PLUS D’ARTICLES</Button>
+        onClick={handleMore}
+        startIcon={more?<CircularProgress size={25}/>:<ExpandMoreIcon style={{ color: '#8BBC1F'}}/>}>CHARGER PLUS D’ARTICLES</Button>
       </Divider>
     </Box>
     

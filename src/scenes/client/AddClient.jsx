@@ -62,6 +62,7 @@ export const AddClient = () => {
     })
     .then(resp => {
       setIsLoading(false)
+      setData(resp.data)
       setSuccess(true)  
     
     })
@@ -80,7 +81,7 @@ export const AddClient = () => {
     <Box>
         <Header title={'AJOUTER NOUVEAU CLIENT'} subtitle={'ajouter ici votre nouveau client'}/>
         <FormProvider {...methods}>
-         <SucceedClient open={success} setOpen={setSuccess}/> 
+         <SucceedClient open={success} setOpen={setSuccess} data={data}/> 
       {isLoading && <LoadingSpinner/>}
       {error && <ModalError open={error} message={errorMessage} handleClose={()=>setError(false)}/>}
         <form>

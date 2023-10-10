@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Stack, Typography } from '@mui/material'
 import React from 'react'
 
 export const SucceedClient = ({open,setOpen,data}) => {
@@ -9,14 +9,25 @@ export const SucceedClient = ({open,setOpen,data}) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
+        <DialogTitle>
+          <Typography variant='h6' color={'primary'} sx={{fontWeight: 'bold'}}>
+            Vous avez un nouveau ClIENT!
+          </Typography>
+        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            <Stack direction={'row'} spacing={1} pb={1}>
+              <Typography color={'primary'} sx={{textDecoration: 'underline'}}>Nom: </Typography>
+              <Typography>{data.nom}</Typography>
+            </Stack>
+            <Stack direction={'row'} alignItems='center' spacing={1}>
+              <Typography color={'primary'} sx={{textDecoration: 'underline'}}>ID du Client: </Typography>
+              <Typography sx={{ backgroundColor: '#8bbc1f', p:1, color:'white', fontWeight: 'bold', borderRadius:2}}>{data.clientId}</Typography>
+            </Stack>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={()=>setOpen(false)} autoFocus>
+          <Button variant='contained' onClick={()=>setOpen(false)} autoFocus>
             OK
           </Button>
         </DialogActions>

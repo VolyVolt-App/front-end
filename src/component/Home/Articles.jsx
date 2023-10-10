@@ -28,7 +28,7 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
                 {heading}
             </Typography>
         </ScrollAnimationLayout>
-        <Stack direction={'row'} spacing={1}>
+       {/*  <Stack direction={'row'} spacing={1}>
             <Box display={'flex'} alignItems={'center'}>
                 <ScrollAnimationLayout>
                     <CalendarTodayIcon sx={{fontSize: 15, fill: '#8BBC1F'}}/>
@@ -56,7 +56,7 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
                     </Typography>
                 </ScrollAnimationLayout>
             </Box>
-        </Stack>
+        </Stack>*/}
         <ScrollAnimationLayout>
             <Typography 
                 sx={{
@@ -68,7 +68,7 @@ export const Articles = ({articleImage,subheading,heading,date,nombre, text, lin
             </Typography>
         </ScrollAnimationLayout>
         <ScrollAnimationLayout>
-            <Link>Voir plus</Link>
+        <Link href={link} target="_blank" rel="noopener noreferrer" >Voir plus</Link>
         </ScrollAnimationLayout>
     </Box>
   )

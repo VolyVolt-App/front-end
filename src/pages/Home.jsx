@@ -12,8 +12,8 @@ import { ReactComponent as ValuePropositionThree } from '../asset/icon/icons-cle
 
 
 import article1 from '../asset/image/image 19.webp'
-import article2 from '../asset/image/image 20.webp'
-import article3 from '../asset/image/travailleurs-campagne-ensemble-terrain 1.webp'
+import article2 from '../asset/image/article6.webp'
+import article3 from '../asset/image/article5.webp'
 //import { ReactComponent as OddTwo } from '../asset/image/odd2.svg'
 import { ReactComponent as OddSeven } from '../asset/image/odd7_adobe_express.svg'
 import { ReactComponent as OddNine } from '../asset/image/odd09_adobe_express.svg'
@@ -942,11 +942,11 @@ export const Home = () => {
           <ImageAnimationLayout>
             <Articles 
               articleImage={article3} 
-              subheading={'Developpement local'} 
-              heading={"VolyVolt contribue à l’amélioration des conditions de vie"} 
+              subheading={'Énergie'} 
+              heading={"L’Accès à L’énergie"} 
               date={'14 Aout 2023'} 
               nombre={'5'}
-              text={"Depuis l’implémentation du projet Volyvolt, les ménages à Miarinarivo voient leurs conditions de vies s’améliorer. Les paysans enregistrent  des hausses d’une moyenne de 20% sur leurs productions agricoles ..."}
+              text={"En 2016, une grande partie de la population mondiale n’a pas accès à des énergies modernes et propres, en particulier les populations rurales pauvres d’Afrique subsaharienne et d’Asie. En effet, au niveau mondial, plus de 95 % des personnes n’ayant pas accès à des services énergétiques habitent dans ces zones, dont 84 % en zones rurales ..."}
               link={''} />
           </ImageAnimationLayout>
         </Grid>{/* end item*/}
@@ -955,12 +955,12 @@ export const Home = () => {
           <ImageAnimationLayout>
             <Articles 
             articleImage={article2} 
-            subheading={'Santé'} 
+            subheading={'Développement rural'} 
             heading={"Implantation de VolyVolt : un pas vers l’ autonomie énergétique "} 
             date={'27 Juillet 2023'} 
             nombre={'8'}
             text={"Alors que les défis liés à l'accès à l'énergie durable persistent dans les zones rurales, une lueur d'espoir émerge avec l'implantation de VolyVolt. Cette solution novatrice de générateurs d'énergie propre et renouvelable...."}
-            link={''} />
+            link={'https://medium.com/@volyvolt.contact/cieimplantation-de-volyvolt-un-pas-vers-lautonomie-%C3%A9nerg%C3%A9tique-0f5d2112ccb8'} />
           </ImageAnimationLayout>
         </Grid>{/* end item*/}
 
@@ -968,18 +968,18 @@ export const Home = () => {
           <ImageAnimationLayout>
             <Articles 
               articleImage={article1} 
-              subheading={'Santé'} 
+              subheading={'Jeunesse et Technologie'} 
               heading={"VolyVolt, projet issu d'Orange Summer Challenge"} 
               date={'04 Juillet 2023'} 
               nombre={'3'}
-              text={"Ce projet, porté par une équipe engagée et diversifiée, a vu le jour à la suite de plusieurs mois d'efforts et de recherche. L'idée de combiner l'agriculture durable et l'énergie verte pour répondre ..."}
-              link={''} />
+              text={"Dans un monde où l’accès à l’électricité reste un luxe pour des millions de personnes, VolyVolt émerge comme un éclaireur dans l’obscurité, portant les promesses d’un avenir plus lumineux pour les communautés rurales ..."}
+              link={'https://medium.com/@volyvolt.contact/volyvolt-projet-issu-dorange-summer-challenge-3bb11c712176'} />
             </ImageAnimationLayout>
         </Grid>{/* end item*/}
 
       </Grid>{/*end container */}
     </Box>
-{/* end article */}
+{/* end article Numérique*/}
     </>
   )
 }

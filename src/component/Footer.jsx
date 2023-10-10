@@ -92,7 +92,7 @@ export const Footer = () => {
                         component={'img'}
                         sx={{
                             //width: {xs: 50, sm: 150},
-                            height: {xs:'9vh', sm: '10vh', md: '15vh'},
+                            height: {xs:'8.5vh', sm: '10vh', md: '15vh'},
                             my:1
                         //mt:{xs:3,md:0},
                         
@@ -106,7 +106,7 @@ export const Footer = () => {
                         component={'img'}
                         sx={{
                             //width: {xs:50, sm: 150},
-                            height: {xs:'9vh', sm: '10vh', md: '15vh'},
+                            height: {xs:'8.5vh', sm: '10vh', md: '15vh'},
                             my:1,
                         //mt:{xs:3,md:0},
                         

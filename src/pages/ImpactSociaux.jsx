@@ -52,7 +52,7 @@ export const ImpactSociaux = () => {
     setMore(true)
     setTimeout(function() {
       setMore(false)
-      setSnackbar({children:'Pas de nouvel article', severity: 'warning'})
+      setSnackbar({children:'Tous nos artciles ont été defilés', severity: 'warning'})
     }, 2000)
   }
 

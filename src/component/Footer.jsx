@@ -20,6 +20,8 @@ import { InstagramIcon } from '../asset/dynamic/InstagramIcon'
 import { FbIcon } from '../asset/dynamic/FbIcon'
 import { ENDPOINT, FRONTENDPOINT } from '../services/BaseUrl'
 import { Youtube } from '../asset/dynamic/Youtube'
+import { LoadingSpinner } from './Utils/modal/LoadingSpinner'
+import { ThxForAbonnement } from './footer/ThxForAbonnement'
 
 const pages = [
     {
@@ -42,6 +44,30 @@ const pages = [
 
 export const Footer = () => {
     const [isHover, setHover] = useState('')
+    const [input,setInput] =  useState('')
+    const [isLoading, setIsLoading]= useState(false)
+    const [success,setSuccess] = useState(false)
+    const [error,setError] = useState(false)
+
+    const handleChange = (e) => {
+        setInput(e.target.value)
+    }
+
+    const handleAbonnement = () => {
+        if(input === ''){
+            setError(true)
+        }
+        else {
+            setError(false)
+            setIsLoading(true)
+            setTimeout(function() {
+                setInput('')
+                setIsLoading(false)
+                setSuccess(true)
+                
+            }, 3000)
+        }
+      }
 
   return (
     <Box 
@@ -50,6 +76,8 @@ export const Footer = () => {
             width: '100%',
             
         }}>
+        {isLoading && <LoadingSpinner/>}
+        <ThxForAbonnement open={success} setOpen={setSuccess}/>
          <Grid container display={'flex'} justifyContent={'space-between'} alignItems={'center'} sx={{backgroundColor: '#FFFFFF'}}  >
          
             <Grid item xs={12}  p={1} my={1} px={{xs:2,md:3, lg: 6}}>
@@ -95,10 +123,12 @@ export const Footer = () => {
             <Grid item xs={12} sm={6} sx={{backgroundColor: '#6E9F00'}} p={1} mt={3} marginX={{xs:1,md:0}} borderRadius={2}>
                 <Stack direction={{xs:'column',sm:'row'}} alignItems={'center'} justifyContent={'center'} spacing={2}>
                     <Typography color={'white'}>S’abonner aux Newsletters</Typography>
-                    <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white', borderRadius:2}}
+                    <TextField placeholder='Entre ton email' sx={{backgroundColor: 'white', borderRadius:2}} onChange={handleChange} value={input}
+                        error={error}// helperText={error&& "Veuillez entrer un adresse mail"}
                         InputProps={{
                             endAdornment: <InputAdornment position='end'>
-                                <Button variant='contained' color='yellowVoly'sx={{color:'black'}} >S'abonner</Button>
+                                <Button variant='contained' color='yellowVoly'sx={{color:'black'}} 
+                                    onClick={handleAbonnement}>S'abonner</Button>
                                 </InputAdornment>
                         }}/>
                 </Stack>

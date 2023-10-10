@@ -947,7 +947,7 @@ export const Home = () => {
               date={'14 Aout 2023'} 
               nombre={'5'}
               text={"En 2016, une grande partie de la population mondiale n’a pas accès à des énergies modernes et propres, en particulier les populations rurales pauvres d’Afrique subsaharienne et d’Asie. En effet, au niveau mondial, plus de 95 % des personnes n’ayant pas accès à des services énergétiques habitent dans ces zones, dont 84 % en zones rurales ..."}
-              link={''} />
+              link={'https://www.encyclopedie-energie.org/lacces-a-lenergie/'} />
           </ImageAnimationLayout>
         </Grid>{/* end item*/}
         

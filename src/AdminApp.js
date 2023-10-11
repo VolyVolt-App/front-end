@@ -13,6 +13,8 @@ import { RequireAuth } from './auth/RequireAuth';
 import { Playground } from './scenes/component/SideBarTest';
 import { AddClient } from './scenes/client/AddClient';
 import { Appareil } from './scenes/appareil/Appareil';
+import AddAppareil from './scenes/appareil/AddAppareil';
+import { UnReadMessage } from './scenes/message/UnReadMessage';
 
 export const AdminApp = () => {
   
@@ -51,6 +53,8 @@ export const AdminApp = () => {
               <Route path='/addclient' element={<AddClient/>}/>
               <Route path='/quotegenerator' element={<QuoteGenerator/>}/>
               <Route path='/appareil' element={<Appareil/>}/>
+              <Route path='/addappareil' element={<AddAppareil/>}/>
+              <Route path='/message' element={<UnReadMessage/>}/>
             </Route>
           </Routes>
         </Box>

@@ -18,7 +18,7 @@ const validationSchema = Yup.object().shape({
       .required("l'email de votre compte est necessaire")
       .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, 'entrez un addresse email valide'),
     numero: Yup.string()
-      .matches(/^(?!.*\S)|((034|038|032|033)([0-9]{7}))$/,'veuillez entrer un numero valide'),
+      .matches(/^(?!.*\S)|((\+261|0)(34|38|32|33)([0-9]{7}))$/,'veuillez entrer un numero valide'),
     NomOrOrganisme : Yup.string()
       .required("Entrer votre nom ou votre nom d'organisme"),
     communicationMeans : Yup.string()

@@ -1,9 +1,11 @@
-import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography, Chip, CardMedia } from '@mui/material'
+import { Accordion,AccordionSummary ,AccordionDetails ,Box, Divider, Grid, Typography, Chip, CardMedia, Stack, Button } from '@mui/material'
 import React, { useState } from 'react'
-
+import ViewInArIcon from '@mui/icons-material/ViewInAr'
+import CloseIcon from '@mui/icons-material/Close'
 
 import bannerImage from '../asset/image/Group 104.webp'
 //import bannerVideo from '../asset/image/Group 103.png'
+import dispositifImage from '../asset/image/Dispositif.png'
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Analyse } from '../component/solution/Analyse';
@@ -33,6 +35,7 @@ export const Solution = () => {
   //mission
   const [solution, setSolution] = useState('analyse')
   const [isProcessusHover,setProcessusHover]= useState('')
+  const [show3d,setShow3d] = useState(false)
 
   return (
     <>
@@ -463,15 +466,40 @@ export const Solution = () => {
         <Typography color={'white'} my={2} px={{xs:2,md:6,lg:12}}>
         Notre dispositif de stockage d'énergie est au cœur de notre solution d'électrification rurale. Elle permet aux ménages de stocker de l’énergie pour alimenter les  équipements éléctriques au sein des foyers.
         </Typography>
-        <Box sx={{height: '50vh', cursor: 'pointer'}}>
+        <Stack alignItems={'center'} px={{xs:2,md:6,lg:12}}>
+          <Box 
+          component={'img'}
+          src={dispositifImage}
+          
+          sx={{
+            width: {xs:'100%', md:'80%'}
+          }}
+          />
+        </Stack>
+        
+        {show3d && 
+        (
+          <Stack alignItems='center'>
+            <Box sx={{height: '50vh', width: {xs:'100%',md: '80%'}, cursor: 'pointer', bgColor: '#00000011'}}>
+            
+            <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
+              <ambientLight intensity={5} />
+              <OrbitControls enableZoom={true} />
+              <Model />
+            </Canvas>
 
-        <Canvas camera={{ fov: 64, position: [-2, 2, 0] }}>
-          <ambientLight intensity={5} />
-          <OrbitControls enableZoom={true} />
-          <Model />
-        </Canvas>
-
-        </Box>
+            </Box>
+          </Stack>)}
+        <Stack alignItems={'center'}>
+          <Button 
+            variant='outlined' 
+            color='whitevoly' 
+            startIcon={show3d ? <CloseIcon/> : <ViewInArIcon/>} 
+            mt={2}
+            onClick={()=>setShow3d(!show3d)}>
+              {show3d ? 'cacher le 3d':'Afficher en 3d'}
+          </Button>
+        </Stack>
         </Grid>
       </Grid>
       {/* end dispositif */}

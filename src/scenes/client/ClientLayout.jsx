@@ -93,7 +93,7 @@ export const ClientLayout = ({data}) => {
           lg:'fit-content'
         }}
         
-        height="70vh"
+       // height="70vh"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",

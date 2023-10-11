@@ -177,7 +177,7 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, toggled, setToggled}) => {
                     />
                   <Item
                     title="Ajouter"
-                    to="/newAppareil"
+                    to="/addappareil"
                     icon={<AddToQueueOutlinedIcon />}
                     selected={selected}
                     setSelected={setSelected}
@@ -204,17 +204,24 @@ export const Sidebars = ({isCollapsed,setIsCollapsed, toggled, setToggled}) => {
                   setCollapsed={setIsCollapsed}
                   isCollapsed={isCollapsed}
                 />
-
-                <Item
-                  title="MESSAGE"
-                  to="/message"
-                  icon={<MessageOutlined />}
-                  selected={selected}
-                  setSelected={setSelected}
-                  setCollapsed={setIsCollapsed}
-                  isCollapsed={isCollapsed}
-                />
-            
+                <SubMenu
+                label='MESSAGE'
+                icon={<MessageOutlined />}
+                style={{
+                  fontWeight: 'bold'
+                  //fontSize: '13px'
+                }}
+                >
+                  <Item
+                    title="nouveau"
+                    to="/message"
+                    icon={<MessageOutlined />}
+                    selected={selected}
+                    setSelected={setSelected}
+                    setCollapsed={setIsCollapsed}
+                    isCollapsed={isCollapsed}
+                  />
+              </SubMenu>
             </Menu>
         </Sidebar>
       </Box>

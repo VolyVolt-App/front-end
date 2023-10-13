@@ -23,7 +23,8 @@ export const DashboardLayout = ({dashboard,allclient,allappareil}) => {
           </Box>
         </Grid>
       </Grid>
-      <Grid container>
+
+      <Grid container mb={3}>
         <Grid item xs={12}>
 
 {/* global tendency */}
@@ -33,12 +34,13 @@ export const DashboardLayout = ({dashboard,allclient,allappareil}) => {
 {/* historique tension */}
 {/* end historique tension */}
           
-<Chart
+          <Chart
             xdata = {['25 Oct','26 Oct','27 Oct','28 Oct','29 Oct','30 Oct', '1 Sept', '2 Sept', '3 Sept', '4 Sept', '5 Sept', '6 Sept']}
             ydata = {[0.08,0.13,0.4,0.6,0.7,0.8,0.78,0.77,0.82,0.8,0.8,0.8]}
             title = {''}
             unity={'V'}
-            />
+          />
+
         </Grid>
       </Grid>
 {/* all client */}

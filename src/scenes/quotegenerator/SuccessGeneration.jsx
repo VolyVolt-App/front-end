@@ -74,9 +74,9 @@ export const SuccessGeneration = ({open, setOpen, data}) => {
                             color: '#76A40F',
                         }}>{data.organisme}</Typography>   
                     </Stack>
-                    
+                    {/* <MailOutlineIcon/> */}
                     <Stack direction={'row'} spacing={1}>
-                        <Typography><MailOutlineIcon/></Typography>
+                        <Typography>Adresse Email</Typography>
                         <Typography sx={{
                             fontWeight: 'bold',
                             color: '#76A40F',
@@ -100,11 +100,11 @@ export const SuccessGeneration = ({open, setOpen, data}) => {
                     justifyContent: 'center',
                     flexWrap: 'wrap'
                     }}>
-                <DevisCard title={'INSTALLATION DES GÉNÉRATEURS'}>
-                </DevisCard>
-                <CardQuote title={"PRODUCTION D’ENERGIE NECESSAIRE "} value={'124kWh'} />
-                <CardQuote title={"SURFACE TOTALE À CULTIVER"} value={'4Ha'} />
-                <CardQuote title={"DEVIS  dES SERVICES"} value={'4Ha'} />
+                {/*<DevisCard title={'INSTALLATION DES GÉNÉRATEURS'}>
+                </DevisCard>*/}
+                {/*<CardQuote title={"PRODUCTION D’ENERGIE NECESSAIRE "} value={'124kWh'} />*/}
+                {/*<CardQuote title={"SURFACE TOTALE À CULTIVER"} value={'4Ha'} />*/}
+                {/*<CardQuote title={"DEVIS  dES SERVICES"} value={'4Ha'} />*/}
                 
             </Grid>
           </Grid>

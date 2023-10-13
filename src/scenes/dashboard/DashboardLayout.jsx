@@ -18,7 +18,7 @@ export const DashboardLayout = ({dashboard,allclient,allappareil}) => {
             justifyContent: 'center',
             flexWrap: 'wrap'
           }}>
-           <CardDashboard title={'NOMBRE DE FOYERS ECLAIRÉS'} value={'3'}/>
+           <CardDashboard title={'NOMBRE DE FOYERS ECLAIRÉS'} value={dashboard.nbrClient}/>
            <CardDashboard title={'SURFACE TOTALE CULTIVÉES'} value={'4Ha'}/>
           </Box>
         </Grid>
@@ -33,11 +33,11 @@ export const DashboardLayout = ({dashboard,allclient,allappareil}) => {
 {/* historique tension */}
 {/* end historique tension */}
           
-          <Chart
-            xdata = {['semaine 1','semaine 2','semaine 3','semaine 4','semaine 5','semaine 6', 'semaine 7']}
-            ydata = {[0.8,1,2.1,4,1,9,7]}
+<Chart
+            xdata = {['25 Oct','26 Oct','27 Oct','28 Oct','29 Oct','30 Oct', '1 Sept', '2 Sept', '3 Sept', '4 Sept', '5 Sept', '6 Sept']}
+            ydata = {[0.08,0.13,0.4,0.6,0.7,0.8,0.78,0.77,0.82,0.8,0.8,0.8]}
             title = {''}
-            unity={'mV'}
+            unity={'V'}
             />
         </Grid>
       </Grid>

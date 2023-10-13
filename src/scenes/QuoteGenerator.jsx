@@ -10,6 +10,7 @@ import { LoadingSpinner } from '../component/Utils/modal/LoadingSpinner'
 import { ModalError } from '../component/Utils/modal/ModalError'
 import { useState } from 'react'
 import { ENDPOINT } from '../services/BaseUrl'
+import { SuccessGeneration } from './quotegenerator/SuccessGeneration'
 
 const validationSchema = Yup.object().shape({
     email : Yup.string()
@@ -51,6 +52,7 @@ export const QuoteGenerator = () => {
       const [success, setSuccess] = useState(false)
       const [error,setError] = useState(false)
       const [errorMessage, setErrorMessage]= useState('')
+      const [data,setData] = useState([])
 
       const onSubmit = (data) => {
         //organisme,email,numero,localite,distance,nbrmenage,ptkioske,contractduration
@@ -69,14 +71,15 @@ export const QuoteGenerator = () => {
         dataForm.append('contractduration',data.contractduration)
         
         //dataForm.append('',data.)
-        axios.post(ENDPOINT+'message',dataForm,
+        axios.post(ENDPOINT+'algo',dataForm,
         {
           transformRequest: dataForm=> dataForm,//to solve axios issue
         })
         .then(resp => {
+          setData(resp.data)
           setIsLoading(false)
-          setSuccess(true)  
-        
+          setSuccess(true) 
+          console.log(resp.data) 
         })
         .catch(error => {
           console.log(error)
@@ -89,6 +92,7 @@ export const QuoteGenerator = () => {
   
   return (
     <Box>
+        <SuccessGeneration open={success} setOpen={setSuccess} data={data}/>
         <Typography variant='h6' fontWeight={'bold'} pb={1}>INPUTS CLIENTS</Typography>
         <FormProvider {...methods}>
             {isLoading && <LoadingSpinner/>}
@@ -110,13 +114,9 @@ export const QuoteGenerator = () => {
                         <Button variant='contained' fullWidth type='submit'>GENERER LE DEVIS</Button>
                         </Stack>
                     </Grid>
-
                     
                     <Grid item xs={12} md={6} display={'flex'} justifyContent={'center'} alignItems={'center'}>
                         <Stack spacing={2} dis alignItems={'center'}>
-                            <CardQuote title={"PRODUCTION D’ENERGIE NECESSAIRE "} value={'124kWh'} />
-                            <CardQuote title={"SURFACE TOTALE À CULTIVER"} value={'4Ha'} />
-                            <CardQuote title={"DEVIS  dES SERVICES"} value={'4Ha'} />
                         </Stack>
                     </Grid>
                 </Grid>{/* end grid container */}

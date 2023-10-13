@@ -1,47 +1,73 @@
-import { Box, Grid, Typography } from '@mui/material'
+import { useQueries, useQuery } from '@tanstack/react-query'
 import React from 'react'
-import { CardDashboard } from './component/dasboard/CardDashboard'
-import { LineChart } from '@mui/x-charts'
-import { TendencyChart } from './component/chart/TendencyChart'
-import { MultiLineTendancy } from './component/chart/MultiLineTendancy'
+import { axiosClient } from '../utils/axios'
+import { ENDPOINT } from '../services/BaseUrl'
+import { ErrorFromServer } from '../component/ErrorFromServer'
+import { Loading } from '../component/Loading'
+import { DashboardLayout } from './dashboard/DashboardLayout'
+import { Box } from '@mui/material'
+import { Chart } from './component/chart/Chart'
 
 export const Dashboard = () => {
+    /*const {data,isLoading,isError, isSuccess} = useQuery(['allClient'],()=>
+    axiosClient.get(ENDPOINT+'allClient')
+    .then((res) => res.data)
+    )*/
+
+    const [dashboard, allClient, allappareil] = useQueries({
+      queries : [
+        {
+          queryKey: ['dashboard'],
+          queryFn: () => axiosClient.get('dashboard', 
+          {headers : {
+            'content-type' : 'application/json',
+            //'Authorization': 'Bearer '+auth.token,
+          } ,})
+          .then((res) => res.data)
+        },//end query one
+        {
+          queryKey: ['allClient'],
+          queryFn: () => axiosClient.get('allClient', 
+          {headers : {
+            'content-type' : 'application/json',
+         //   'Authorization': 'Bearer '+auth.token,
+          } ,})
+          .then((res) => res.data)
+        },//end query two
+        {
+          queryKey: ['allappareil'],
+          queryFn: () => axiosClient.get('allappareil/', 
+          {headers : {
+            'content-type' : 'application/json',
+         //   'Authorization': 'Bearer '+auth.token,
+          } ,})
+          .then((res) => res.data)
+        },//end query three
+        
+       /* {
+          queryKey: ['getConsomation/'+params.id],
+          queryFn: () => axiosClient.get('getConsomation/'+params.id, 
+          {headers : {
+            'content-type' : 'application/json',
+         //   'Authorization': 'Bearer '+auth.token,
+          } ,})
+          .then((res) => res.data)
+        },//end query four*/
+      ]
+    })
+
   return (
-    <Box>
-      <Grid container>
-        <Grid item xs={12}>
-          <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
-           <CardDashboard title={'NOMBRE DE FOYERS ECLAIRÉS'} value={'3'}/>
-           <CardDashboard title={'SURFACE TOTALE CULTIVÉES'} value={'4Ha'}/>
-          </Box>
-        </Grid>
-      </Grid>
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography variant='h6'>COURBES DE TENDANCE</Typography>
-         {/*  <LineChart
-            xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
-            
-            series={[
-              {
-                data: [2, 5.5, 2, 8.5, 1.5, 5],
-              },
-            ]}
-            width={500}
-            height={300}
-          /> */}
-          <TendencyChart 
-            xdata = {['semaine 1','semaine 2','semaine 3','semaine 4','semaine 5','semaine 6', 'semaine 7']}
-            ydata = {[0.8,1,2.1,4,1,9,7]}
-            title = {'Consommation réelle'}
-            />
-          <MultiLineTendancy/>
-        </Grid>
-      </Grid>
+    <Box
+      sx={{
+        height: '100% !important'
+      }}>
+    {(dashboard.status === 'error'||allClient.status === 'error'||allappareil.status === 'error') && <ErrorFromServer/>}
+    {(dashboard.status === 'success'&& allClient.status === 'success' && allappareil.status === 'success')  &&
+      <DashboardLayout dashboard={dashboard.data} allclient={allClient.data} allappareil={allappareil.data}/>
+      }
+    {(dashboard.status === 'loading'&& allClient.status === 'loading' && allappareil.status === 'loading') && <Loading/>}
+    
     </Box>
+    
   )
 }

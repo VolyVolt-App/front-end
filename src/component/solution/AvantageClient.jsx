@@ -96,7 +96,7 @@ export const AvantageClient = () => {
       </Box>
       
       <Swiper
-      //loop
+      loop
       modules={[Navigation, Pagination , Scrollbar, A11y]}
       spaceBetween={50}
       initialSlide={5}

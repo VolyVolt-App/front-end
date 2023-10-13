@@ -9,7 +9,9 @@ export const CardQuote = ({title,value}) => {
         height: 120,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        m:2,
+        borderRadius:2
     }}>
         <Typography variant='h6' align='center' sx={{color: '#76A40F', fontWeight:600}}>{title}</Typography>
         <Typography align='center' sx={{color: '#76A40F', fontWeight: 700, fontSize:45}} >{value}</Typography>

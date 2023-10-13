@@ -11,6 +11,7 @@ export const Client = () => {
     axiosClient.get(ENDPOINT+'allClient')
     .then((res) => res.data)
     )
+    
   return (
     <>
     {isError && <ErrorFromServer/>}
